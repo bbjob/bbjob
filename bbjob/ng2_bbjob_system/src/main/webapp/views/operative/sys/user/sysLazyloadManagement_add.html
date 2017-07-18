@@ -1,0 +1,43 @@
+<div class="modal-content">
+	<div class="modal-header">
+		<h4 class="modal-title MtextGray" id="myModalLabel">{{ isEdit ? '修改懒加载项' : '新增懒加载项'}}</h4>
+	</div>
+	<div class="modal-body MpaddingTop0">
+		<form name="addForm" novalidate="" enctype="multipart/form-data" class="form-validate">
+			<div class="row ">
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>名称</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入名称"
+										ng-model="selffilters.name">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>文件名称</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入文件名称,名称用单引号标准,多个用逗号隔开"
+										ng-model="selffilters.files">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer ">
+
+		<div class="col-lg-2 col-lg-offset-4">
+			<button class="btn btn-block btn-info mt-lg mb-lg"
+				ng-disabled="selffilters.files == null || selffilters.files == '' || selffilters.name == null || selffilters.name == ''"
+				 ng-click="save()">保存</button>
+		</div>
+		<div class="col-lg-2">
+			<button class="btn btn-block btn-default mt-lg mb-lg"
+				ng-click="close()">关闭</button>
+		</div>
+	</div>
+</div>

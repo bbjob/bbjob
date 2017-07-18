@@ -1,0 +1,48 @@
+<h3>
+	<em class="icon-user"></em>
+	 懒加载项配置
+</h3>
+<form  class="form-horizontal">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel">
+				<div class="panel-heading">
+					<div class="pull-right pl-sm">
+						<button type="button" class="btn btn-danger bg-danger-light"
+							ng-click="del()">删除</button>
+					</div>
+					<div class="pull-right pl-sm">
+						<button type="button" class="btn btn-warning bg-warning-light"
+							ng-click="openDialog(1)">修改</button>
+					</div>
+					<div class="pull-right pl-sm">
+						<button type="button" class="btn btn-info bg-info-light"
+							ng-click="openDialog(0)">新增</button>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- START table-responsive-->
+				<div class="panel-body MpaddingTop0">
+					<table class="table  table-bordered table-striped table-hover Mtable"
+							ng-table="lmCtrl.tableParams" 
+							ng-table-columns-binding="lmCtrl.cols" 
+							>
+						<tbody
+							ms-table-nothing 
+							ms-table-data="$data" 
+							ms-table-length="2"
+							ms-nothing-img="js/modules/server/tableNothing.directive/table_nothing_cry.png">
+							<tr ng-repeat="info in $data"
+								ng-click="info.$selected = !info.$selected; clickRow(info)"
+								ng-class="{'active': info.$selected}">
+								
+								<td title="'名称'" ng-if="true">{{info.name}}</td>
+								<td title="'文件名'" ng-if="true" >{{info.files}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,110 @@
+<div class="modal-content">
+	<div class="modal-header">
+		<h4 class="modal-title MtextGray" id="myModalLabel">{{ isEdit ? '修改懒加载项' : '新增懒加载项'}}</h4>
+	</div>
+	<div class="modal-body MpaddingTop0">
+		<form name="addForm" novalidate="" enctype="multipart/form-data" class="form-validate">
+			<div class="row ">
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>系统菜单</label>
+	            		<div class="col-sm-7">
+	            			<select 
+								m-select2 
+								class="form-control"
+									ms-key-to-the-value="y,x"
+									ms-model="selffilters.functionId"
+									ms-options="functionNames" 
+									ms-allowclear="true"
+									ms-placeholder="请选择系统菜单" required>
+							</select>
+	            		</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>路由名称</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入路由名称"
+										ng-model="selffilters.stateName" required>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>路由标题</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入路由标题"
+										ng-model="selffilters.stateTitle" required>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>路由url</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入路由url"
+										ng-model="selffilters.stateUrl" required>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>控制器全称</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入控制器全称"
+										ng-model="selffilters.controllerName" required>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>控制器简称</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入控制器简称"
+										ng-model="selffilters.controllerNameAs" required>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>路由地址</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入路由地址"
+										ng-model="selffilters.templateurl" required>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-3 control-label pr0 text-right pt-sm"><span
+							class="text-danger">*</span>懒加载项引用</label>
+						<div class="col-sm-7">
+		            		<input type="text" id="phone" class="form-control Minput" placeholder="请输入懒加载项引用,名称用单引号标准,多个用逗号隔开"
+										ng-model="selffilters.resolve" required>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer ">
+
+		<div class="col-lg-2 col-lg-offset-4">
+			<button class="btn btn-block btn-info mt-lg mb-lg"
+				ng-disabled="addForm.$invalid"
+				 ng-click="save()">保存</button>
+		</div>
+		<div class="col-lg-2">
+			<button class="btn btn-block btn-default mt-lg mb-lg"
+				ng-click="close()">关闭</button>
+		</div>
+	</div>
+</div>

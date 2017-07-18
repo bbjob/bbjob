@@ -1,0 +1,54 @@
+<h3>
+	<em class="icon-user"></em>
+	 路由配置
+</h3>
+<form  class="form-horizontal">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="panel">
+				<div class="panel-heading">
+					<div class="pull-right pl-sm">
+						<button type="button" class="btn btn-danger bg-danger-light"
+							ng-click="del()">删除</button>
+					</div>
+					<div class="pull-right pl-sm">
+						<button type="button" class="btn btn-warning bg-warning-light"
+							ng-click="openDialog(1)">修改</button>
+					</div>
+					<div class="pull-right pl-sm">
+						<button type="button" class="btn btn-info bg-info-light"
+							ng-click="openDialog(0)">新增</button>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- START table-responsive-->
+				<div class="panel-body MpaddingTop0">
+					<table class="table  table-bordered table-striped table-hover Mtable"
+							ng-table="rmCtrl.tableParams" 
+							ng-table-columns-binding="rmCtrl.cols" 
+							>
+						<tbody
+							ms-table-nothing 
+							ms-table-data="$data" 
+							ms-table-length="2"
+							ms-nothing-img="js/modules/server/tableNothing.directive/table_nothing_cry.png">
+							<tr ng-repeat="info in $data"
+								ng-click="info.$selected = !info.$selected; clickRow(info)"
+								ng-class="{'active': info.$selected}">
+								
+								<td title="'菜单名称'" ng-if="true">{{info.functionName}}</td>
+								<td title="'名称'" ng-if="true">{{info.stateName}}</td>
+								<td title="'标题'" ng-if="true" >{{info.stateTitle}}</td>
+								<td title="'路由地址'" ng-if="true" >{{info.stateUrl}}</td>
+								<td title="'控制器名称'" ng-if="true" >{{info.controllerName}}</td>
+								<td title="'控制器简称'" ng-if="true" >{{info.controllerNameAs}}</td>
+								<td title="'访问页面地址'" ng-if="true" >{{info.templateurl}}</td>
+								<td title="'懒加载项名称'" ng-if="true" >{{info.resolve}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
