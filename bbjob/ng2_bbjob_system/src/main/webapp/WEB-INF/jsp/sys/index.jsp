@@ -42,8 +42,9 @@
    <!--app.router-->
    <script src="${p:get('system.ctx')}js/modules/routes/routes.module.js" type="text/javascript" charset="utf-8"></script>
    <script src="${p:get('system.ctx')}js/modules/routes/route-helpers.provider.js" type="text/javascript" charset="utf-8"></script>
-   <script src="${p:get('system.ctx')}js/modules/routes/routes.config.js" type="text/javascript" charset="utf-8"></script>
-   <!--app.navsearch-->
+   <%-- <script src="${p:get('system.ctx')}js/modules/routes/routes.config.js" type="text/javascript" charset="utf-8"></script>
+    --%><script src="${p:get('system.ctx')}sys/getRoutes" type="text/javascript" charset="utf-8"></script>
+    <!--app.navsearch-->
    <script src="${p:get('system.ctx')}js/modules/navsearch/navsearch.module.js" type="text/javascript" charset="utf-8"></script>
    <script src="${p:get('system.ctx')}js/modules/navsearch/navsearch.directive.js" type="text/javascript" charset="utf-8"></script>
    <script src="${p:get('system.ctx')}js/modules/navsearch/navsearch.service.js" type="text/javascript" charset="utf-8"></script>
@@ -84,7 +85,8 @@
    <!--lazyload-->
    <script src="${p:get('system.ctx')}js/modules/lazyload/lazyload.module.js" type="text/javascript" charset="utf-8"></script>
    <script src="${p:get('system.ctx')}js/modules/lazyload/lazyload.config.js" type="text/javascript" charset="utf-8"></script>
-   <script src="${p:get('system.ctx')}js/modules/lazyload/lazyload.constants.js" type="text/javascript" charset="utf-8"></script>
+  <%--  <script src="${p:get('system.ctx')}js/modules/lazyload/lazyload.constants.js" type="text/javascript" charset="utf-8"></script>
+   --%> <script src="${p:get('system.ctx')}sys/getLazyload" type="text/javascript" charset="utf-8"></script>
    <!--colors-->
    <script src="${p:get('system.ctx')}js/modules/colors/colors.module.js" type="text/javascript" charset="utf-8"></script>
    <script src="${p:get('system.ctx')}js/modules/colors/colors.service.js" type="text/javascript" charset="utf-8"></script>
