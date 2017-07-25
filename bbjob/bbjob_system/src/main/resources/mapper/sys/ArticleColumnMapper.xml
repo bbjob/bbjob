@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rundatop.sys.mapper.ArticleColumnMapper" >
+  <resultMap id="BaseResultMap" type="com.rundatop.sys.model.ArticleColumn" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="article_id" property="articleId" jdbcType="VARCHAR" />
+    <result column="column_id" property="columnId" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="creater_id" property="createrId" jdbcType="VARCHAR" />
+    <result column="free1" property="free1" jdbcType="VARCHAR" />
+    <result column="free2" property="free2" jdbcType="VARCHAR" />
+    <result column="free3" property="free3" jdbcType="VARCHAR" />
+  </resultMap>
+  <select  id="getArtRefColList" resultType="map">
+  SELECT column_id as columnId, COUNT(1) as colArtSum FROM article_column arco
+  LEFT JOIN channel_columns chco ON arco.column_id = chco.id
+  GROUP BY column_id
+  </select>
+  
+</mapper>
