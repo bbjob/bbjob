@@ -13,7 +13,7 @@
         <jdk.version>1.8</jdk.version>
         <!--  依赖版本  -->
    		<mysql.version>5.1.39</mysql.version>
-   		<mapper.version>3.4.1</mapper.version>
+   		<mapper.version>3.4.2</mapper.version>
    		<mybatis.version>3.4.2</mybatis.version>
    		<spring.version>4.3.5.RELEASE</spring.version>
         <mybatis.spring.version>1.2.4</mybatis.spring.version>
@@ -347,7 +347,12 @@
     <artifactId>kaptcha</artifactId>
     <version>2.3</version>
 </dependency>    
-  
+    <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+<dependency>
+    <groupId>org.freemarker</groupId>
+    <artifactId>freemarker</artifactId>
+    <version>2.3.26-incubating</version>
+</dependency>
  </dependencies>
  
  
@@ -379,10 +384,10 @@
   
  <modules>
  	<module>framework-support</module>
- 	<module>web-demo2</module>
+ 	<module>ng2-demo</module>
  	<module>bbjob_system</module>
  	<module>bbjob_security</module>
  	<module>ng-framework-seed</module>
- 	<module>bbjob_system_job</module>
+ 	<module>ng2_bbjob_system</module>
  </modules>
 </project>
