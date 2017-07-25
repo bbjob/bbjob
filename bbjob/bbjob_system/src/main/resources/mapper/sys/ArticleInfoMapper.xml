@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rundatop.sys.mapper.ArticleInfoMapper">
+  <resultMap id="BaseResultMap" type="com.rundatop.sys.model.ArticleInfo">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="creater_id" jdbcType="VARCHAR" property="createrId" />
+    <result column="free1" jdbcType="VARCHAR" property="free1" />
+    <result column="free2" jdbcType="VARCHAR" property="free2" />
+    <result column="free3" jdbcType="VARCHAR" property="free3" />
+    <result column="key_wordd" jdbcType="VARCHAR" property="keyWordd" />
+    <result column="article_title" jdbcType="VARCHAR" property="articleTitle" />
+    <result column="is_original" jdbcType="INTEGER" property="isOriginal" />
+    <result column="fee_type" jdbcType="INTEGER" property="feeType" />
+    <result column="fee" jdbcType="INTEGER" property="fee" />
+    <result column="article_type" jdbcType="INTEGER" property="articleType" />
+    <result column="article_source" jdbcType="VARCHAR" property="articleSource" />
+    <result column="arcticle_summary" jdbcType="VARCHAR" property="arcticleSummary" />
+    <result column="like_count" jdbcType="INTEGER" property="likeCount" />
+    <result column="scan_count" jdbcType="INTEGER" property="scanCount" />
+    <result column="entry_date" jdbcType="TIMESTAMP" property="entryDate" />
+    <result column="order_time" jdbcType="TIMESTAMP" property="orderTime" />
+    <result column="is_top" jdbcType="INTEGER" property="isTop" />
+    <result column="article_title2" jdbcType="VARCHAR" property="articleTitle2" />
+    <result column="title_all" jdbcType="VARCHAR" property="titleAll" />
+    <result column="sub_title" jdbcType="VARCHAR" property="subTitle" />
+    <result column="old_title" jdbcType="VARCHAR" property="oldTitle" />
+    <result column="arctlcle_author" jdbcType="VARCHAR" property="arctlcleAuthor" />
+    <result column="author_id" jdbcType="VARCHAR" property="authorId" />
+    <result column="pic1" jdbcType="VARCHAR" property="pic1" />
+    <result column="pic2" jdbcType="VARCHAR" property="pic2" />
+    <result column="arcticle_status" jdbcType="INTEGER" property="arcticleStatus" />
+    <result column="source_id" jdbcType="VARCHAR" property="sourceId" />
+    <result column="is_perfect" jdbcType="INTEGER" property="isPerfect" />
+    <result column="comment_type" jdbcType="INTEGER" property="commentType" />
+    <result column="survey_id" jdbcType="VARCHAR" property="surveyId" />
+    <result column="html_url" jdbcType="VARCHAR" property="htmlUrl" />
+    <result column="file" jdbcType="VARCHAR" property="file" />
+    <result column="author_name" jdbcType="VARCHAR" property="authorName" />
+    <result column="content_source" jdbcType="VARCHAR" property="contentSource" />
+    <result column="free4" jdbcType="VARCHAR" property="free4" />
+    <result column="free5" jdbcType="VARCHAR" property="free5" />
+    <result column="free6" jdbcType="VARCHAR" property="free6" />
+     <!-- 评测列表用 -->
+    <result column="is_excellent" jdbcType="INTEGER" property="isExcellent" />
+    <result column="dastatus_time" jdbcType="TIMESTAMP" property="dastatusTime" />
+    <!-- 评测列表用 -->
+    <result column="idno" jdbcType="INTEGER" property="idno" />
+    
+    <result column="art_Col_Id" jdbcType="VARCHAR" property="artColId" />
+    
+  </resultMap>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <select id="getArtListByExample" resultMap="BaseResultMap">
+  	select info.*, col.id as art_Col_Id
+    	from article_info info
+    	left join article_column col ON info.id = col.article_id
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  	
+  	where col.column_id = #{colId, jdbcType=VARCHAR}
+  </select>
+  
+  <select id="artNumCount"  resultType="java.lang.Integer">
+      SELECT count(1)
+	  FROM article_info ai <if test="columnId !=null or channelId !=null">LEFT JOIN article_column ac ON ai.id=ac.article_id LEFT JOIN channel_columns cc ON ac.column_id=cc.id</if> 
+	  where  ai.arcticle_status <![CDATA[ <>]]> 4 
+	  <if test="columnId !=null"> AND cc.id=#{columnId} </if>
+	  <if test="channelId !=null"> AND cc.channel_id=#{channelId} </if>
+	  <if test="name !=null"> AND ai.article_title LIKE #{name} </if>
+  </select>
+  
+   <select id="selInColArticleCount"  resultType="java.lang.Integer">
+      SELECT count(1)
+	  FROM article_info ai <if test="columnId !=null or channelId !=null">LEFT JOIN article_column ac ON ai.id=ac.article_id LEFT JOIN channel_columns cc ON ac.column_id=cc.id</if> 
+	  where  ai.arcticle_status <![CDATA[ <>]]> 4 AND  ai.id IN (SELECT article_id FROM article_column where ai.id=article_id AND column_id=#{colId} ) 
+	  <if test="columnId !=null"> AND cc.id=#{columnId} </if>
+	  <if test="channelId !=null"> AND cc.channel_id=#{channelId} </if>
+	  <if test="name !=null"> AND ai.article_title LIKE #{name} </if>
+  </select>
+  
+  <select id="selNotinColArticle" resultMap="BaseResultMap">
+      SELECT ai.*,ac.column_id,cc.channel_id 
+	  FROM article_info ai LEFT JOIN article_column ac ON ai.id=ac.article_id LEFT JOIN channel_columns cc ON ac.column_id=cc.id 
+	  where  ai.arcticle_status <![CDATA[ <>]]> 4 AND  ai.id NOT IN (SELECT article_id FROM article_column where ai.id=article_id AND column_id=#{colId} ) 
+	  <if test="columnId !=null"> AND cc.id=#{columnId} </if>
+	  <if test="channelId !=null"> AND cc.channel_id=#{channelId} </if>
+	  <if test="name !=null"> AND ai.article_title LIKE #{name} </if>
+	      ORDER BY ai.create_time desc
+	  limit #{begin, jdbcType=INTEGER},  #{size, jdbcType=INTEGER}   
+	       
+  </select>
+  
+    <select id="selectByGenereateParams" resultMap="BaseResultMap">
+  	select 
+	<choose>
+		<when test="record.titleLength != null"> 
+			left(ai.article_title, #{record.titleLength, jdbcType=INTEGER}) as articleTitle,
+		</when> 
+		<otherwise>
+			ai.article_title,
+		</otherwise>
+	</choose>
+  	
+  	<choose>
+		<when test="record.abstractLength != null"> 
+			left(ai.arcticle_summary, #{record.abstractLength, jdbcType=INTEGER}) as arcticleSummary,
+		</when> 
+		<otherwise>
+			ai.arcticle_summary,
+		</otherwise>
+	</choose>
+	ai.pic1, ai.author_name, ai.scan_count, ai.entry_date, ai.free2
+	from article_info ai
+	left join article_column ac on ai.id = ac.article_id
+	where ac.column_id = #{record.clumnId, jdbcType=VARCHAR}
+  	
+  	<if test="record.articleAuthor != null">
+      AND ai.author_name = #{record.articleAuthor, jdbcType=VARCHAR}
+    </if>
+  	
+  	<choose>
+  		<when test="record.articleType == '0'.toString() ">
+  			AND ai.article_type = 0
+  		</when>
+  		
+  		<when test="record.articleType == '1'.toString() ">
+  			AND ai.article_type = 3
+  		</when>
+  		
+  		<otherwise>
+  			AND (ai.article_type = 0 or ai.article_type = 3)
+		</otherwise>  		
+  	</choose>
+  	
+  	<choose>
+		<when test="record.original == 1 ">
+			AND ai.is_original = 1
+		</when>  	
+  	
+		<when test="record.original == 2 ">
+			AND ai.is_original = 0
+		</when>
+  	</choose>
+
+  	<choose>
+  		<when test="record.sortType == 0"> 
+			 order by ai.entry_date DESC
+		</when> 
+  	
+  		<when test="record.sortType == 1"> 
+			order by ai.entry_date ASC
+		</when> 
+		
+		<when test="record.sortType == 2"> 
+			order by ai.scan_count DESC
+		</when> 
+		
+		<when test="record.sortType == 3"> 
+			order by ai.scan_count ASC
+		</when> 
+  			
+  		<otherwise>
+  			order by ai.entry_date
+		</otherwise>
+  	</choose>
+  </select>
+  
+</mapper>
