@@ -1,5 +1,6 @@
 package com.rundatop.biz.service.impl;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,6 +9,9 @@ import java.util.Map;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import tk.mybatis.mapper.entity.Example;
+import tk.mybatis.mapper.entity.Example.Criteria;
 
 import com.rundatop.biz.service.FreeMarkerService;
 import com.rundatop.sys.dto.SysUser;
@@ -25,8 +29,6 @@ import com.rundatop.sys.model.SysUserFunction;
 import com.rundatop.sys.model.SysUserRole;
 
 import freemarkerUtil.FreeMarkerUtil;
-import tk.mybatis.mapper.entity.Example;
-import tk.mybatis.mapper.entity.Example.Criteria;
 
 @Service
 public class FreeMarkerServiceImpl implements FreeMarkerService{
@@ -43,7 +45,7 @@ public class FreeMarkerServiceImpl implements FreeMarkerService{
 	@Autowired
 	private SysLazyloadMapper sysLazyloadMapper;
 	@Override
-	public String getRoutes(SysUser user) {
+	public void getRoutes(SysUser user, PrintWriter out) {
 		//1.筛选用户权限所对应的功能菜单， 默认超管拥有所有权限 type=-1
 		Example sfEx = new Example(SysFunction.class);
 		if (user.getUserType() != -1) {
@@ -62,7 +64,7 @@ public class FreeMarkerServiceImpl implements FreeMarkerService{
 		Map<String, Object> root = new HashMap<String, Object>();
 		root.put("customRoutes", customRoutes);
 		FreeMarkerUtil fmu = new FreeMarkerUtil();
-		return fmu.print("routes.ftl", root);
+		fmu.print("routes.ftl", root, out);
 	}
 	
 	/**
@@ -173,10 +175,10 @@ public class FreeMarkerServiceImpl implements FreeMarkerService{
 	}
 
 	@Override
-	public String getLazyload() {
+	public void getLazyload(PrintWriter out) {
 		
 		Example ex = new Example(SysLazyload.class);
-//		ex.createCriteria();
+		ex.createCriteria();
 		List<SysLazyload> slList = sysLazyloadMapper.selectByExample(ex);
 		//1.拼接lazyload.constants.js定制部分
 		String customLazyload = getCustomLazyloadStr(slList);
@@ -185,7 +187,7 @@ public class FreeMarkerServiceImpl implements FreeMarkerService{
 		Map<String, Object> root = new HashMap<String, Object>();
 		root.put("customLazyload", customLazyload);
 		FreeMarkerUtil fmu = new FreeMarkerUtil();
-		return fmu.print("lazyload.ftl", root);
+		fmu.print("lazyload.ftl", root, out);
 	}
 	
 	/**

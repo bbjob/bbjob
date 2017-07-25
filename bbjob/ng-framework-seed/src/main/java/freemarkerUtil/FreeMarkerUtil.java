@@ -1,8 +1,7 @@
 package freemarkerUtil;
 
 import java.io.IOException;
-import java.io.StringWriter;
-import java.util.HashMap;
+import java.io.PrintWriter;
 import java.util.Map;
 
 import freemarker.template.Configuration;
@@ -33,28 +32,16 @@ public class FreeMarkerUtil {
 	 * 输出到控制台
 	 * 
 	 */
-	public String print(String name, Map<String, Object> root) {
-		String result = "";
+	public void print(String name, Map<String, Object> root, PrintWriter out) {
 		try {
-			StringWriter writer = new StringWriter();
 			Template temp = this.getTemplate(name);
 			temp.setEncoding("UTF-8");  
-			temp.process(root, writer);
-			result = writer.toString();
-			writer.close();
+			temp.process(root, out);
 		} catch (TemplateException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-		return result;
 	}
 
-	public static void main(String[] args) {
-		Map<String, Object> root = new HashMap<String, Object>();
-		root.put("username", "张三");
-		FreeMarkerUtil fmu = new FreeMarkerUtil();
-		System.out.println(fmu.print("test.ftl", root));
-	}
 }

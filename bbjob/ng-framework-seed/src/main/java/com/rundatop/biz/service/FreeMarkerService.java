@@ -1,10 +1,12 @@
 package com.rundatop.biz.service;
 
+import java.io.PrintWriter;
+
 import com.rundatop.sys.dto.SysUser;
 
 public interface FreeMarkerService {
 
-	String getRoutes(SysUser user); 
+	void getRoutes(SysUser user, PrintWriter out); 
 
-	String getLazyload(); 
+	void getLazyload(PrintWriter out); 
 }
