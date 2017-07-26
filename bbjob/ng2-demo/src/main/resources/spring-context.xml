@@ -47,13 +47,14 @@
 	  <property name="freemarkerVariables">
 		<map>
 			<entry key="picArtList" value-ref="picArtListDirective"></entry>
+			<entry key="commonLabel" value-ref="commonLabelDirective"></entry>
 		</map>
 	  </property>
 	    
 	 </bean>
  
   	<bean id="picArtListDirective" class="com.rundatop.biz.boardModel.directive.PicArtListDirective"></bean>   
-	
+	<bean id="commonLabelDirective" class="com.rundatop.biz.boardModel.directive.CommonLabelDirective"></bean> 
 	
 	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">  
         <property name="config">  
