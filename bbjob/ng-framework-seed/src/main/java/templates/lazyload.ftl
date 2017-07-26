@@ -154,6 +154,11 @@
 									name: 'table.nothing',
 									files: ['js/modules/server/tableNothing.directive/tableNothing.directive.js']
 								},
+								{
+									name : 'ckeditor',
+									files : [
+										'vendor/ckeditor/ckeditor.js' ]
+								},
 								
 								// 以上内容为固定功能模块↑↑↑↑↑↑↑↑↑↑
 
