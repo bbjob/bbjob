@@ -122,7 +122,7 @@ img{border:0;}
         .part1 .modalTable:nth-child(n+3){padding-top: 20px;margin-top: 20px;border-top: 1px solid #c6c6c6;}
       </style>
 
-        <@picArtParent boardID = "3087754F65DF434BBCE5F47E1E1357ED" extAttr = "className=part1_" />
+        <@CommonLabelParent boardID = "3087754F65DF434BBCE5F47E1E1357ED" extAttr = "className=part1_&flagBit=1" />
         </div>
 	</td>
     <td width="31" valign="top">&nbsp;</td>
