@@ -1,0 +1,989 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>2017年世界电信和信息社会日特别策划_通信世界网</title>
+<script language=javascript src="/mnt/ftl/20170517/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/mnt/ftl/20170517/js/jquery_slide.js"></script>
+<link type="text/css" rel="stylesheet" href="/mnt/ftl/20170517/css/reset.css" />
+<link type="text/css" rel="stylesheet" href="/mnt/ftl/20170517/css/style.css" />
+<script language=javascript src="/mnt/ftl/20170517/js/normor.js"></script>
+<style type="text/css">
+body,td,th,div {
+  font-family: 微软雅黑;
+	font-size: 14px;
+	color: #333;
+}
+body {
+	background-color: #fff;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+img{border:0;}
+.for_left{ float:left;}
+.left1{float:left;}
+.leftleft{ margin-left:45px;}
+.leftleftb{ margin-left:40px;}
+.titlezi{  font-size: 24px; color:#3940AB;}
+.neirz{ font-size:13px; color:#64676b; line-height:20px;}
+.titlezib{ font-size:18px; color:#2d2d2d;}
+.xiaozilan{color:#005fb1;font-size: 12px;line-height:24px;}
+.contentzi{ color:#6c6c6c;}
+.jiaodainz,.jiaodainz a:link,.jiaodainz a:visited,.jiaodainz a:hover,.jiaodainz a:active{ color:#3b3d3f; font-size:18px; text-align:center;}
+.clear{clear:both;}
+.coushu{ height:11px;line-height:11px;}
+
+.focus img{ width:305px; height:203px;}
+.mid{ margin:0 auto; width:1000px;}
+.top{ background:url(/mnt/ftl/20170517/images/banner.jpg) center center no-repeat; height:301px; padding-top:1px;}
+
+ a:visited { text-decoration: none ;color: #333 ;font-size:14px;}
+ 		a:hover { text-decoration: none; color: red ;font-size:14px;}
+		a:link { text-decoration: none ;font-size:14px; color: #333 ;}
+		 a:active { text-decoration: none;  font-size:14px;color: #333 ;}
+		 
+.hyyc{height:280px;width:665px;overflow-y:scroll;text-align:center;}
+.hyyc p{margin:0;padding:0;}
+
+.ztfc{width:100%;/*height:1300px;*/overflow:hidden;}
+.ztfc img{width:305px;height:203px;}
+.ztfc_title{text-align:center;padding:12px 0 17px 0;}
+.ztfc_title, .ztfc_title a:link, .ztfc_title a:visited, .ztfc_title a:hover, .ztfc_title a:active{font-size:18px;line-height:24px;font-family:微软雅黑;color:#3b3d3f;text-decoration:none;}
+
+.jb td{background-color:#f0f0f0;}
+.jb_mingzi{padding:2px 0;text-align:center;font-weight:600;}
+.jb_zhiwei{padding-bottom:5px;text-align:center;}
+.jiab td td{text-align:center;}
+
+.hyyc p{padding:0;margin:0;}
+
+.bza{font-size:18px;color:#444;line-height:36px;font-weight:normal;text-indent:2em;padding:0 20px;}
+
+</style></head> 
+<body>
+
+<#include "/ftl/header.ftl" />
+
+<div class="top" style="background-color:#666666"></div>
+
+<div style="background-color:#f6f6f6;padding-top:50px;padding-bottom:50px;">
+	<div class="mid" style="font-size:18px;font-weight:bold;line-height:32px;text-indent:40px;padding-left:20px;color:#6e6e6e;">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="34" valign="top" style="padding-top:15px;" bgcolor=""><img src="/mnt/ftl/20170517/images/bza_left.jpg" /></td>
+    <td class="bza"><p>一年一度的5 17世界电信和信息社会日即将到来，国际电信联盟将今年“世界电信日”主题确定为“发展大数据，扩大影响力”，这是国际电联首次以大数据为主题，国际电联旨在充分发挥大数据的潜力，使之转化为可促进发展的信息机遇。</p>
+      <p> 值此“世界电信日”来临之际，《通信世界全媒体》将迎合当下大数据发展的良好契机，希望借助信息通信产业的群策群力，搭建政府研究机构、电信运营企业以及大数据相关企业技术交流与观点碰撞的桥梁与平台，助推大数据产业链的健康、快速发展，为推动经济增长发挥积极作用。</p></td>
+    <td width="34" valign="bottom" style="padding-bottom:15px;"><img src="/mnt/ftl/20170517/images/bza_right.jpg" /></td>
+  </tr>
+</table>
+  </div>
+</div>
+
+<div class="mid" style="margin-top:50px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="340" valign="top" class="focusPic">
+		<style>
+		.toutiao_title,.toutiao_title a:link,.toutiao_title a:hover,.toutiao_title a:active,.toutiao_title a:visited{font-size:18px;color:#4f4f4f;font-weight:600;}
+		.toutiao_title a:hover{color:#f75757;}
+		.toutiao_line{padding-top:20px;margin-top:20px;border-top:1px solid #c6c6c6;}
+		.toutiao_content{color:#666;margin-top:10px;line-height:22px;font-size:14px;}
+		</style>
+
+        <@picArtList boardID = "14066" className = "toutiao_">
+          <#if conf.showTemplate == "201tc">
+            <#list data as valueList>
+              <div class="toutiao_title"><a href="${data.link}" target="_blank">${data.title}</a></div>
+              <div class="toutiao_content">${data.content}</div>
+
+            </#list>
+          </#if>
+        </@picArtList>
+
+		<div class="toutiao_title"><a href="http://www.cww.net.cn/article?id=406400" target="_blank">张峰：工信部将从五方面促进大数据发展</a></div>
+		<div class="toutiao_content">张峰指出，今年5.17活动以“发展大数据、扩大影响力”为主题，紧扣当前行业和产业发展的脉搏，..</div>
+
+		<div class="toutiao_title toutiao_line"><a href="http://www.cww.net.cn/article?id=406005" target="_blank">春江水暖  国内大数据市场全面拥抱开源</a></div>
+		<div class="toutiao_content">虽然国内大数据相较国外起步较晚，但增长态势却一路上扬，完美诠释了典型的“中国速度”，不仅..</div>
+
+	</td>
+    <td width="31" valign="top">&nbsp;</td>
+    <td width="629" valign="top">
+	<div class="toutiao">
+	<style>	
+	.toutiao{padding-top:4px;background:url(/mnt/ftl/20170517/images/focusPic_bg.jpg) repeat-x;}
+	.toutiao #cww3021{text-align:left;width:409px;}
+	.toutiao #cww3021 img{width:410px;height:250px;border:0;}
+	.toutiao #cww3022{vertical-align:top;padding:10px 0px;}
+	.toutiao #cww3022,.toutiao #cww3022 a:link,.toutiao #cww3022 a:visited,.toutiao #cww3022 a:hover,.toutiao #cww3022 a:active{font-size:18px;color:#464646;line-height:28px;font-weight:600;}
+	.toutiao #cww3022 a:hover{color:#f30;}
+	.toutiao #cww3023{vertical-align:top;line-height:24px;color:#666;}
+	.toutiao #cww3022,.toutiao #cww3023{background-color:#f3f3f3;padding-left:18px;padding-right:10px;}
+	</style>
+	<table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+<tr id="cwwtr14071_1">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313155.htm' class='' title='今年的“电信日”主题，多给各级政府讲讲' target='_blank'><img src='/mnt/ftl/20170517/images/201751235083745.png' border=0 width='409' height='237' title='今年的“电信日”主题，多给各级政府讲讲'></a></td>
+    <td id="cww3022"><a href='/stat/stat313155.htm' class='' title='今年的“电信日”主题，多给各级政府讲讲' target='_blank'>今年的“电信日”主题，多给各级政府讲讲</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">如今大数据产业“热潮滚滚”，许多企业都将其视为“金矿”，准备在这个行业大展身手。但不可否认的是，目前大数据应..</td>
+  </tr>
+</table>
+</td>
+</tr></table>
+
+	</div>
+	</td>
+  </tr>
+</table>
+
+</div>
+
+<div class="mid" style="margin-top:50px;">
+
+	<style>
+	.yysNewsPer{width:222px;overflow:hidden;float:left;background-color:#1483F9;}
+	.yysNewsPer2{margin-left:37px;}
+	.yysNewsPics{background-color:#fff;}
+	.yysNewsPics img{border:0;width:222px;height:150px;}
+	.yysNewsTitle{padding:10px 8px 0 8px;text-align:center;}
+	.yysNewsTitle,.yysNewsTitle a:link,.yysNewsTitle a:hover,.yysNewsTitle a:active,.yysNewsTitle a:visited{font-size:16px;color:#f8f8f8;font-weight:600;line-height:26px;}
+	.yysNewsTitle a:hover{color:#ffff00;}
+	.yysNewsName{font-size:16px;color:#f8f8f8;font-weight:bold;text-align:center;padding:15px 0 10px 0;border-bottom:1px solid #f8f8f8;width:80%;margin:0 auto;}
+	.yysNewsContent{color:#f0f0f0;padding:8px 8px 18px 8px;line-height:22px;font-size:14px;}
+	</style>
+	
+	<div class="yysNewsPer">
+		<div class="yysNewsPics"><a href="/zhuanti/html/2017/5/17/2017517914412763.htm" target="_blank"><img src="/mnt/ftl/20170517/images/201751733539215.png"></a></div>
+		<div class="yysNewsName">赵厚麟</div>
+		<div class="yysNewsTitle"><a href="/zhuanti/html/2017/5/17/2017517914412763.htm" target="_blank">国际电信联盟秘书长</a></div>
+		<div class="yysNewsContent">通过分析数据而实现的洞察力有助于在国家、区域和国际层面做出实事求是的决策，协助推动所有17项联合国2030可持续发..</div>
+	</div>
+	
+	<div class="yysNewsPer yysNewsPer2">
+		<div class="yysNewsPics"><a href="/zhuanti/html/2017/5/17/20175179208646.htm" target="_blank"><img src="/mnt/ftl/20170517/images/201751733223067.png"></a></div>
+		<div class="yysNewsName">尚冰</div>
+		<div class="yysNewsTitle"><a href="/zhuanti/html/2017/5/17/20175179208646.htm" target="_blank">中国移动董事长</a></div>
+		<div class="yysNewsContent">推动“大连接”战略落地 培育转型发展新动能，这既体现了大数据产业在促进经济和社会进步方面的重要驱动作用，也对..</div>
+	</div>
+	
+	<div class="yysNewsPer yysNewsPer2">
+		<div class="yysNewsPics"><a href="/zhuanti/html/2017/5/17/2017517923306969.htm" target="_blank"><img src="/mnt/ftl/20170517/images/201751733954769.jpg"></a></div>
+		<div class="yysNewsName">王晓初</div>
+		<div class="yysNewsTitle"><a href="/zhuanti/html/2017/5/17/2017517923306969.htm" target="_blank">中国联通董事长</a></div>
+		<div class="yysNewsContent">中国联通将着力提升对大数据的“资源掌控、技术支撑和价值挖掘”三大能力，规模拓展大数据新空间，打造创新业务新引..</div>
+	</div>
+	
+	<div class="yysNewsPer yysNewsPer2">
+		<div class="yysNewsPics"><a href="/zhuanti/html/2017/5/17/2017517956308738.htm" target="_blank"><img src="/mnt/ftl/20170517/images/201751735845009.jpg"></a></div>
+		<div class="yysNewsName">杨杰</div>
+		<div class="yysNewsTitle"><a href="/zhuanti/html/2017/5/17/2017517956308738.htm" target="_blank">中国电信董事长</a></div>
+		<div class="yysNewsContent">中国电信秉承“深化挖掘应用打造企业差异化竞争力、全面开放合作共建大数据产业生态”的发展理念，积极探索大数据专..</div>
+	</div>
+		
+</div>
+
+<div class="clear"></div>
+
+<div style="background-color:#445C8A;padding-bottom:40px;padding-top:50px;margin-top:50px;">
+<div class="mid">
+<div>
+		<div style="text-align:center;margin-bottom:10px;"><img src="/mnt/ftl/20170517/images/xcbd_t.jpg" /></div>
+		<div class="hyzb">
+			
+			<style>
+			.hyzb #cwwtd{background-color:#fff;padding-bottom:25px;width:33%;vertical-align:top;border-top:3px solid #fff;padding-top:25px; background:none;}
+			.hyzb #cwwtr14070_1 #cwwtd{border-top:0;}
+			.hyzb #modeTable{width:326px;height:396px;overflow:hidden;background:url(images/perBG.png) center center no-repeat;background-color:#fff;}
+			.hyzb #cww3041{text-align:center;vertical-align:top;padding-top:7px;height:195px;}
+			.hyzb #cww3041 img{width:314px;height:195px;border:0;}
+			.hyzb #cww3042{padding:25px 0 15px 0;vertical-align:top;height:56px;}
+			.hyzb #cww3042,.hyzb #cww3042 a:link,.hyzb #cww3042 a:visited,.hyzb #cww3042 a:hover,.hyzb #cww3042 a:active{font-size:20px;line-height:28px;font-weight:600;color:#444;text-decoration:none;}
+			.hyzb #cww3042 a:hover{color:#f30;}
+			.hyzb #cww3043{color:#777;font-size:16px;vertical-align:top;line-height:30px;height:100px;}
+			.hyzb #cww3042,.hyzb #cww3043{padding-left:16px;padding-right:12px;}
+			</style>
+			<table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+<tr id="cwwtr14070_1">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/stat/stat313218.htm' class='' title='中国电信高同庆：大数据为迎接智能时代提供重要支撑' target='_blank'><img src='/mnt/ftl/20170517/images/201751772742177.png' border=0 width='314' height='195' title='中国电信高同庆：大数据为迎接智能时代提供重要支撑'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/stat/stat313218.htm' class='' title='中国电信高同庆：大数据为迎接智能时代提供重要支撑' target='_blank'>中国电信高同庆：大数据为迎接智能时代提供重要支撑</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">当前以大数据、云计算、人工智能为代表的现代信息通信技术，正在引领新一..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/stat/stat313217.htm' class='' title='张峰：工信部将从五方面促进大数据发展' target='_blank'><img src='/mnt/ftl/20170517/images/201751771305433.png' border=0 width='314' height='195' title='张峰：工信部将从五方面促进大数据发展'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/stat/stat313217.htm' class='' title='张峰：工信部将从五方面促进大数据发展' target='_blank'>张峰：工信部将从五方面促进大数据发展</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">张峰指出，今年5.17活动以“发展大数据、扩大影响力”为主题，紧扣当前行..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/20175171618228042.htm' class='' title='中企网络詹东东：创新ICT服务赋能行业变革' target='_blank'><img src='/mnt/ftl/20170517/images/201751758770481.jpg' border=0 width='314' height='195' title='中企网络詹东东：创新ICT服务赋能行业变革'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/20175171618228042.htm' class='' title='中企网络詹东东：创新ICT服务赋能行业变革' target='_blank'>中企网络詹东东：创新ICT服务赋能行业变革</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">大数据其实是我们的想象力，想象力有多大，它发挥的作用有多大，而且它现..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14070_4">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/20175171530463099.htm' class='' title='中国信通院刘睿：国际社会治理的大数据应用' target='_blank'><img src='/mnt/ftl/20170517/images/201751755997966.jpg' border=0 width='314' height='195' title='中国信通院刘睿：国际社会治理的大数据应用'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/20175171530463099.htm' class='' title='中国信通院刘睿：国际社会治理的大数据应用' target='_blank'>中国信通院刘睿：国际社会治理的大数据应用</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">在十八大五中全会中五大发展理念的指导下，提出社会治理的精细化。</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/20175171538583259.htm' class='' title='中国电信高歆雅：智能时代，中国的新起点' target='_blank'><img src='/mnt/ftl/20170517/images/201751756491553.jpg' border=0 width='314' height='195' title='中国电信高歆雅：智能时代，中国的新起点'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/20175171538583259.htm' class='' title='中国电信高歆雅：智能时代，中国的新起点' target='_blank'>中国电信高歆雅：智能时代，中国的新起点</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">我们未来更多的生活将会迁移由网络和智能构成的这样一套虚拟空间当中，我..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/20175171518386335.htm' class='' title='中国联通赵越：合作促共赢，数据塑梦想' target='_blank'><img src='/mnt/ftl/20170517/images/201751755212098.jpg' border=0 width='314' height='195' title='中国联通赵越：合作促共赢，数据塑梦想'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/20175171518386335.htm' class='' title='中国联通赵越：合作促共赢，数据塑梦想' target='_blank'>中国联通赵越：合作促共赢，数据塑梦想</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">数据对运营商来讲，我们有很好的渊源。实际上从电信运营商最早的数据局，..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14070_7">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/20175171427279894.htm' class='' title='中国移动孙少陵：大连接成就大数据，大数据繁荣行业创新' target='_blank'><img src='/mnt/ftl/20170517/images/201751752192561.jpg' border=0 width='314' height='195' title='中国移动孙少陵：大连接成就大数据，大数据繁荣行业创新'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/20175171427279894.htm' class='' title='中国移动孙少陵：大连接成就大数据，大数据繁荣行业创新' target='_blank'>中国移动孙少陵：大连接成就大数据，大数据繁荣行业创新</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">大数据已经从以前的一些概念，已经慢慢开始落地了。另外一个方面，在国家..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/20175171453503488.htm' class='' title='中国电信吴章先：建数据生态，享智慧未来' target='_blank'><img src='/mnt/ftl/20170517/images/201751754583293.jpg' border=0 width='314' height='195' title='中国电信吴章先：建数据生态，享智慧未来'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/20175171453503488.htm' class='' title='中国电信吴章先：建数据生态，享智慧未来' target='_blank'>中国电信吴章先：建数据生态，享智慧未来</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">在大环境的背景下，人工智能、大数据、移动互联网、物联网和云计算纷纷在..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/20175171350494835.htm' class='' title='中兴通讯罗圣美：数赢未来，中兴通讯大数据产业实践' target='_blank'><img src='/mnt/ftl/20170517/images/201751751197261.jpg' border=0 width='314' height='195' title='中兴通讯罗圣美：数赢未来，中兴通讯大数据产业实践'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/20175171350494835.htm' class='' title='中兴通讯罗圣美：数赢未来，中兴通讯大数据产业实践' target='_blank'>中兴通讯罗圣美：数赢未来，中兴通讯大数据产业实践</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">中兴通讯发展主要分两个部分，一个就是平台，一个是生态。从平台来说，中..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14070_10">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/2017517122333647.htm' class='' title='联想毕巍:打造智慧城市泛数字化是基础' target='_blank'><img src='/mnt/ftl/20170517/images/201751747942802.jpg' border=0 width='314' height='195' title='联想毕巍:打造智慧城市泛数字化是基础'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/2017517122333647.htm' class='' title='联想毕巍:打造智慧城市泛数字化是基础' target='_blank'>联想毕巍:打造智慧城市泛数字化是基础</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">2017年5月17日，正值一年一度的5.17电信日，世界电信和信息社会日大会在..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/2017517114154327.htm' class='' title='大唐电信陈山枝：5G移动边缘计算与大数据结合的创新应用' target='_blank'><img src='/mnt/ftl/20170517/images/201751743588662.jpg' border=0 width='314' height='195' title='大唐电信陈山枝：5G移动边缘计算与大数据结合的创新应用'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/2017517114154327.htm' class='' title='大唐电信陈山枝：5G移动边缘计算与大数据结合的创新应用' target='_blank'>大唐电信陈山枝：5G移动边缘计算与大数据结合的创新应用</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">面向未来重要的是数据、连接，连接大数据场景和用户体验。所以未来三大应..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td id="cww3041"><a href='/zhuanti/html/2017/5/17/20175171122385279.htm' class='' title='中国普天陶雄强：打造智慧医疗养老云平台 助力大健康产业升级' target='_blank'><img src='/mnt/ftl/20170517/images/201751741845734.jpg' border=0 width='314' height='195' title='中国普天陶雄强：打造智慧医疗养老云平台 助力大健康产业升级'></a></td>
+  </tr>
+  <tr>
+    <td id="cww3042"><a href='/zhuanti/html/2017/5/17/20175171122385279.htm' class='' title='中国普天陶雄强：打造智慧医疗养老云平台 助力大健康产业升级' target='_blank'>中国普天陶雄强：打造智慧医疗养老云平台 助力大健康产业升级</a></td>
+  </tr>
+  <tr>
+    <td id="cww3043">什么是大数据，我想我自己理解的，我们现在所有的事物都是用两种方式来描..</td>
+  </tr>
+</table>
+</td>
+</tr></table>
+
+		</div>
+	</div>
+</div>
+</div>
+
+<div style="margin-top:50px;padding-bottom:40px;">
+	<div class="mid">
+		<div style="padding-bottom:15px;text-align:center;"><img src="/mnt/ftl/20170517/images/zjgd_t.jpg" /></div>
+		<div style="text-align:center;">
+		
+	<style>	
+	.zjgdTitle{padding:0 10px;margin-top:20px;text-align:center;height:46px;width:452px;float:left;overflow:hidden;background:url(/mnt/ftl/20170517/images/images/zjgd_bg.jpg) center center no-repeat;}
+	.zjgdTitle,.zjgdTitle a:link,.zjgdTitle a:hover,.zjgdTitle a:active,.zjgdTitle a:visited{font-size:18px;color:#555;font-weight:600;line-height:46px;}
+	..zjgdTitle a:hover{color:#ff3300;}
+	</style>
+	
+		<div class="zjgdTitle"><a href="http://www.cww.net.cn/article?id=406039" target="_blank">数据挖掘：隐私保护与价值挖掘的度如何把握？</a></div>
+	
+		<div class="zjgdTitle"><a href="http://www.cww.net.cn/article?id=406038" target="_blank">人工智能+大数据催生新生态模式</a></div>
+	
+		<div class="zjgdTitle"><a href="http://www.cww.net.cn/article?id=406037" target="_blank">数据开放共享的桎梏与破解</a></div>
+	
+		<div class="zjgdTitle"><a href="http://www.cww.net.cn/article?id=406034" target="_blank">破解大数据盈利困局 人工智能成突破口</a></div>
+		
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div style="margin-top:50px;padding:40px 0;background-color:#F8F9FB;">
+	<div class="mid">
+		<div style="padding-bottom:20px;text-align:center;"><img src="/mnt/ftl/20170517/images/tbbd_t.jpg" /></div>
+	<style>
+	.yys,.yys li{padding:0;margin:0;list-style:none;cursor:pointer;}
+	.yys{width:600px;margin:0 auto;}
+	.yys ul{}
+	.yys li{float:left;width:199px;text-align:center;padding:5px 0;}
+	.yys li div{text-align:center;height:30px;line-height:30px;font-size:22px;font-weight:600;letter-spacing:3px;color:#fff;}
+	.yys_cur{background:url(/mnt/ftl/20170517/images/tbbd_t_bg_cur.jpg) no-repeat center center;}
+	.yys_bg{background:url(/mnt/ftl/20170517/images/tbbd_t_bg_b.jpg) no-repeat center center;}
+	.yys_cur,.yys_bg{text-align:center;height:49px;width:137px;overflow:hidden;}
+	.yys_cur div,.yys_bg div{padding-top:10px;}
+	
+	.show{padding-top:20px;}
+	.show #cwwtd img{width:214px;height:128px;border:0;}
+	.show #modeTable{margin-top:-1px;}
+	.show #cwwtd{padding:30px 0;border-top:1px solid #ccc;}
+	.show #cww3021{text-align:left;width:251px;}
+	.show #cww3022{vertical-align:top;padding:10px 0px;}
+	.show #cww3022,.show #cww3022 a:link,.show #cww3022 a:visited,.show #cww3022 a:hover,.show #cww3022 a:active{font-size:18px;color:#666;line-height:28px;font-weight:600;}
+	.show #cww3022 a:hover{color:#f30;}
+	.show #cww3023{vertical-align:top;line-height:24px;color:#777;}
+	.show #cww3022,.show #cww3023{padding-right:10px;}
+	.show #cwwtr14068_1 #cwwtd,.show #cwwtr14069_1 #cwwtd,.show #cwwtr14081_1 #cwwtd{border-top:none;}
+	</style>
+  	<ul class="yys">
+		<li class="yys_cur"><div>运营商</div></li>
+		<li class="yys_bg"><div>设备商</div></li>
+		<li class="yys_bg"><div>资讯集锦</div></li>
+	</ul>
+	<div class="clear"></div>
+	<div class="show"><table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+<tr id="cwwtr14068_1">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313198.htm' class='' title='中国电信杨杰517致辞：发展大数据 拥抱智能未来' target='_blank'><img src='/mnt/ftl/20170517/images/201751735243489.jpg' border=0 width='214' height='128' title='中国电信杨杰517致辞：发展大数据 拥抱智能未来'></a></td>
+    <td id="cww3022"><a href='/stat/stat313198.htm' class='' title='中国电信杨杰517致辞：发展大数据 拥抱智能未来' target='_blank'>中国电信杨杰517致辞：发展大数据 拥抱智能未来</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在这个生机盎然的季节里，我们迎来了世界电信和信息社会日。今年世界电信和信息社会日的主题是“发展大数据、扩大影响力”，这一主题深刻反映了大数据等现代信息技术在社会经济发展中的重要作用。当前，以大数据、云计算、物联网、人工智能为代表的现代信息通信技术正在引发新一轮的产业革命，催生出更具创新力的产品，激发出全新的..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14068_2">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/17/2017517934151442.htm' class='' title='中国移动尚冰517致辞： 推动“大连接”战略落地 培育转型发展新动能' target='_blank'><img src='/mnt/ftl/20170517/images/201751734559005.jpg' border=0 width='214' height='128' title='中国移动尚冰517致辞： 推动“大连接”战略落地 培育转型发展新动能'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/17/2017517934151442.htm' class='' title='中国移动尚冰517致辞： 推动“大连接”战略落地 培育转型发展新动能' target='_blank'>中国移动尚冰517致辞： 推动“大连接”战略落地 培育转型发展新动能</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">2017年世界电信与信息社会日的主题是“发展大数据，扩大影响力”，这既体现了大数据产业在促进经济和社会进步方面的重要驱动作用，也对信息通信业利用大数据技术和应用推动数字经济发展提出了新的更高要求。</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14068_3">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313195.htm' class='' title='中国联通王晓初517致辞：联通世界 创享美好智慧生活' target='_blank'><img src='/mnt/ftl/20170517/images/201751734391585.jpg' border=0 width='214' height='128' title='中国联通王晓初517致辞：联通世界 创享美好智慧生活'></a></td>
+    <td id="cww3022"><a href='/stat/stat313195.htm' class='' title='中国联通王晓初517致辞：联通世界 创享美好智慧生活' target='_blank'>中国联通王晓初517致辞：联通世界 创享美好智慧生活</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">值此世界电信和信息社会日到来之际，我谨代表中国联通向广大客户、产业链伙伴及各界朋友，致以诚挚的问候。今年世界电信和信息社会日主题是“发展大数据，扩大影响力”，旨在支持建设一个促进ICT（信息通信技术）和高速数据网络发展的有利竞争环境。这个主题也反映了当前大数据、云计算、物联网等新兴信息技术已经成为社会关注的..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14068_4">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313152.htm' class='' title='率先发力：中国电信领航央企大数据建设' target='_blank'><img src='/mnt/ftl/20170517/images/201751177310529.png' border=0 width='214' height='128' title='率先发力：中国电信领航央企大数据建设'></a></td>
+    <td id="cww3022"><a href='/stat/stat313152.htm' class='' title='率先发力：中国电信领航央企大数据建设' target='_blank'>率先发力：中国电信领航央企大数据建设</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023"><P style="TEXT-INDENT: 2em"><STRONG>通信世界网消息(CWW)</STRONG> 目前大数据技术和产业正处于蓬勃发展过程中，越来越多的厂商已经意识到数据作为企业核心资产的重要意义，也有意愿向该领域的系统建设投资。但是大数据产业在发展过程中也存在着以下问题。</P></td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14068_5">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313154.htm' class='' title='西班牙电信大数据实践启示：“数据可视化”至关重要' target='_blank'><img src='/mnt/ftl/20170517/images/201751178226161.png' border=0 width='214' height='128' title='西班牙电信大数据实践启示：“数据可视化”至关重要'></a></td>
+    <td id="cww3022"><a href='/stat/stat313154.htm' class='' title='西班牙电信大数据实践启示：“数据可视化”至关重要' target='_blank'>西班牙电信大数据实践启示：“数据可视化”至关重要</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023"><P style="TEXT-INDENT: 2em">目前大数据业务得到了运营商的广泛关注，通过数年的运营经验积累，一些运营商已经开始提供大数据相关的产品和服务。</P></td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14068_6">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313149.htm' class='' title='中国移动借大数据开辟全新服务模式' target='_blank'><img src='/mnt/ftl/20170517/images/201751164416093.png' border=0 width='214' height='128' title='中国移动借大数据开辟全新服务模式'></a></td>
+    <td id="cww3022"><a href='/stat/stat313149.htm' class='' title='中国移动借大数据开辟全新服务模式' target='_blank'>中国移动借大数据开辟全新服务模式</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">通信世界网消息(CWW)&nbsp;在大数据领域，中国移动毫无疑问是最具潜力的竞争者——手握8亿多移动用户，拥有150多万座4G基站，每天有大量数据在其网络上产生。中国移动也早已认识到数据宝藏的巨大价值，从2010年就开始正式制定大数据规划，目前已经形成了苏州研发中心提供技术产品支撑、各省公司面向具体客户的局面。经过多年的发展，..</td>
+  </tr>
+</table>
+</td>
+</tr></table>
+
+		<div style="padding-top:10px;text-align:center;"><a href="/list/14068.htm" target="_blank"><img src="/mnt/ftl/20170517/images/tbbd_more.jpg" /></a></div>
+	</div>
+	<div class="show" style="display:none;"><table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+<tr id="cwwtr14069_1">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313157.htm' class='' title='5G之花绽放大数据时代' target='_blank'><img src='/mnt/ftl/20170517/images/201751233889589.png' border=0 width='214' height='128' title='5G之花绽放大数据时代'></a></td>
+    <td id="cww3022"><a href='/stat/stat313157.htm' class='' title='5G之花绽放大数据时代' target='_blank'>5G之花绽放大数据时代</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023"><P style="TEXT-INDENT: 2em">21世纪，人们生活的方方面面都与无线连接和移动计算产生了密切关联。大连接产生大数据，而作为下一代连接技术，5G将当仁不让地成为未来创新革命的催化剂。</P></td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14069_2">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313151.htm' class='' title='“平台+行业应用”  大唐电信推出大数据整体解决方案' target='_blank'><img src='/mnt/ftl/20170517/images/201751177035529.png' border=0 width='214' height='128' title='“平台+行业应用”  大唐电信推出大数据整体解决方案'></a></td>
+    <td id="cww3022"><a href='/stat/stat313151.htm' class='' title='“平台+行业应用”  大唐电信推出大数据整体解决方案' target='_blank'>“平台+行业应用”  大唐电信推出大数据整体解决方案</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023"><P style="TEXT-INDENT: 2em"><STRONG>通信世界网消息(CWW)</STRONG> 目前大数据技术和产业正处于蓬勃发展过程中，越来越多的厂商已经意识到数据作为企业核心资产的重要意义，也有意愿向该领域的系统建设投资。但是大数据产业在发展过程中也存在着以下问题。</P></td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14069_3">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313150.htm' class='' title='跨界大数据 看亨通如何布局未来' target='_blank'><img src='/mnt/ftl/20170517/images/201751164798409.png' border=0 width='214' height='128' title='跨界大数据 看亨通如何布局未来'></a></td>
+    <td id="cww3022"><a href='/stat/stat313150.htm' class='' title='跨界大数据 看亨通如何布局未来' target='_blank'>跨界大数据 看亨通如何布局未来</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">通信世界网消息(CWW)近几个月来，光通信行业龙头企业亨通集团在大数据领域重磅消息不断：3月底，亨通光电宣布计划投资约20亿元，在苏州吴江区太湖新城约190亩的工业用地上建设苏州湾大数据智慧产业基地，加快布局大数据产业；4月中旬，亨通光电与世纪互联签署合作协议，双方将聚焦大数据网络平台建设、运营与安全保密，共同构建智..</td>
+  </tr>
+</table>
+</td>
+</tr></table>
+
+		<div style="padding-top:10px;text-align:center;"><a href="/list/14069.htm" target="_blank"><img src="/mnt/ftl/20170517/images/tbbd_more.jpg" /></a></div>
+	</div>
+	<div class="show" style="display:none;"><table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+<tr id="cwwtr14081_1">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313178.htm' class='' title='大数据背景下运营商建设统一DPI系统思考' target='_blank'><img src='/mnt/ftl/20170517/images/201751252937629.png' border=0 width='214' height='128' title='大数据背景下运营商建设统一DPI系统思考'></a></td>
+    <td id="cww3022"><a href='/stat/stat313178.htm' class='' title='大数据背景下运营商建设统一DPI系统思考' target='_blank'>大数据背景下运营商建设统一DPI系统思考</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">移动数据流量业务逐渐增大，运营商的经营模式正在从“话务量经营”向“流量经营”转变，“大数据经营”将成为运营商的主要发展方向。运营商积极探索&nbsp;DPI&nbsp;技术对于大数据运营的价值和应用方向，制定标准的统一&nbsp;DPI&nbsp;系统规范，为大数据运营提供全面、标准的流量数据。系统分析了传统&nbsp;DPI&nbsp;部署方式存在的弊端，提出建设统一..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14081_2">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313169.htm' class='' title='数据挖掘：隐私保护与价值挖掘的度如何把握？' target='_blank'><img src='/mnt/ftl/20170517/images/201751241205285.png' border=0 width='214' height='128' title='数据挖掘：隐私保护与价值挖掘的度如何把握？'></a></td>
+    <td id="cww3022"><a href='/stat/stat313169.htm' class='' title='数据挖掘：隐私保护与价值挖掘的度如何把握？' target='_blank'>数据挖掘：隐私保护与价值挖掘的度如何把握？</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023"><P style="TEXT-INDENT: 2em">2016年，iPhone用户数据泄露、LinkedIn超1.67亿个账户被销售等事件，敲响了大数据安全隐私保护的警钟。当时，LinkedIn1.67亿个账户中有1.17亿个账户信息同时包含电子邮件和密码。而且更值得关注的是，互联网公司也在深入挖掘用户数据背后的价值。</P></td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14081_3">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/stat/stat313168.htm' class='' title='人工智能+大数据催生新生态模式' target='_blank'><img src='/mnt/ftl/20170517/images/201751240943689.png' border=0 width='214' height='128' title='人工智能+大数据催生新生态模式'></a></td>
+    <td id="cww3022"><a href='/stat/stat313168.htm' class='' title='人工智能+大数据催生新生态模式' target='_blank'>人工智能+大数据催生新生态模式</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023"><P style="TEXT-INDENT: 2em">任何智能的发展，其实都需要一个学习的过程。而近期人工智能之所以能取得突飞猛进的发展，不能不说是因为这些年来大数据长足发展的结果。</P></td>
+  </tr>
+</table>
+</td>
+</tr></table>
+
+		<div style="padding-top:10px;text-align:center;"><a href="/list/14069.htm" target="_blank"><img src="/mnt/ftl/20170517/images/tbbd_more.jpg" /></a></div>
+	</div>
+	
+	<script>
+	$.each($(".yys li div"),function(i,val){
+		if(i>0)
+		{
+			//$(val).css("border-left","1px solid #ccc")
+		}
+		$(val).hover(
+			function(){
+				$(".yys li").attr("class","yys_bg");
+				$(".yys li:eq(" + i + ")").attr("class","yys_cur");
+				$(".show").css("display","none");
+				$(".show:eq(" + i + ")").css("display","block");
+			},
+			function(){})
+	})
+	//$(".yys li").hover(function(){$(".yys li").attr("class","yys_bg");$(this).attr("class","yys_cur")},function(){})
+	</script>
+	</div>
+</div>
+
+
+
+<div class="mBody marginTop30" style="padding-top:50px;padding-bottom:30px;background-color:#fff;">
+<div class="mid">
+	<div style="padding-bottom:30px;text-align:center;"><img src="/mnt/ftl/20170517/images/jctj_t.jpg" /></div>
+	<div class='ditu'> 
+	
+<div class="container_image">
+	<a href="javascript:void(0)" tip="0" class="i_btn prev_L"></a>
+	<a href="javascript:void(0)" tip="1" class="i_btn next_R"></a>
+	<ul class="slide_img">
+		
+		<li class="on">
+			<a><img src="/mnt/ftl/20170517/images/201751740571333.jpg" alt="5174"/></a>
+			<div class="bg"></div>
+		</li>
+				
+		<li class="on">
+			<a><img src="/mnt/ftl/20170517/images/201751254906633.png" alt="5173"/></a>
+			<div class="bg"></div>
+		</li>
+				
+		<li class="on">
+			<a><img src="/mnt/ftl/20170517/images/201751254689685.png" alt="5172"/></a>
+			<div class="bg"></div>
+		</li>
+				
+		<li class="on">
+			<a><img src="/mnt/ftl/20170517/images/201751254714505.png" alt="5171"/></a>
+			<div class="bg"></div>
+		</li>
+				
+	</ul>
+</div>
+<script type="text/javascript">
+$(function(){
+
+	var newopt2={
+		w2:"100",//小图宽度
+		h2:"390"//小图高度 
+	};
+	
+	i_slide($(".container_image"),newopt2);
+	
+});
+</script>
+
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div style="background:url(/mnt/ftl/20170517/images/heci_bg.jpg) no-repeat top center;margin-top:50px;padding-bottom:60px;padding-top:40px;">
+  <div class="mid">
+	<div style="padding-bottom:5px;text-align:center;"><img src="/mnt/ftl/20170517/images/qyzc.png" /></div>
+	<div class="heci">
+	<style>
+	.heci{padding-top:20px;width:100%;overflow:hidden;}
+	.heci img{width:161px;height:133px;border:0;}
+	.heci #cwwtd{width:50%;padding-left:20px;vertical-align:top;padding-bottom:30px;}
+	.heci #cww3021{text-align:left;width:177px;vertical-align:top;padding-top:5px;}
+	.heci #cww3022{vertical-align:top;padding:0px 0px 10px 0px;}
+	.heci #cww3022,.heci #cww3022 a:link,.heci #cww3022 a:visited,.heci #cww3022 a:hover,.heci #cww3022 a:active{font-size:16px;color:#fff;line-height:28px;font-weight:600;}
+	.heci #cww3022 a:hover{color:#f30;}
+	.heci #cww3023{vertical-align:top;line-height:24px;color:#fff;}
+	.heci #cww3022,.heci #cww3023{padding-right:10px;}
+	</style>
+	<div class="heciScroll">
+	<table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+<tr id="cwwtr14067_1">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/17/20175171824541011.htm' class='' title='中天科技集团董事长 薛济萍' target='_blank'><img src='/mnt/ftl/20170517/images/201751766414617.jpg' border=0 width='214' height='128' title='中天科技集团董事长 薛济萍'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/17/20175171824541011.htm' class='' title='中天科技集团董事长 薛济萍' target='_blank'>中天科技集团董事长 薛济萍</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">以云计算、大数据、物联网等为代表的新一代信息技术，正在成为我国的经济转型的全新驱动力。今年的世界电信和信息社..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/17/2017517125652308.htm' class='' title='英特尔杨旭' target='_blank'><img src='/mnt/ftl/20170517/images/201751746657637.png' border=0 width='214' height='128' title='英特尔杨旭'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/17/2017517125652308.htm' class='' title='英特尔杨旭' target='_blank'>英特尔杨旭</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在这个万物生长的时节，我们迎来了世界电信和信息社会日。今年的主题是“发展大数据，扩大影响力”，预示了数据未来..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_3">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175121134203940.htm' class='' title='华为 技术有限公司' target='_blank'><img src='/mnt/ftl/20170517/images/201751247105077.png' border=0 width='214' height='128' title='华为 技术有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175121134203940.htm' class='' title='华为 技术有限公司' target='_blank'>华为 技术有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">随着人类对数字世界的探索不断取得突破，未来二、三十年人类社会将演变成一个以“万物感知、万物互联、万物智能”为..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175111744389327.htm' class='' title='爱立信中国通信有限公司' target='_blank'><img src='/mnt/ftl/20170517/images/201751249749857.png' border=0 width='214' height='128' title='爱立信中国通信有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175111744389327.htm' class='' title='爱立信中国通信有限公司' target='_blank'>爱立信中国通信有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">我们正在迈向万物互联的网络社会。爱立信预测，到2020年全球互联终端将达到260亿部。连接所带来的大数据正如浪潮一..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_5">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175121017342439.htm' class='' title='中兴 通讯' target='_blank'><img src='/mnt/ftl/20170517/images/201751237594849.png' border=0 width='214' height='128' title='中兴 通讯'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175121017342439.htm' class='' title='中兴 通讯' target='_blank'>中兴 通讯</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">时至今日，大数据技术已经将其分析能力延伸到了各个领域，从电子商务、社交平台、基因分型、医疗健康、食品科学，到..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/2017512137546396.htm' class='' title='Qualcomm中国区董事长  孟樸' target='_blank'><img src='/mnt/ftl/20170517/images/201751247409577.png' border=0 width='214' height='128' title='Qualcomm中国区董事长  孟樸'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/2017512137546396.htm' class='' title='Qualcomm中国区董事长  孟樸' target='_blank'>Qualcomm中国区董事长  孟樸</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">21世纪的今天，大连接和大数据已成为人类社会发展的主题。未来，数十亿部具有超凡连接和计算能力的移动终端，将与机..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_7">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175111717514172.htm' class='' title='诺基亚和上海贝尔总裁  王建亚' target='_blank'><img src='/mnt/ftl/20170517/images/201751235561477.png' border=0 width='214' height='128' title='诺基亚和上海贝尔总裁  王建亚'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175111717514172.htm' class='' title='诺基亚和上海贝尔总裁  王建亚' target='_blank'>诺基亚和上海贝尔总裁  王建亚</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">我们生活在一个由数据驱动的世界中，这个看似简单的“0和1”组合，已经成为满足人类社会发展的必要条件。电子支付、..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175121312273526.htm' class='' title='国动网络通信集团有限公司' target='_blank'><img src='/mnt/ftl/20170517/images/201751247632089.png' border=0 width='214' height='128' title='国动网络通信集团有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175121312273526.htm' class='' title='国动网络通信集团有限公司' target='_blank'>国动网络通信集团有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">国动集团是用心服务的通信行业服务商、永续超越的共建共享实践者。2008年，国动集团在江苏首创由独立第三方投资铁塔..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_9">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175121318226990.htm' class='' title='中国普天信息产业股份有限公司总裁  徐千' target='_blank'><img src='/mnt/ftl/20170517/images/201751248003589.png' border=0 width='214' height='128' title='中国普天信息产业股份有限公司总裁  徐千'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175121318226990.htm' class='' title='中国普天信息产业股份有限公司总裁  徐千' target='_blank'>中国普天信息产业股份有限公司总裁  徐千</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">随着国家“大数据战略”的实施，“数据中国”步入了建设的高峰。今年电信的主题是“发展大数据，扩大影响力”，充分..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111742288974.htm' class='' title='大唐电信科技产业集团董事长兼总裁 童国华' target='_blank'><img src='/mnt/ftl/20170517/images/201751163870157.png' border=0 width='214' height='128' title='大唐电信科技产业集团董事长兼总裁 童国华'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111742288974.htm' class='' title='大唐电信科技产业集团董事长兼总裁 童国华' target='_blank'>大唐电信科技产业集团董事长兼总裁 童国华</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">大数据为人们全面提升洞察能力提供了无限可能，在推动生活方式和商业模式不断变革创新的同时，也对人们的数据驾驭能..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_11">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111720277461.htm' class='' title='烽火科技集团董事长、总裁   鲁国庆' target='_blank'><img src='/mnt/ftl/20170517/images/201751235688073.png' border=0 width='214' height='128' title='烽火科技集团董事长、总裁   鲁国庆'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111720277461.htm' class='' title='烽火科技集团董事长、总裁   鲁国庆' target='_blank'>烽火科技集团董事长、总裁   鲁国庆</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在一切皆信息的时代，大数据正改变着我们的思维方式、生产方式和生活方式，基于大数据的解决方案和管理模式将是我国..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111740759.htm' class='' title='新华三集团总裁兼首席执行官  于英涛' target='_blank'><img src='/mnt/ftl/20170517/images/201751540685989.jpg' border=0 width='214' height='128' title='新华三集团总裁兼首席执行官  于英涛'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111740759.htm' class='' title='新华三集团总裁兼首席执行官  于英涛' target='_blank'>新华三集团总裁兼首席执行官  于英涛</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在国际电信联盟成立151周年后的今天，“数据”已经成为电信产业的重要生产和运营资源，大数据应用所带来的核心业务..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_13">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111724111196.htm' class='' title='长飞光纤光缆股份有限公司执行董事兼总裁 庄丹' target='_blank'><img src='/mnt/ftl/20170517/images/201751162676473.png' border=0 width='214' height='128' title='长飞光纤光缆股份有限公司执行董事兼总裁 庄丹'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111724111196.htm' class='' title='长飞光纤光缆股份有限公司执行董事兼总裁 庄丹' target='_blank'>长飞光纤光缆股份有限公司执行董事兼总裁 庄丹</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">从政府提倡的“互联网+”行动计划，到“宽带中国”的深入推进，以及三大电信运营商在网络建设上的持续发力，中国的..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175121320541402.htm' class='' title='瑞斯康达科技发展股份有限公司' target='_blank'><img src='/mnt/ftl/20170517/images/201751249499729.png' border=0 width='214' height='128' title='瑞斯康达科技发展股份有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175121320541402.htm' class='' title='瑞斯康达科技发展股份有限公司' target='_blank'>瑞斯康达科技发展股份有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">2017年“世界电信和信息社会日”的主题是“发展大数据，扩大影响力”，大数据是信息通信产业的重要资源，也是一项非..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_15">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/2017511173754897.htm' class='' title='俊知集团有限公司CEO   蒋唯' target='_blank'><img src='/mnt/ftl/20170517/images/201751163584177.png' border=0 width='214' height='128' title='俊知集团有限公司CEO   蒋唯'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/2017511173754897.htm' class='' title='俊知集团有限公司CEO   蒋唯' target='_blank'>俊知集团有限公司CEO   蒋唯</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">当前，以大数据为主导的信息化变革正席卷全球,移动互联网、物联网、手机、平板电脑以及遍布全球各个角落的传感器，..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111736145274.htm' class='' title='江苏亨鑫科技有限公司总经理  徐国强' target='_blank'><img src='/mnt/ftl/20170517/images/201751163465837.png' border=0 width='214' height='128' title='江苏亨鑫科技有限公司总经理  徐国强'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111736145274.htm' class='' title='江苏亨鑫科技有限公司总经理  徐国强' target='_blank'>江苏亨鑫科技有限公司总经理  徐国强</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">2017年电信日的主题是“发展大数据，扩大影响力”，充分体现了大数据的产业链覆盖到社会经济、人类生活的各个领域，..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_17">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111734443319.htm' class='' title='凌华科技股份有限公司董事长 刘钧' target='_blank'><img src='/mnt/ftl/20170517/images/201751632345343.jpg' border=0 width='214' height='128' title='凌华科技股份有限公司董事长 刘钧'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111734443319.htm' class='' title='凌华科技股份有限公司董事长 刘钧' target='_blank'>凌华科技股份有限公司董事长 刘钧</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">不管是在工业互联网的应用，还是在电信5G时代，开放的架构才能让各厂商互相沟通，而起决定作用的却是边缘计算应用..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175121323401599.htm' class='' title='威图电子机械技术（上海）有限公司' target='_blank'><img src='/mnt/ftl/20170517/images/201751248392205.png' border=0 width='214' height='128' title='威图电子机械技术（上海）有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175121323401599.htm' class='' title='威图电子机械技术（上海）有限公司' target='_blank'>威图电子机械技术（上海）有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">随着《大数据产业发展规划》的发布，数据时代已经到来，任何一个行业和领域都会产生有价值的数据，对这些数据进行统..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_19">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/2017511173366249.htm' class='' title='通鼎互联信息股份有限公司总裁  蔡文杰' target='_blank'><img src='/mnt/ftl/20170517/images/201751163275093.png' border=0 width='214' height='128' title='通鼎互联信息股份有限公司总裁  蔡文杰'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/2017511173366249.htm' class='' title='通鼎互联信息股份有限公司总裁  蔡文杰' target='_blank'>通鼎互联信息股份有限公司总裁  蔡文杰</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">大数据作为高科技时代的产物，成为目前企业和社会关注的重要战略资源。如今，数据已成为企业打造竞争优势的基石，通..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111731337331.htm' class='' title='杭州东信北邮信息技术有限公司总裁  廖建新' target='_blank'><img src='/mnt/ftl/20170517/images/201751163177033.png' border=0 width='214' height='128' title='杭州东信北邮信息技术有限公司总裁  廖建新'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111731337331.htm' class='' title='杭州东信北邮信息技术有限公司总裁  廖建新' target='_blank'>杭州东信北邮信息技术有限公司总裁  廖建新</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">大数据技术具有广阔的应用前景，将创造出巨大的价值空间。目前，东信北邮已形成以价值为导向，以生产型、决策型、开..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_21">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/2017511172735883.htm' class='' title='西安西古光通信有限公司总经理  刘少锋' target='_blank'><img src='/mnt/ftl/20170517/images/201751163058161.png' border=0 width='214' height='128' title='西安西古光通信有限公司总经理  刘少锋'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/2017511172735883.htm' class='' title='西安西古光通信有限公司总经理  刘少锋' target='_blank'>西安西古光通信有限公司总经理  刘少锋</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">今年“世界电信和信息社会日”主题为“发展大数据，扩大影响力”。大数据时代离不开基础通信网络的保障，作为通信运..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111724493738.htm' class='' title='一诺仪器（中国）有限公司中国区营销总裁  高飞' target='_blank'><img src='/mnt/ftl/20170517/images/201751162843441.png' border=0 width='214' height='128' title='一诺仪器（中国）有限公司中国区营销总裁  高飞'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111724493738.htm' class='' title='一诺仪器（中国）有限公司中国区营销总裁  高飞' target='_blank'>一诺仪器（中国）有限公司中国区营销总裁  高飞</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在现代社会中，大数据承载信息流动并日益渗透到生活的方方面面。在此趋势下，以通信为主的各类新兴产业积极推动大数..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_23">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/2017512132783203.htm' class='' title='盛阳铁塔有限公司运营总裁  黄江' target='_blank'><img src='/mnt/ftl/20170517/images/201751248539265.png' border=0 width='214' height='128' title='盛阳铁塔有限公司运营总裁  黄江'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/2017512132783203.htm' class='' title='盛阳铁塔有限公司运营总裁  黄江' target='_blank'>盛阳铁塔有限公司运营总裁  黄江</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">随着中国窄带物联网络的不断完善，物联网大数据领域的商用也越来越多。盛阳通信在城市大数据管理领域也进行了深入探..</td>
+  </tr>
+</table>
+</td>
+</tr></table>
+
+	</div>
+	</div>
+  
+<SCRIPT language="javascript">
+var sHeight = 500
+var sShowLength = 3
+function sScroll(obj){
+  $(obj).find(".heciScroll").animate({
+  marginTop : "-" + sHeight + "px" 
+  },1000,function(){ 
+  //alert($(this).css({marginTop : "0px"}).find("tr:lt(" + sShowLength + ")").html())
+  //alert($(this).css({marginTop : "0px"}).find("tr[id]").html())
+  $(this).css({marginTop : "0px"}).find("tr[id]:lt(" + sShowLength + ")").appendTo($(".heciScroll > table > tbody")); 
+  })
+  //alert($(obj).find(".dibu").html())
+  } 
+  $(function(){
+  	  //alert($(".heciScroll > table > tbody > tr").length)
+	  if($(".heciScroll > table > tbody > tr").length > sShowLength)
+	  {
+	   	  $(".heci").css("height",sHeight + "px")
+		  var t = setInterval('sScroll(".heci")',5000);
+		  $(".heciScroll > table").hover(function(){clearInterval(t)},function(){t = setInterval('sScroll(".heci")',5000)})
+	  }
+  })
+  
+</SCRIPT>
+  </div>
+</div>
+
+	<div class="clear"></div>
+
+    <#include "/ftl/footer.ftl" />
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1994061" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+</body>
+</html>

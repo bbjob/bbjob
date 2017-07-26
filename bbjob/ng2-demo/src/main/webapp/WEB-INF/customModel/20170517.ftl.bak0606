@@ -1,0 +1,650 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<#include "/ftl/macro.ftl" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>2017年世界电信和信息社会日特别策划_通信世界网</title>
+<script language=javascript src="/mnt/ftl/customModel/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/mnt/ftl/customModel/js/jquery_slide.js"></script>
+<link type="text/css" rel="stylesheet" href="/mnt/ftl/customModel/css/reset.css" />
+<link type="text/css" rel="stylesheet" href="/mnt/ftl/customModel/css/style.css" />
+<script language=javascript src="/mnt/ftl/customModel/js/normor.js"></script>
+<style type="text/css">
+body,td,th,div {
+  font-family: 微软雅黑;
+  font-size: 14px;
+  color: #333;
+}
+body {
+	background-color: #fff;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+img{border:0;}
+.for_left{ float:left;}
+.left1{float:left;}
+.leftleft{ margin-left:45px;}
+.leftleftb{ margin-left:40px;}
+.titlezi{  font-size: 24px; color:#3940AB;}
+.neirz{ font-size:13px; color:#64676b; line-height:20px;}
+.titlezib{ font-size:18px; color:#2d2d2d;}
+.xiaozilan{color:#005fb1;font-size: 12px;line-height:24px;}
+.contentzi{ color:#6c6c6c;}
+.jiaodainz,.jiaodainz a:link,.jiaodainz a:visited,.jiaodainz a:hover,.jiaodainz a:active{ color:#3b3d3f; font-size:18px; text-align:center;}
+.clear{clear:both;}
+.coushu{ height:11px;line-height:11px;}
+
+.focus img{ width:305px; height:203px;}
+.mid{ margin:0 auto; width:1000px;}
+.top{ background:url(/mnt/ftl/customModel/images/banner.jpg) center center no-repeat; height:301px; padding-top:1px;}
+
+ a:visited { text-decoration: none ;color: #333 ;font-size:14px;}
+ 		a:hover { text-decoration: none; color: red ;font-size:14px;}
+		a:link { text-decoration: none ;font-size:14px; color: #333 ;}
+		 a:active { text-decoration: none;  font-size:14px;color: #333 ;}
+		 
+.hyyc{height:280px;width:665px;overflow-y:scroll;text-align:center;}
+.hyyc p{margin:0;padding:0;}
+
+.ztfc{width:100%;/*height:1300px;*/overflow:hidden;}
+.ztfc img{width:305px;height:203px;}
+.ztfc_title{text-align:center;padding:12px 0 17px 0;}
+.ztfc_title, .ztfc_title a:link, .ztfc_title a:visited, .ztfc_title a:hover, .ztfc_title a:active{font-size:18px;line-height:24px;font-family:微软雅黑;color:#3b3d3f;text-decoration:none;}
+
+.jb td{background-color:#f0f0f0;}
+.jb_mingzi{padding:2px 0;text-align:center;font-weight:600;}
+.jb_zhiwei{padding-bottom:5px;text-align:center;}
+.jiab td td{text-align:center;}
+
+.hyyc p{padding:0;margin:0;}
+
+.bza{font-size:18px;color:#444;line-height:36px;font-weight:normal;text-indent:2em;padding:0 20px;}
+
+</style></head> 
+<body>
+
+<#include "/ftl/header.ftl" />
+
+<div class="top" style="background-color:#666666"></div>
+
+<div style="background-color:#f6f6f6;padding-top:50px;padding-bottom:50px;">
+	<div class="mid" style="font-size:18px;font-weight:bold;line-height:32px;text-indent:40px;padding-left:20px;color:#6e6e6e;">
+	  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="34" valign="top" style="padding-top:15px;" bgcolor=""><img src="/mnt/ftl/customModel/images/bza_left.jpg" /></td>
+    <td class="bza"><p>一年一度的5 17世界电信和信息社会日即将到来，国际电信联盟将今年“世界电信日”主题确定为“发展大数据，扩大影响力”，这是国际电联首次以大数据为主题，国际电联旨在充分发挥大数据的潜力，使之转化为可促进发展的信息机遇。</p>
+      <p> 值此“世界电信日”来临之际，《通信世界全媒体》将迎合当下大数据发展的良好契机，希望借助信息通信产业的群策群力，搭建政府研究机构、电信运营企业以及大数据相关企业技术交流与观点碰撞的桥梁与平台，助推大数据产业链的健康、快速发展，为推动经济增长发挥积极作用。</p></td>
+    <td width="34" valign="bottom" style="padding-bottom:15px;"><img src="/mnt/ftl/customModel/images/bza_right.jpg" /></td>
+  </tr>
+</table>
+  </div>
+</div>
+
+<div class="mid" style="margin-top:50px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="340" valign="top" class="focusPic">
+        <@picArtParent boardID = "14066" extAttr = "className=toutiao_" />
+	</td>
+
+    <td width="31" valign="top">&nbsp;</td>
+    <td width="629" valign="top">
+	<div class="toutiao">
+    <@picArtList boardID = "14071">
+      <#if confMap.showTemplate == "302ptc">
+        <#include "/ftl/14071_302ptc.ftl" />
+      </#if>
+    </@picArtList>
+	</div>
+	</td>
+  </tr>
+</table>
+
+</div>
+
+<div class="mid" style="margin-top:50px;">
+    <@picArtList boardID = "14079" className = "yysNews">
+      <#if confMap.showTemplate == "401petc">
+        <#include "/ftl/14079_401petc.ftl">
+      </#if>
+    </@picArtList>
+</div>
+
+<div class="clear"></div>
+
+<div style="background-color:#445C8A;padding-bottom:40px;padding-top:50px;margin-top:50px;">
+<div class="mid">
+<div>
+		<div style="text-align:center;margin-bottom:10px;"><img src="/mnt/ftl/customModel/images/xcbd_t.jpg" /></div>
+		<div class="hyzb">
+			
+        <@picArtList boardID = "14070">
+          <#if confMap.showTemplate == "304ptc">
+            <#include "/ftl/14070_304ptc.ftl" />
+          </#if>
+        </@picArtList>
+
+		</div>
+	</div>
+</div>
+</div>
+
+<div style="margin-top:50px;padding-bottom:40px;">
+	<div class="mid">
+		<div style="padding-bottom:15px;text-align:center;"><img src="/mnt/ftl/customModel/images/zjgd_t.jpg" /></div>
+		<div style="text-align:center;">
+		
+        <@picArtList boardID = "14078" className = "zjgdTitle">
+          <#if confMap.showTemplate == "">
+            <#include "/ftl/14078.ftl" />
+          </#if>
+        </@picArtList>
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div style="margin-top:50px;padding:40px 0;background-color:#F8F9FB;">
+	<div class="mid">
+		<div style="padding-bottom:20px;text-align:center;"><img src="/mnt/ftl/customModel/images/tbbd_t.jpg" /></div>
+	<style>
+	.yys,.yys li{padding:0;margin:0;list-style:none;cursor:pointer;}
+	.yys{width:600px;margin:0 auto;}
+	.yys ul{}
+	.yys li{float:left;width:199px;text-align:center;padding:5px 0;}
+	.yys li div{text-align:center;height:30px;line-height:30px;font-size:22px;font-weight:600;letter-spacing:3px;color:#fff;}
+	.yys_cur{background:url(/mnt/ftl/customModel/images/tbbd_t_bg_cur.jpg) no-repeat center center;}
+	.yys_bg{background:url(/mnt/ftl/customModel/images/tbbd_t_bg_b.jpg) no-repeat center center;}
+	.yys_cur,.yys_bg{text-align:center;height:49px;width:137px;overflow:hidden;}
+	.yys_cur div,.yys_bg div{padding-top:10px;}
+	
+	.show{padding-top:20px;}
+	.show #cwwtd img{width:214px;height:128px;border:0;}
+	.show #modeTable{margin-top:-1px;}
+	.show #cwwtd{padding:30px 0;border-top:1px solid #ccc;}
+	.show #cww3021{text-align:left;width:251px;}
+	.show #cww3022{vertical-align:top;padding:10px 0px;}
+	.show #cww3022,.show #cww3022 a:link,.show #cww3022 a:visited,.show #cww3022 a:hover,.show #cww3022 a:active{font-size:18px;color:#666;line-height:28px;font-weight:600;}
+	.show #cww3022 a:hover{color:#f30;}
+	.show #cww3023{vertical-align:top;line-height:24px;color:#777;}
+	.show #cww3022,.show #cww3023{padding-right:10px;}
+	.show #cwwtr14068_1 #cwwtd,.show #cwwtr14069_1 #cwwtd,.show #cwwtr14081_1 #cwwtd{border-top:none;}
+	</style>
+  	<ul class="yys">
+		<li class="yys_cur"><div>运营商</div></li>
+		<li class="yys_bg"><div>设备商</div></li>
+		<li class="yys_bg"><div>资讯集锦</div></li>
+	</ul>
+	<div class="clear"></div>
+	<div class="show">
+      <@picArtList boardID = "14068">
+        <#if confMap.showTemplate == "302ptc">
+          <table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+              <#list htmlValue as data>
+                <tr id="cwwtr14068_1">
+                  <td background='' bgcolor='' id='cwwtd'>
+                    <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+                      <tr>
+                        <td rowspan="2" id="cww3021"><a href='${data.link}' class='' title='${data.title}' target='_blank'><img src='${data.img}' border=0 width='214' height='128' title='${data.title}'></a></td>
+                        <td id="cww3022"><a href='${data.link}' class='' title='${data.title}' target='_blank'>${data.title}</a></td>
+                      </tr>
+                      <tr>
+                        <td id="cww3023">${data.content}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </#list>
+          </table>
+        </#if>
+      </@picArtList>
+
+    <div style="padding-top:10px;text-align:center;"><a href="/list/14068.htm" target="_blank"><img src="/mnt/ftl/customModel/images/tbbd_more.jpg" /></a></div>
+	</div>
+	<div class="show" style="display:none;">
+      <@picArtList boardID = "14069">
+        <#if confMap.showTemplate == "302ptc">
+          <table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+            <#list htmlValue as data>
+              <tr id="cwwtr14069_1">
+                <td background='' bgcolor='' id='cwwtd'>
+                  <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+                    <tr>
+                      <td rowspan="2" id="cww3021"><a href='${data.link}' class='' title='${data.title}' target='_blank'><img src='${data.img}' border=0 width='214' height='128' title='${data.title}'></a></td>
+                      <td id="cww3022"><a href='${data.link}' class='' title='${data.title}' target='_blank'>${data.title}</a></td>
+                    </tr>
+                    <tr>
+                      <td id="cww3023">${data.content}</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </#list>
+          </table>
+        </#if>
+    </@picArtList>
+
+    <div style="padding-top:10px;text-align:center;"><a href="/list/14069.htm" target="_blank"><img src="/mnt/ftl/customModel/images/tbbd_more.jpg" /></a></div>
+	</div>
+	<div class="show" style="display:none;">
+      <@picArtList boardID = "14081">
+      <#if confMap.showTemplate == "302ptc">
+        <table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+          <#list htmlValue as data>
+            <tr id="cwwtr14081_1">
+              <td background='' bgcolor='' id='cwwtd'>
+                <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+                  <tr>
+                    <td rowspan="2" id="cww3021"><a href='${data.link}' class='' title='${data.title}' target='_blank'><img src='${data.img}' border=0 width='214' height='128' title='${data.title}'></a></td>
+                    <td id="cww3022"><a href='${data.link}' class='' title='${data.title}' target='_blank'>${data.title}</a></td>
+                  </tr>
+                  <tr>
+                    <td id="cww3023">${data.content}</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </#list>
+        </table>
+      </#if>
+    </@picArtList>
+
+    <div style="padding-top:10px;text-align:center;"><a href="/list/14069.htm" target="_blank"><img src="/mnt/ftl/customModel/images/tbbd_more.jpg" /></a></div>
+	</div>
+	
+	<script>
+	$.each($(".yys li div"),function(i,val){
+		if(i>0)
+		{
+			//$(val).css("border-left","1px solid #ccc")
+		}
+		$(val).hover(
+			function(){
+				$(".yys li").attr("class","yys_bg");
+				$(".yys li:eq(" + i + ")").attr("class","yys_cur");
+				$(".show").css("display","none");
+				$(".show:eq(" + i + ")").css("display","block");
+			},
+			function(){})
+	})
+	//$(".yys li").hover(function(){$(".yys li").attr("class","yys_bg");$(this).attr("class","yys_cur")},function(){})
+	</script>
+	</div>
+</div>
+
+<div class="mBody marginTop30" style="padding-top:50px;padding-bottom:30px;background-color:#fff;">
+<div class="mid">
+	<div style="padding-bottom:30px;text-align:center;"><img src="/mnt/ftl/customModel/images/jctj_t.jpg" /></div>
+	<div class='ditu'> 
+	
+<div class="container_image">
+	<a href="javascript:void(0)" tip="0" class="i_btn prev_L"></a>
+	<a href="javascript:void(0)" tip="1" class="i_btn next_R"></a>
+	<ul class="slide_img">
+		
+		<li class="on">
+			<a><img src="/mnt/ftl/customModel/images/201751740571333.jpg" alt="5174"/></a>
+			<div class="bg"></div>
+		</li>
+				
+		<li class="on">
+			<a><img src="/mnt/ftl/customModel/images/201751254906633.png" alt="5173"/></a>
+			<div class="bg"></div>
+		</li>
+				
+		<li class="on">
+			<a><img src="/mnt/ftl/customModel/images/201751254689685.png" alt="5172"/></a>
+			<div class="bg"></div>
+		</li>
+				
+		<li class="on">
+			<a><img src="/mnt/ftl/customModel/images/201751254714505.png" alt="5171"/></a>
+			<div class="bg"></div>
+		</li>
+				
+	</ul>
+</div>
+<script type="text/javascript">
+$(function(){
+
+	var newopt2={
+		w2:"100",//小图宽度
+		h2:"390"//小图高度 
+	};
+	
+	i_slide($(".container_image"),newopt2);
+	
+});
+</script>
+
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div style="background:url(/mnt/ftl/customModel/images/heci_bg.jpg) no-repeat top center;margin-top:50px;padding-bottom:60px;padding-top:40px;">
+  <div class="mid">
+	<div style="padding-bottom:5px;text-align:center;"><img src="/mnt/ftl/customModel/images/qyzc.png" /></div>
+	<div class="heci">
+	<style>
+	.heci{padding-top:20px;width:100%;overflow:hidden;}
+	.heci img{width:161px;height:133px;border:0;}
+	.heci #cwwtd{width:50%;padding-left:20px;vertical-align:top;padding-bottom:30px;}
+	.heci #cww3021{text-align:left;width:177px;vertical-align:top;padding-top:5px;}
+	.heci #cww3022{vertical-align:top;padding:0px 0px 10px 0px;}
+	.heci #cww3022,.heci #cww3022 a:link,.heci #cww3022 a:visited,.heci #cww3022 a:hover,.heci #cww3022 a:active{font-size:16px;color:#fff;line-height:28px;font-weight:600;}
+	.heci #cww3022 a:hover{color:#f30;}
+	.heci #cww3023{vertical-align:top;line-height:24px;color:#fff;}
+	.heci #cww3022,.heci #cww3023{padding-right:10px;}
+	</style>
+	<div class="heciScroll">
+	<table width='100%' align=''  border='0' bordercolor='' cellspacing='0' cellpadding='0' style='border-collapse:collapse;'>
+<tr id="cwwtr14067_1">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/17/20175171824541011.htm' class='' title='中天科技集团董事长 薛济萍' target='_blank'><img src='/mnt/ftl/customModel/images/201751766414617.jpg' border=0 width='214' height='128' title='中天科技集团董事长 薛济萍'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/17/20175171824541011.htm' class='' title='中天科技集团董事长 薛济萍' target='_blank'>中天科技集团董事长 薛济萍</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">以云计算、大数据、物联网等为代表的新一代信息技术，正在成为我国的经济转型的全新驱动力。今年的世界电信和信息社..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/17/2017517125652308.htm' class='' title='英特尔杨旭' target='_blank'><img src='/mnt/ftl/customModel/images/201751746657637.png' border=0 width='214' height='128' title='英特尔杨旭'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/17/2017517125652308.htm' class='' title='英特尔杨旭' target='_blank'>英特尔杨旭</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在这个万物生长的时节，我们迎来了世界电信和信息社会日。今年的主题是“发展大数据，扩大影响力”，预示了数据未来..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_3">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175121134203940.htm' class='' title='华为 技术有限公司' target='_blank'><img src='/mnt/ftl/customModel/images/201751247105077.png' border=0 width='214' height='128' title='华为 技术有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175121134203940.htm' class='' title='华为 技术有限公司' target='_blank'>华为 技术有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">随着人类对数字世界的探索不断取得突破，未来二、三十年人类社会将演变成一个以“万物感知、万物互联、万物智能”为..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175111744389327.htm' class='' title='爱立信中国通信有限公司' target='_blank'><img src='/mnt/ftl/customModel/images/201751249749857.png' border=0 width='214' height='128' title='爱立信中国通信有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175111744389327.htm' class='' title='爱立信中国通信有限公司' target='_blank'>爱立信中国通信有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">我们正在迈向万物互联的网络社会。爱立信预测，到2020年全球互联终端将达到260亿部。连接所带来的大数据正如浪潮一..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_5">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175121017342439.htm' class='' title='中兴 通讯' target='_blank'><img src='/mnt/ftl/customModel/images/201751237594849.png' border=0 width='214' height='128' title='中兴 通讯'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175121017342439.htm' class='' title='中兴 通讯' target='_blank'>中兴 通讯</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">时至今日，大数据技术已经将其分析能力延伸到了各个领域，从电子商务、社交平台、基因分型、医疗健康、食品科学，到..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/2017512137546396.htm' class='' title='Qualcomm中国区董事长  孟樸' target='_blank'><img src='/mnt/ftl/customModel/images/201751247409577.png' border=0 width='214' height='128' title='Qualcomm中国区董事长  孟樸'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/2017512137546396.htm' class='' title='Qualcomm中国区董事长  孟樸' target='_blank'>Qualcomm中国区董事长  孟樸</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">21世纪的今天，大连接和大数据已成为人类社会发展的主题。未来，数十亿部具有超凡连接和计算能力的移动终端，将与机..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_7">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175111717514172.htm' class='' title='诺基亚和上海贝尔总裁  王建亚' target='_blank'><img src='/mnt/ftl/customModel/images/201751235561477.png' border=0 width='214' height='128' title='诺基亚和上海贝尔总裁  王建亚'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175111717514172.htm' class='' title='诺基亚和上海贝尔总裁  王建亚' target='_blank'>诺基亚和上海贝尔总裁  王建亚</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">我们生活在一个由数据驱动的世界中，这个看似简单的“0和1”组合，已经成为满足人类社会发展的必要条件。电子支付、..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/12/20175121312273526.htm' class='' title='国动网络通信集团有限公司' target='_blank'><img src='/mnt/ftl/customModel/images/201751247632089.png' border=0 width='214' height='128' title='国动网络通信集团有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/12/20175121312273526.htm' class='' title='国动网络通信集团有限公司' target='_blank'>国动网络通信集团有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">国动集团是用心服务的通信行业服务商、永续超越的共建共享实践者。2008年，国动集团在江苏首创由独立第三方投资铁塔..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_9">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175121318226990.htm' class='' title='中国普天信息产业股份有限公司总裁  徐千' target='_blank'><img src='/mnt/ftl/customModel/images/201751248003589.png' border=0 width='214' height='128' title='中国普天信息产业股份有限公司总裁  徐千'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175121318226990.htm' class='' title='中国普天信息产业股份有限公司总裁  徐千' target='_blank'>中国普天信息产业股份有限公司总裁  徐千</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">随着国家“大数据战略”的实施，“数据中国”步入了建设的高峰。今年电信的主题是“发展大数据，扩大影响力”，充分..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111742288974.htm' class='' title='大唐电信科技产业集团董事长兼总裁 童国华' target='_blank'><img src='/mnt/ftl/customModel/images/201751163870157.png' border=0 width='214' height='128' title='大唐电信科技产业集团董事长兼总裁 童国华'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111742288974.htm' class='' title='大唐电信科技产业集团董事长兼总裁 童国华' target='_blank'>大唐电信科技产业集团董事长兼总裁 童国华</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">大数据为人们全面提升洞察能力提供了无限可能，在推动生活方式和商业模式不断变革创新的同时，也对人们的数据驾驭能..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_11">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111720277461.htm' class='' title='烽火科技集团董事长、总裁   鲁国庆' target='_blank'><img src='/mnt/ftl/customModel/images/201751235688073.png' border=0 width='214' height='128' title='烽火科技集团董事长、总裁   鲁国庆'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111720277461.htm' class='' title='烽火科技集团董事长、总裁   鲁国庆' target='_blank'>烽火科技集团董事长、总裁   鲁国庆</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在一切皆信息的时代，大数据正改变着我们的思维方式、生产方式和生活方式，基于大数据的解决方案和管理模式将是我国..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111740759.htm' class='' title='新华三集团总裁兼首席执行官  于英涛' target='_blank'><img src='/mnt/ftl/customModel/images/201751540685989.jpg' border=0 width='214' height='128' title='新华三集团总裁兼首席执行官  于英涛'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111740759.htm' class='' title='新华三集团总裁兼首席执行官  于英涛' target='_blank'>新华三集团总裁兼首席执行官  于英涛</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在国际电信联盟成立151周年后的今天，“数据”已经成为电信产业的重要生产和运营资源，大数据应用所带来的核心业务..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_13">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111724111196.htm' class='' title='长飞光纤光缆股份有限公司执行董事兼总裁 庄丹' target='_blank'><img src='/mnt/ftl/customModel/images/201751162676473.png' border=0 width='214' height='128' title='长飞光纤光缆股份有限公司执行董事兼总裁 庄丹'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111724111196.htm' class='' title='长飞光纤光缆股份有限公司执行董事兼总裁 庄丹' target='_blank'>长飞光纤光缆股份有限公司执行董事兼总裁 庄丹</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">从政府提倡的“互联网+”行动计划，到“宽带中国”的深入推进，以及三大电信运营商在网络建设上的持续发力，中国的..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175121320541402.htm' class='' title='瑞斯康达科技发展股份有限公司' target='_blank'><img src='/mnt/ftl/customModel/images/201751249499729.png' border=0 width='214' height='128' title='瑞斯康达科技发展股份有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175121320541402.htm' class='' title='瑞斯康达科技发展股份有限公司' target='_blank'>瑞斯康达科技发展股份有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">2017年“世界电信和信息社会日”的主题是“发展大数据，扩大影响力”，大数据是信息通信产业的重要资源，也是一项非..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_15">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/2017511173754897.htm' class='' title='俊知集团有限公司CEO   蒋唯' target='_blank'><img src='/mnt/ftl/customModel/images/201751163584177.png' border=0 width='214' height='128' title='俊知集团有限公司CEO   蒋唯'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/2017511173754897.htm' class='' title='俊知集团有限公司CEO   蒋唯' target='_blank'>俊知集团有限公司CEO   蒋唯</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">当前，以大数据为主导的信息化变革正席卷全球,移动互联网、物联网、手机、平板电脑以及遍布全球各个角落的传感器，..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111736145274.htm' class='' title='江苏亨鑫科技有限公司总经理  徐国强' target='_blank'><img src='/mnt/ftl/customModel/images/201751163465837.png' border=0 width='214' height='128' title='江苏亨鑫科技有限公司总经理  徐国强'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111736145274.htm' class='' title='江苏亨鑫科技有限公司总经理  徐国强' target='_blank'>江苏亨鑫科技有限公司总经理  徐国强</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">2017年电信日的主题是“发展大数据，扩大影响力”，充分体现了大数据的产业链覆盖到社会经济、人类生活的各个领域，..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_17">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111734443319.htm' class='' title='凌华科技股份有限公司董事长 刘钧' target='_blank'><img src='/mnt/ftl/customModel/images/201751632345343.jpg' border=0 width='214' height='128' title='凌华科技股份有限公司董事长 刘钧'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111734443319.htm' class='' title='凌华科技股份有限公司董事长 刘钧' target='_blank'>凌华科技股份有限公司董事长 刘钧</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">不管是在工业互联网的应用，还是在电信5G时代，开放的架构才能让各厂商互相沟通，而起决定作用的却是边缘计算应用..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175121323401599.htm' class='' title='威图电子机械技术（上海）有限公司' target='_blank'><img src='/mnt/ftl/customModel/images/201751248392205.png' border=0 width='214' height='128' title='威图电子机械技术（上海）有限公司'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175121323401599.htm' class='' title='威图电子机械技术（上海）有限公司' target='_blank'>威图电子机械技术（上海）有限公司</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">随着《大数据产业发展规划》的发布，数据时代已经到来，任何一个行业和领域都会产生有价值的数据，对这些数据进行统..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_19">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/2017511173366249.htm' class='' title='通鼎互联信息股份有限公司总裁  蔡文杰' target='_blank'><img src='/mnt/ftl/customModel/images/201751163275093.png' border=0 width='214' height='128' title='通鼎互联信息股份有限公司总裁  蔡文杰'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/2017511173366249.htm' class='' title='通鼎互联信息股份有限公司总裁  蔡文杰' target='_blank'>通鼎互联信息股份有限公司总裁  蔡文杰</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">大数据作为高科技时代的产物，成为目前企业和社会关注的重要战略资源。如今，数据已成为企业打造竞争优势的基石，通..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111731337331.htm' class='' title='杭州东信北邮信息技术有限公司总裁  廖建新' target='_blank'><img src='/mnt/ftl/customModel/images/201751163177033.png' border=0 width='214' height='128' title='杭州东信北邮信息技术有限公司总裁  廖建新'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111731337331.htm' class='' title='杭州东信北邮信息技术有限公司总裁  廖建新' target='_blank'>杭州东信北邮信息技术有限公司总裁  廖建新</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">大数据技术具有广阔的应用前景，将创造出巨大的价值空间。目前，东信北邮已形成以价值为导向，以生产型、决策型、开..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_21">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/2017511172735883.htm' class='' title='西安西古光通信有限公司总经理  刘少锋' target='_blank'><img src='/mnt/ftl/customModel/images/201751163058161.png' border=0 width='214' height='128' title='西安西古光通信有限公司总经理  刘少锋'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/2017511172735883.htm' class='' title='西安西古光通信有限公司总经理  刘少锋' target='_blank'>西安西古光通信有限公司总经理  刘少锋</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">今年“世界电信和信息社会日”主题为“发展大数据，扩大影响力”。大数据时代离不开基础通信网络的保障，作为通信运..</td>
+  </tr>
+</table>
+</td>
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/20175111724493738.htm' class='' title='一诺仪器（中国）有限公司中国区营销总裁  高飞' target='_blank'><img src='/mnt/ftl/customModel/images/201751162843441.png' border=0 width='214' height='128' title='一诺仪器（中国）有限公司中国区营销总裁  高飞'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/20175111724493738.htm' class='' title='一诺仪器（中国）有限公司中国区营销总裁  高飞' target='_blank'>一诺仪器（中国）有限公司中国区营销总裁  高飞</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">在现代社会中，大数据承载信息流动并日益渗透到生活的方方面面。在此趋势下，以通信为主的各类新兴产业积极推动大数..</td>
+  </tr>
+</table>
+</td>
+</tr><tr id="cwwtr14067_23">
+<td background='' bgcolor='' id='cwwtd'>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border-collapse:collapse" id="modeTable">
+  <tr>
+    <td rowspan="2" id="cww3021"><a href='/zhuanti/html/2017/5/11/2017512132783203.htm' class='' title='盛阳铁塔有限公司运营总裁  黄江' target='_blank'><img src='/mnt/ftl/customModel/images/201751248539265.png' border=0 width='214' height='128' title='盛阳铁塔有限公司运营总裁  黄江'></a></td>
+    <td id="cww3022"><a href='/zhuanti/html/2017/5/11/2017512132783203.htm' class='' title='盛阳铁塔有限公司运营总裁  黄江' target='_blank'>盛阳铁塔有限公司运营总裁  黄江</a></td>
+  </tr>
+  <tr>
+    <td id="cww3023">随着中国窄带物联网络的不断完善，物联网大数据领域的商用也越来越多。盛阳通信在城市大数据管理领域也进行了深入探..</td>
+  </tr>
+</table>
+</td>
+</tr></table>
+
+	</div>
+	</div>
+  
+<SCRIPT language="javascript">
+var sHeight = 500
+var sShowLength = 3
+function sScroll(obj){
+  $(obj).find(".heciScroll").animate({
+  marginTop : "-" + sHeight + "px" 
+  },1000,function(){ 
+  //alert($(this).css({marginTop : "0px"}).find("tr:lt(" + sShowLength + ")").html())
+  //alert($(this).css({marginTop : "0px"}).find("tr[id]").html())
+  $(this).css({marginTop : "0px"}).find("tr[id]:lt(" + sShowLength + ")").appendTo($(".heciScroll > table > tbody")); 
+  })
+  //alert($(obj).find(".dibu").html())
+  } 
+  $(function(){
+  	  //alert($(".heciScroll > table > tbody > tr").length)
+	  if($(".heciScroll > table > tbody > tr").length > sShowLength)
+	  {
+	   	  $(".heci").css("height",sHeight + "px")
+		  var t = setInterval('sScroll(".heci")',5000);
+		  $(".heciScroll > table").hover(function(){clearInterval(t)},function(){t = setInterval('sScroll(".heci")',5000)})
+	  }
+  })
+  
+</SCRIPT>
+  </div>
+</div>
+
+	<div class="clear"></div>
+
+    <#include "/ftl/footer.ftl" />
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1994061" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+</body>
+</html>
