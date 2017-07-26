@@ -26,6 +26,34 @@
 		</property>
 	</bean>
 	
+	 <!-- FreeMarker --> 
+	 <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
+	   <property name="templateLoaderPaths">
+	   	<list>
+	   		<value>/WEB-INF/customModel/</value>
+	   	</list>
+	   </property>
+	   <property name="defaultEncoding" value="utf-8" />  
+	   <property name="freemarkerSettings">  
+	   <props>  
+	    <prop key="template_update_delay">10</prop>  
+	    <prop key="locale">zh_CN</prop>  
+	    <prop key="datetime_format">yyyy-MM-dd hh:mm:ss</prop>  
+	    <prop key="date_format">yyyy-MM-dd</prop>  
+	    <prop key="number_format">#.##</prop>  
+	   </props>  
+	  </property>
+	  
+	  <property name="freemarkerVariables">
+		<map>
+			<entry key="picArtList" value-ref="picArtListDirective"></entry>
+		</map>
+	  </property>
+	    
+	 </bean>
+ 
+  	<bean id="picArtListDirective" class="com.rundatop.biz.boardModel.directive.PicArtListDirective"></bean>   
+	
 	
 	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">  
         <property name="config">  

@@ -84,6 +84,17 @@
     </property>
     <property name="viewResolvers">
       <list>
+      	<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">    
+			  <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"></property>  
+			    
+			  <property name="suffix" value=".ftl" />  
+			  <property name="contentType" value="text/html;charset=utf-8" />  
+			  <property name="exposeRequestAttributes" value="true" />  
+			  <property name="exposeSessionAttributes" value="true" />  
+			  <property name="exposeSpringMacroHelpers" value="true" />
+			  <property name="order" value="0" />
+		 </bean>  
+      
         <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
           <property name="prefix" value="/WEB-INF/jsp/"/>
           <property name="suffix" value=".jsp"/>
@@ -115,15 +126,7 @@
   <bean id="multipartResolver" class="com.rundatop.core.io.upload.CustomMultipartResolver">
     <property name="maxUploadSize" value="104857600"/>
   </bean>
-
-
-
-
-
-
-
-
-
+  
 	<bean id="crosFilter" name="crosFilter" class="com.rundatop.core.web.filter.CrosFilter"></bean>
 
 
