@@ -1,0 +1,214 @@
+		<div class="modal-header">
+			<h4 class="modal-title" id="myModalLabel">标签属性设置</h4>
+		</div>
+		<div class="modal-body  gdt">
+		<form  name="SubjectAddForm" novalidate>
+			<div class="row">
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">文章数目：</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="title"  placeholder="0" ng-model="editModelAttr.articleNumber">
+						</div>
+
+						<label class="col-md-2 control-label pr0 text-right pt-sm">文章类型：</label>
+						<div class="col-md-4" style="margin-top: 5px">
+							<input type="checkbox" name="artType"  ng-checked="isArtTypeChecked(0)" ng-click="updateArtTypeSelection($event, 0)">html新闻
+							<input type="checkbox" name="artType"  ng-checked="isArtTypeChecked(1)" ng-click="updateArtTypeSelection($event, 1)">外部链接
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">显示列数：</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="folder"  placeholder="0" ng-model="editModelAttr.lineNumber">
+						</div>
+
+						<label class="col-md-2 control-label pr0 text-right pt-sm">时间格式：</label>
+						<div class="col-md-4">
+							<select data-ng-model="editModelAttr.timeType" name="timeFormat"
+									class="form-control"
+									data-ng-options="x.id as x.title for x in timeSEL"
+							>
+								<option value="">请选择</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">显示内容：</label>
+						<div class="col-md-4" style="margin-top: 5px">
+							<input type="checkbox" name="content" ng-checked="isContentChecked(0)" ng-click="updateContentSelection($event, 0)">标题
+							<input type="checkbox" name="content" ng-checked="isContentChecked(1)" ng-click="updateContentSelection($event, 1)">图片
+							<input type="checkbox" name="content" ng-checked="isContentChecked(2)" ng-click="updateContentSelection($event, 2)">摘要
+							<span style="border:1px solid #b0b2b3;border-radius: 4px;padding: 5px;margin-left: 10px;" onclick="javascript:if(cMore.style.display=='none'){cMore.style.display=''}else{cMore.style.display='none'}">更多...</span>
+
+							<div onmouseout="javascript:this.style.display='none'" onmouseover="javascript:this.style.display=''" id="cMore" style="position: absolute;margin-top: 3px;padding: 2px;border-radius: 4px;background-color: rgb(255, 255, 255); width: 220px; height: 75px; border: 1px solid rgb(204, 204, 204); display: none;z-index:1">
+								<table width="100%" cellspacing="0" cellpadding="2" border="0" onmouseover="javascript:cMore.style.display=''">
+									<tbody><tr><td valign="top" align="left"><input type="checkbox" name="content" ng-checked="isContentChecked(3)" ng-click="updateContentSelection($event, 3)">作者</td>
+
+										<td valign="top" align="left"><input type="checkbox" name="content" ng-checked="isContentChecked(4)" ng-click="updateContentSelection($event, 4)">点击量</td>
+
+										<td valign="top" align="left"><input type="checkbox" name="content" ng-checked="isContentChecked(5)" ng-click="updateContentSelection($event, 5)">浏览量</td>
+									</tr><tr>
+										<td valign="top" align="left"><input type="checkbox" name="content" ng-checked="isContentChecked(6)" ng-click="updateContentSelection($event, 6)">时间</td>
+
+										<td valign="top" align="left"></td>
+
+										<td valign="top" align="left"></td>
+									</tr></tbody></table>
+							</div>
+						</div>
+
+						<label class="col-md-2 control-label pr0 text-right pt-sm">排序方式：</label>
+						<div class="col-md-4">
+							<select data-ng-model="editModelAttr.sortType" name="sortWay"
+									class="form-control"
+									data-ng-options="x.id as x.title for x in sortSEL"
+							>
+								<option value="">请选择</option>
+							</select>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">标题长度：</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="title"  placeholder="0" ng-model="editModelAttr.titleLength">
+						</div>
+						<label class="col-md-2 control-label pr0 text-right pt-sm">摘要长度：</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="tempTag"  placeholder="10" ng-model="editModelAttr.abstractLength">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">标题前缀：</label>
+						<div class="col-md-4">
+							<label class="radio-inline c-radio">
+								<input id="prefix" name="prefix" value="0" ng-model="editModelAttr.prefixType" type="radio">
+								<span class="fa fa-check"></span>文字</label>
+								<input type="text" name="title" style="padding: 6px 16px;font-size: 14px;border: 1px solid #dde6e9;border-radius: 4px;"  placeholder="0" ng-model="editModelAttr.prefixContent">
+						</div>
+						<div class="col-md-6 community_post_imgarea">
+							<label class="radio-inline c-radio" style="float: left; margin-top: 4px">
+								<input id="prefix" name="prefix" value="1" ng-model="editModelAttr.prefixType" type="radio">
+								<span class="fa fa-check"></span>图片</label>
+
+							<div   id="upimgDIv" ng-class="(null === editModelAttr.prefixPic || '' === editModelAttr.prefixPic)?'imgadd':'blockimg'"  ng-click="addPic()" >
+								<img  ng-src="{{(null==editModelAttr.prefixPic || '' === editModelAttr.prefixPic)?'app/img/icon_add.png':res+editModelAttr.prefixPic}}">
+								<input type="file" id="uppic" style="display: none;" accept="image/*">
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">图片高度：</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="tempTag"  placeholder="10" ng-model="editModelAttr.picHeight">
+						</div>
+
+						<label class="col-md-2 control-label pr0 text-right pt-sm">图片宽度：</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="tempTag"  placeholder="10" ng-model="editModelAttr.picWide">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">文章作者：</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" name="tempTag"  placeholder="单行输入" ng-model="editModelAttr.articleAuthor">
+						</div>
+
+						<label class="col-md-2 control-label pr0 text-right pt-sm">子栏目内容是否显示：</label>
+						<div class="col-md-4">
+							<label class="radio-inline c-radio">
+								<input id="isShowChild" name="isShowChild" value="1" ng-model="editModelAttr.childrenClomns" type="radio">
+								<span class="fa fa-check"></span>是</label>
+							<label class="radio-inline c-radio">
+								<input id="isShowChild" name="isShowChild" value="0" ng-model="editModelAttr.childrenClomns" type="radio">
+								<span class="fa fa-check"></span>否</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">原创：</label>
+						<div class="col-md-10">
+							<label class="radio-inline c-radio">
+								<input id="isOriginal" name="isOriginal" value="0" ng-model="editModelAttr.original" type="radio">
+								<span class="fa fa-check"></span>全部</label>
+							<label class="radio-inline c-radio">
+								<input id="isOriginal" name="isOriginal" value="1" ng-model="editModelAttr.original" type="radio">
+								<span class="fa fa-check"></span>原创</label>
+							<label class="radio-inline c-radio">
+								<input id="isOriginal" name="isOriginal" value="2" ng-model="editModelAttr.original" type="radio">
+								<span class="fa fa-check"></span>非原创</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">显示模板：</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" name="tempTag"  placeholder="单行输入" ng-model="editModelAttr.model" required>
+						</div>
+						<div class="col-md-2">
+							<button ng-click="chooseModel()">选择</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 mt-lg">
+					<div class="form-group">
+						<label class="col-md-4 control-label pr0 text-right pt-sm">内容轮换：</label>
+						<div class="col-sm-8">
+							<label class="radio-inline c-radio">
+								<input id="rotation" name="rotation" value="0" ng-model="editModelAttr.rotationType" type="radio">
+								<span class="fa fa-check"></span>普通</label>
+							<label class="radio-inline c-radio">
+								<input id="rotation" name="rotation" value="1" ng-model="editModelAttr.rotationType" type="radio">
+								<span class="fa fa-check"></span>幻灯</label>
+							<label class="radio-inline c-radio">
+								<input id="rotation" name="rotation" value="2" ng-model="editModelAttr.rotationType" type="radio">
+								<span class="fa fa-check"></span>待定</label>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mt-lg">
+					<div class="form-group">
+						<label class="col-md-2 control-label pr0 text-right pt-sm">关键词：</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" name="tempTag"  placeholder="单行输入" ng-model="editModelAttr.keyword" required>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!--保存按钮-->
+			<div class="modal-footer">
+				<div class="col-lg-4 col-lg-offset-4 text-center">
+					<button class="btn btn-info mt-lg mb-lg" ng-click="setTag();closeThisDialog()" ng-disabled="SubjectAddForm.year.$invalid||SubjectAddForm.title.$invalid ">确定</button>
+					<button class="btn btn-default mt-lg mb-lg" ng-click="closeThisDialog();$event.stopPropagation();">取消</button>
+				</div>
+			</div>
+			<!--保存按钮//-->
+			</form>
+		</div>

@@ -1,0 +1,139 @@
+<!-- Page content-->
+<div class="content-wrapper" ng-controller="proManageAddCtrl">
+	<div class="content-heading">
+		<!--返回按钮-->
+		<div class="pull-right">
+			<button class="btn btn-oval btn-primary  mb-lg" ng-click="backPage()">
+				<em class="fa fa-reply mr"></em>返回
+			</button>
+		</div>
+		<!--返回按钮//-->
+		<div ng-show="savetype == 0"><em class="icon-user-follow"></em> 新增专题</div>
+		<div ng-show="savetype == 1"><em class="icon-user-follow"></em> 修改专题</div>
+	</div>
+	<!-- 表格区-->
+	<div class="panel panel-default">
+		<div role="tabpanel">
+			<div class="tab-content ">
+				<div id="tab1" role="tabpanel" class="tab-pane  active pt-lg pb-xl">
+					<!--表单开始-->
+					<form  name="SubjectAddForm" novalidate>
+						<div class="row">
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">栏目名称：</label>
+									<div class="col-md-10">
+										<input type="text" class="form-control" name="title"  placeholder="请输入(必填)" ng-model="editinfo.columnsName" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 mt-lg">
+								<div class="form-group">
+									<label class="col-md-4 control-label pr0 text-right pt-sm">栏目类型：</label>
+									<div class="col-sm-8">
+										<label class="radio-inline c-radio">
+											<input id="istop" name="istop" value="0" ng-model="editinfo.columnType" type="radio">
+											<span class="fa fa-check"></span>内部栏目</label>
+										<label class="radio-inline c-radio">
+											<input id="istop" name="istop" value="1" ng-model="editinfo.columnType" type="radio">
+											<span class="fa fa-check"></span>外部链接</label>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 mt-lg">
+								<div class="form-group">
+									<label class="col-md-4 control-label pr0 text-right pt-sm">外链地址：</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" name="externalLinks"  placeholder="单行输入" ng-model="editinfo.externalLinks">
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">文件夹：</label>
+									<div class="col-md-10">
+										<input type="text" class="form-control" name="folder"  placeholder="单行输入" ng-model="editinfo.folder" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">模板标签：</label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" name="tempTag"  placeholder="单行输入" ng-model="editinfo.tempTag" required>
+									</div>
+									<div class="col-md-2">
+										<button ng-click="TagAttrSet()">标签属性设置</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">是否显示：</label>
+									<div class="col-sm-10">
+										<select data-ng-model="editinfo.isShow" name="isShow"
+												class="form-control"
+												data-ng-options="x.id as x.title for x in isShowSEL"
+										>
+											<option value="">请选择</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">备注：</label>
+									<div class="col-md-10">
+										<textarea class="form-control" data-ng-model="editinfo.remarks"></textarea>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">栏目文件：</label>
+									<div class="col-md-8">
+										<input type="text" class="form-control" name="tempTag"  placeholder="单行输入" ng-model="editinfo.columnFile">
+									</div>
+									<div class="col-md-2">
+										<button ng-click="onFolderClick()">文件管理</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">访问权限：</label>
+									<div class="col-sm-10">
+										<div class="checkbox" >
+											<label ng-repeat="x in memberGroupList">
+												<input type="checkbox" name="priv" ng-model="x.priv" ng-checked="isChecked(x.id)" ng-click="updateSelection($event,x.id)">{{x.groupName}}
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<!--保存按钮-->
+						<div class="modal-footer">
+
+							<div class="col-lg-4 col-lg-offset-4 text-center">
+								<button class="btn btn-info mt-lg mb-lg" ng-click="addsave(0)" ng-disabled="SubjectAddForm.year.$invalid||SubjectAddForm.title.$invalid ">保存</button>
+							</div>
+						</div>
+						<!--保存按钮//-->
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--表格区//-->
+</div>

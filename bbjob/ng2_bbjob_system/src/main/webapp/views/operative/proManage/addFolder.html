@@ -1,0 +1,32 @@
+<div class="modal-header">
+	<h4 class="modal-title" id="myModalLabel">新增文件夹</h4>
+</div>
+	<div class="modal-body gdt">
+    	<!-- 表单验证form开始 并不是用form提交  只为表单验证 -->
+        <form  name="myForm" novalidate>
+	   		<div role="tabpanel" class="panel panel-transparent">
+            <!-- START list group-->
+            <div class="table-responsive">
+               <div class="modal-body ">
+		          <div class="row">
+		          	<div class="col-md-12 mt-lg">
+			 			<div class="form-group">
+                           <label class="col-md-2 control-label pr0 text-right pt-sm">名称：</label>
+                           <div class="col-sm-8">
+                              <input class="form-control" type="text" placeholder="请输入文件夹名称" name="name" ng-model="folderAttr.name">
+                           </div>
+                        </div>
+ 					</div>
+        		  </div>
+         	   </div>
+            </div>
+           	</div>
+		</form>
+    </div>
+
+<!--保存按钮-->
+<div class="modal-footer" style="padding: 0">
+	<div class="col-lg-4 col-lg-offset-4">
+		<button class="btn btn-block btn-info mt-lg mb-lg" ng-click="submitFolderInfo();closeThisDialog()">提交</button>
+	</div>
+</div>

@@ -1,0 +1,581 @@
+<!--内容区-->
+<div class="modal-header">
+	<h4 class="modal-title" id="chooseModel">选择显示模板</h4>
+</div>
+<div class="modal-body  gdt">
+<!--2块-->
+	<div class="" ng-if="contentSelected.length === 2">
+
+		<div class="row block_class">
+			<div class="col-md-1 col-xs-2 nowrap">01号</div>
+			<div class="col-md-1 col-xs-1 ph0">
+				<input id="modelNo" name="modelNo" value="201" ng-model="chooseModelObj.modelNo" type="radio">
+			</div>
+
+			<div class="col-md-10 col-xs-9">
+				<table class="tab_bro">
+					<tbody>
+					<tr>
+						<td ng-click="modelNoClick('20101', '1')"><div  id="20101">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td ng-click="modelNoClick('20102', '2')"><div id="20102">&nbsp;</div></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row block_class">
+			<div class="col-md-1 col-xs-2 nowrap">02号</div>
+			<div class="col-md-1 col-xs-1 ph0">
+				<input id="modelNo" name="modelNo" value="202" ng-model="chooseModelObj.modelNo" type="radio">
+			</div>
+			<div class="col-md-10 col-xs-9" on-finish-render-filters>
+				<table class="tab_bro">
+					<tbody>
+					<tr>
+						<td class="w50" ng-click="modelNoClick('20201', '1')"><div  id="20201">&nbsp;</div></td>
+						<td ng-click="modelNoClick('20202', '2')"><div id="20202">&nbsp;</div></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+<!--2块//-->
+
+<!--3块-->
+	<div class="" ng-if="contentSelected.length === 3">
+
+		<div class="row block_class">
+			<div class="col-md-1 col-xs-2 nowrap">01号</div>
+			<div class="col-md-1 col-xs-1 ph0">
+				<input id="modelNo" name="modelNo" value="301" ng-model="chooseModelObj.modelNo" type="radio">
+			</div>
+
+			<div class="col-md-10 col-xs-9">
+				<table class="tab_bro">
+					<tbody>
+					<tr>
+						<td colspan="2" ng-click="modelNoClick('30101', '1')"><div  id="30101">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td class="w50" ng-click="modelNoClick('30102', '2')"><div  id="30102">&nbsp;</div></td>
+						<td ng-click="modelNoClick('30103', '3')"><div  id="30103">&nbsp;</div></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row block_class">
+			<div class="col-md-1 col-xs-2 nowrap">02号</div>
+			<div class="col-md-1 col-xs-1 ph0">
+				<input id="modelNo" name="modelNo" value="302" ng-model="chooseModelObj.modelNo" type="radio">
+			</div>
+
+			<div class="col-md-10 col-xs-9">
+				<table class="tab_bro">
+					<tbody>
+					<tr>
+						<td rowspan="2" class="w50" ng-click="modelNoClick('30201', '1')"><div  id="30201">&nbsp;</div></td>
+						<td ng-click="modelNoClick('30202', '2')"><div  id="30202">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td ng-click="modelNoClick('30203', '3')"><div  id="30203">&nbsp;</div></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row block_class">
+			<div class="col-md-1 col-xs-2 nowrap">03号</div>
+			<div class="col-md-1 col-xs-1 ph0">
+				<input id="modelNo" name="modelNo" value="303" ng-model="chooseModelObj.modelNo" type="radio">
+			</div>
+			<div class="col-md-10 col-xs-9">
+				<table class="tab_bro">
+					<tbody>
+					<tr>
+						<td ng-click="modelNoClick('30301', '1')"><div  id="30301">&nbsp;</div></td>
+						<td rowspan="2" class="w50" ng-click="modelNoClick('30302', '2')"><div  id="30302">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td ng-click="modelNoClick('30303', '3')"><div  id="30303">&nbsp;</div></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row block_class">
+			<div class="col-md-1 col-xs-2 nowrap">04号</div>
+			<div class="col-md-1 col-xs-1 ph0">
+				<input id="modelNo" name="modelNo" value="304" ng-model="chooseModelObj.modelNo" type="radio">
+			</div>
+			<div class="col-md-10 col-xs-9">
+				<table class="tab_bro">
+					<tbody>
+					<tr>
+						<td ng-click="modelNoClick('30401', '1')"><div  id="30401">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td ng-click="modelNoClick('30402', '2')"><div  id="30402">&nbsp;</div></td>
+					</tr>
+					<tr>
+						<td ng-click="modelNoClick('30403', '3')"><div  id="30403">&nbsp;</div></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row block_class">
+			<div class="col-md-1 col-xs-2 nowrap">05号</div>
+			<div class="col-md-1 col-xs-1 ph0">
+				<input id="modelNo" name="modelNo" value="305" ng-model="chooseModelObj.modelNo" type="radio">
+			</div>
+			<div class="col-md-10 col-xs-9 border_all">
+				<table class="tab_bro">
+					<tbody>
+					<tr>
+						<td class="w33" ng-click="modelNoClick('30501', '1')"><div  id="30501">&nbsp;</div></td>
+						<td class="w33" ng-click="modelNoClick('30502', '2')"><div  id="30502">&nbsp;</div></td>
+						<td ng-click="modelNoClick('30503', '3')"><div  id="30503">&nbsp;</div></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">06号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="306" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9" on-finish-render-filters>
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td class="w50" ng-click="modelNoClick('30601', '1')"><div  id="30601">&nbsp;</div></td>
+					<td ng-click="modelNoClick('30602', '2')"><div  id="30602">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('30603', '3')"><div  id="30603">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+	</div>
+<!--3块//-->
+<!--4块-->
+	<div class="" ng-if="contentSelected.length === 4">
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">01号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="401" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td ng-click="modelNoClick('40101', '1')"><div  id="40101">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('40102', '2')"><div  id="40102">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('40103', '3')"><div  id="40103">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('40104', '4')"><div  id="40104">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">02号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="402" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td class="w50" ng-click="modelNoClick('40201', '1')"><div  id="40201">&nbsp;</div></td>
+					<td ng-click="modelNoClick('40202', '2')"><div  id="40202">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('40203', '3')"><div  id="40203">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('40204', '4')"><div  id="40204">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">03号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="403" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('40301', '1')"><div  id="40301">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td class="w50" ng-click="modelNoClick('40302', '2')"><div  id="40302">&nbsp;</div></td>
+					<td ng-click="modelNoClick('40303', '3')"><div  id="40302">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('40304', '4')"><div  id="40304">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">04号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="404" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('40401', '1')"><div  id="40401">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('40402', '2')"><div  id="40402">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td class="w50"ng-click="modelNoClick('40403', '3')"><div  id="40403">&nbsp;</div></td>
+					<td ng-click="modelNoClick('40404', '4')"><div  id="40404">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+	<div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">05号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="405" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td class="w33" ng-click="modelNoClick('40501', '1')"><div  id="40501">&nbsp;</div></td>
+					<td class="w33" rowspan="2" ng-click="modelNoClick('40502', '2')"><div  id="40502">&nbsp;</div></td>
+					<td rowspan="2" ng-click="modelNoClick('40503', '3')"><div  id="40503">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('40504', '4')"><div  id="40504">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+	<div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">06号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="406" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td rowspan="2" class="w33" ng-click="modelNoClick('40601', '1')"><div  id="40601">&nbsp;</div></td>
+					<td class="w33" ng-click="modelNoClick('40602', '2')"><div  id="40602">&nbsp;</div></td>
+					<td rowspan="2" ng-click="modelNoClick('40603', '3')"><div  id="40603">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('40604', '4')"><div  id="40604">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+	<div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">07号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="407" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td class="w33" rowspan="2" ng-click="modelNoClick('40701', '1')"><div  id="40701">&nbsp;</div></td>
+					<td rowspan="2" class="w33" ng-click="modelNoClick('40702', '2')"><div  id="40702">&nbsp;</div></td>
+					<td ng-click="modelNoClick('40703', '3')"><div  id="40703">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('40704', '4')"><div  id="40704">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">08号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="408" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<table class="tab_bro">
+			<tbody>
+			<tr>
+				<td class="w25" ng-click="modelNoClick('40801', '1')"><div  id="40801">&nbsp;</div></td>
+				<td class="w25" ng-click="modelNoClick('40802', '2')"><div  id="40802">&nbsp;</div></td>
+				<td class="w25" ng-click="modelNoClick('40803', '3')"><div  id="40803">&nbsp;</div></td>
+				<td  ng-click="modelNoClick('40804', '4')"><div  id="40804">&nbsp;</div></td>
+			</tr>
+			</tbody>
+		</table>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">09号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="409" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td class="w33" ng-click="modelNoClick('40901', '1')"><div  id="40901">&nbsp;</div></td>
+					<td class="w33" ng-click="modelNoClick('40902', '2')"><div  id="40902">&nbsp;</div></td>
+					<td ng-click="modelNoClick('40903', '3')"><div  id="40903">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td colspan="3" ng-click="modelNoClick('40904', '4')"><div  id="40904">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">10号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="410" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td colspan="3" ng-click="modelNoClick('41001', '1')"><div  id="41001">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td class="w33" ng-click="modelNoClick('41002', '2')"><div  id="41002">&nbsp;</div></td>
+					<td class="w33" ng-click="modelNoClick('41003', '3')"><div  id="41003">&nbsp;</div></td>
+					<td ng-click="modelNoClick('41004', '4')"><div  id="41004">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+	<div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">11号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="411" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td class="w50" ng-click="modelNoClick('41101', '1')"><div  id="41101">&nbsp;</div></td>
+					<td rowspan="3" ng-click="modelNoClick('41102', '2')"><div  id="41102">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('41103', '3')"><div  id="41103">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('41104', '4')"><div  id="41104">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+	<div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">12号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="412" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td rowspan="3" class="w50" ng-click="modelNoClick('41201', '1')"><div id="41201">&nbsp;</div></td>
+					<td ng-click="modelNoClick('41202', '2')"><div id="41202">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('41203', '3')"><div id="41203">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('41204', '4')"><div id="41204">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">13号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="413" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td class="w50" ng-click="modelNoClick('41301', '1')"><div id="41301">&nbsp;</div></td>
+					<td ng-click="modelNoClick('41302', '2')"><div id="41302">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td ng-click="modelNoClick('41303', '3')"><div id="41303">&nbsp;</div></td>
+					<td ng-click="modelNoClick('41304', '4')"><div id="41304">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">14号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="414" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td rowspan="2" class="w33"  ng-click="modelNoClick('41401', '1')"><div id="41401">&nbsp;</div></td>
+					<td class="w33"  ng-click="modelNoClick('41402', '2')"><div id="41402">&nbsp;</div></td>
+					<td  ng-click="modelNoClick('41403', '3')"><div id="41403">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td colspan="2"  ng-click="modelNoClick('41404', '4')"><div id="41404">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">15号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="415" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td rowspan="2" class="w33" ng-click="modelNoClick('41501', '1')"><div id="41501">&nbsp;</div></td>
+					<td colspan="2" ng-click="modelNoClick('41502', '2')"><div id="41502">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td class="w33" ng-click="modelNoClick('41503', '3')"><div id="41503">&nbsp;</div></td>
+					<td ng-click="modelNoClick('41504', '4')"><div id="41504">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">16号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="416" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td class="w33" ng-click="modelNoClick('41601', '1')"><div id="41601">&nbsp;</div></td>
+					<td class="w33" ng-click="modelNoClick('41602', '2')"><div id="41602">&nbsp;</div></td>
+					<td rowspan="2" ng-click="modelNoClick('41603', '3')"><div id="41603">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('41604', '4')"><div id="41604">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+    <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">17号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="417" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+		<div class="col-md-10 col-xs-9">
+			<table class="tab_bro">
+				<tbody>
+				<tr>
+					<td colspan="2" ng-click="modelNoClick('41701', '1')"><div id="41701">&nbsp;</div></td>
+					<td rowspan="2" ng-click="modelNoClick('41702', '2')"><div id="41702">&nbsp;</div></td>
+				</tr>
+				<tr>
+					<td class="w33" ng-click="modelNoClick('41703', '3')"><div id="41703">&nbsp;</div></td>
+					<td class="w33" ng-click="modelNoClick('41704', '4')"><div id="41704">&nbsp;</div></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+    </div>
+
+   <div class="row block_class">
+    	<div class="col-md-1 col-xs-2 nowrap">18号</div>
+    	<div class="col-md-1 col-xs-1 ph0">
+			<input id="modelNo" name="modelNo" value="418" ng-model="chooseModelObj.modelNo" type="radio">
+		</div>
+
+	   <div class="col-md-10 col-xs-9" on-finish-render-filters>
+		   <table class="tab_bro">
+			   <tbody>
+			   <tr>
+				   <td rowspan="2" class="w50" ng-click="modelNoClick('41801', '1')"><div id="41801">&nbsp;</div></td>
+				   <td ng-click="modelNoClick('41802', '2')"><div id="41802">&nbsp;</div></td>
+			   </tr>
+			   <tr>
+				   <td ng-click="modelNoClick('41803', '3')"><div id="41803">&nbsp;</div></td>
+			   </tr>
+			   <tr>
+				   <td colspan="2" ng-click="modelNoClick('41804', '4')"><div id="41804">&nbsp;</div></td>
+			   </tr>
+			   </tbody>
+		   </table>
+	   </div>
+    </div>
+	</div>
+
+	<div class="modal-footer">
+		<div class="col-lg-4 col-lg-offset-4 text-center">
+			<button class="btn btn-info mt-lg mb-lg" ng-click="setShowTemplate();closeThisDialog(0)">确定</button>
+			<button class="btn btn-default mt-lg mb-lg" ng-click="closeThisDialog(0);$event.stopPropagation();">取消</button>
+		</div>
+	</div>
+<!--4块//-->
+
+</div>
+<!--内容区//-->
+
+<!--弹出层-->
+<!--弹出层//-->

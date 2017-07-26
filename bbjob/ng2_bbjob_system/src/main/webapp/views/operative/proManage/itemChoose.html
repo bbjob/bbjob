@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="chooseModel">选择显示模板</h4>
+</div>
+
+<div class="modal-body  gdt">
+    <div class="modalarea">
+        <div class="modal-body tc">
+
+            <span ng-if="contentSelected.indexOf(0) > -1"><input id="item" name="item" value="0" ng-model="chooseModelObj.item" type="radio">标题</span>
+            <span ng-if="contentSelected.indexOf(1) > -1"><input id="item" name="item" value="1" ng-model="chooseModelObj.item" type="radio">图片</span>
+            <span ng-if="contentSelected.indexOf(2) > -1"><input id="item" name="item" value="2" ng-model="chooseModelObj.item" type="radio">摘要</span>
+            <span ng-if="contentSelected.indexOf(3) > -1"><input id="item" name="item" value="3" ng-model="chooseModelObj.item" type="radio">作者</span>
+            <span ng-if="contentSelected.indexOf(4) > -1"><input id="item" name="item" value="4" ng-model="chooseModelObj.item" type="radio">点击量</span>
+            <span ng-if="contentSelected.indexOf(5) > -1"><input id="item" name="item" value="5" ng-model="chooseModelObj.item" type="radio">浏览量</span>
+            <span ng-if="contentSelected.indexOf(6) > -1"><input id="item" name="item" value="6" ng-model="chooseModelObj.item" type="radio">时间</span>
+        </div>
+        <div class="modal-footer">
+            <div class="col-lg-4 col-lg-offset-4 text-center">
+                <button class="btn btn-info mt-lg mb-lg" ng-click="setModelItem();closeThisDialog(0)">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
