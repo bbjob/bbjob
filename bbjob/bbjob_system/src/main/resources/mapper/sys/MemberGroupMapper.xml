@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.rundatop.sys.mapper.MemberGroupMapper" >
+  <resultMap id="BaseResultMap" type="com.rundatop.sys.model.MemberGroup" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="group_name" property="groupName" jdbcType="VARCHAR" />
+    <result column="group_description" property="groupDescription" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="creater_id" property="createrId" jdbcType="VARCHAR" />
+    <result column="free1" property="free1" jdbcType="VARCHAR" />
+    <result column="free2" property="free2" jdbcType="VARCHAR" />
+    <result column="free3" property="free3" jdbcType="VARCHAR" />
+    <result column="group_order" property="groupOrder" jdbcType="INTEGER" />
+    <result column="group_status" property="groupStatus" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>
