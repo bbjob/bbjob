@@ -27,6 +27,8 @@ public class SysRoutes {
     private String templateurl;
 
     private String resolve;
+    
+    private String stateParams;
 
     @Transient
     private String[] ids;
@@ -160,4 +162,14 @@ public class SysRoutes {
     public void setResolve(String resolve) {
         this.resolve = resolve;
     }
+
+	public String getStateParams() {
+		return stateParams;
+	}
+
+	public void setStateParams(String stateParams) {
+		this.stateParams = stateParams;
+	}
+    
+    
 }
