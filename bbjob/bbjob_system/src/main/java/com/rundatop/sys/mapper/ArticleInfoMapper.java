@@ -20,5 +20,6 @@ public interface ArticleInfoMapper extends Mapper<ArticleInfo>{
 	List<ArticleInfo> selNotinColArticle(@Param("columnId") String columnId,@Param("channelId") String channelId,@Param("name")String name,@Param("colId")String colId, @Param("begin")Integer begin, @Param("size")int size);
 	Integer selInColArticleCount(@Param("columnId") String columnId,@Param("channelId") String channelId,@Param("name")String name,@Param("colId")String colId, @Param("begin")Integer begin, @Param("size")int size);
 	Integer artNumCount(@Param("columnId") String columnId,@Param("channelId") String channelId,@Param("name")String name,@Param("colId")String colId, @Param("begin")Integer begin, @Param("size")int size);
+	List<ArticleInfo> selectByGenereateParams(@Param("record")ModelAttribute modelAttribute);
 
 }
