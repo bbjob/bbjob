@@ -388,4 +388,15 @@ public class ModelAttribute {
 		this.confAlphaList = confAlphaList;
 	}
 	
+	@Transient
+	private String flatBit;
+
+	public String getFlatBit() {
+		return flatBit;
+	}
+
+	public void setFlatBit(String flatBit) {
+		this.flatBit = flatBit;
+	}
+
 }
