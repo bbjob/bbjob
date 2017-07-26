@@ -25,6 +25,7 @@
    <link rel="stylesheet" ng-href="{{app.layout.theme}}" data-ng-if="app.layout.theme">
    <link rel="stylesheet" type="text/css" href="${p:get('system.ctx')}app/css/style.css"/>
    <link rel="stylesheet" type="text/css" href="${p:get('system.ctx')}app/css/style.adv.css"/>
+   <link rel="stylesheet" type="text/css" href="${p:get('system.ctx')}app/css/frame.css"/>
 </head>
 
 <body data-ng-class="{ 'layout-fixed' : app.layout.isFixed, 'aside-collapsed' : app.layout.isCollapsed, 'layout-boxed' : app.layout.isBoxed, 'layout-fs': app.useFullLayout, 'hidden-footer': app.hiddenFooter, 'layout-h': app.layout.horizontal, 'aside-float': app.layout.isFloat, 'offsidebar-open': app.offsidebarOpen, 'aside-toggled': app.asideToggled}">
@@ -97,6 +98,7 @@
    
    <script src="${p:get('system.ctx')}vendor/flatpickr/js/flatpickr.js"></script> 
  
+   <script src="${p:get('system.ctx')}vendor/ckeditor/ckeditor.js"></script> 
    
    
 </body>
