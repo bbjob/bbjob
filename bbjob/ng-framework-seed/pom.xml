@@ -9,4 +9,12 @@
   <packaging>war</packaging>
   <name>ng-framework-seed</name>
   <description>ng-framework-seed</description>
+  
+  <dependencies>
+		<dependency>
+			<groupId>rundatop</groupId>
+			<artifactId>bbjob_system</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
