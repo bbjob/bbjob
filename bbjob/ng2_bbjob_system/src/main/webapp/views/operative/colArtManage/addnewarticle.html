@@ -1,0 +1,47 @@
+
+<div class="modal-header">
+	<h4 class="modal-title" id="myModalLabel">文章选择</h4>
+</div>
+<div class="modal-body  gdt">
+	<!--选项卡-->
+	<div class="panel-heading">
+
+		<div class="pull-right pl-sm">
+			<button type="button" class="mb-sm btn btn-success" ng-click="newsaveChange()">完成选择</button>
+		</div>
+		<div class="pull-right pl-sm">
+			<button type="button" class="mb-sm btn btn-purple" ng-click="newSearch()">查询</button>
+		</div>
+		<div class="col-lg-10 pull-left dropdown dropdown-list">
+			<div class="col-lg-1">
+				<div class="form-group">
+					<button type="button" class="mb-sm btn btn-info"  ng-click="newselAll()">全选</button>
+				</div>
+			</div>
+			<div class="col-lg-3">
+				<div class="form-group">
+					<label class="col-lg-4 col-sm-4 control-label text-right pt5 nowrap">标题：</label>
+					<div class="col-sm-8  col-sm-8 no-padding">
+						<input class="form-control" type="text" name="articleTitle"  placeholder="模糊标题查询" ng-model="newselffilters.articleTitle">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="line_01">&nbsp;</div>
+	<!-- START table-responsive-->
+	<div class="table-responsive tablescroll">
+		<table  ng-table="newtableParams" class="table ng-table-rowselected">
+	         <tbody>
+	            <tr ng-repeat="info in $data" ng-click="info.$selected = !info.$selected; changeSelection(info)" ng-class="{'active': info.$selected}">
+	                <td title="'编号'">{{info.id}}</td>
+					<td title="'标题'">{{info.articleTitle}}</td>
+					<td title="'创建时间'">{{info.createTime |date:'yyyy-MM-dd HH:mm:ss'}}</td>
+					<td title="'作者'">{{info.arctlcleAuthor}}</td>
+					<td title="'标签'" >{{info.keyWordd}}</td>
+	            </tr>
+	         </tbody>
+	      </table>
+	</div>
+</div>

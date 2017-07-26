@@ -1,0 +1,45 @@
+
+<!-- Page content-->
+<div class="content-wrapper"  ng-controller=" proManageArticleCtrl as subactr">
+	<div class="content-heading">
+		<em class="icon-menu"></em> 专题文章管理
+		<div class="pull-right">
+			<button class="btn btn-oval btn-primary  mb-lg" ng-click="backPage()">
+				<em class="fa fa-reply mr"></em>返回
+			</button>
+		</div>
+	</div>
+	<!-- 表格区-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="pull-left">
+						<span>栏目名称：{{colName}}</span>
+					</div>
+
+					<div class="pull-right pl-sm">
+						<button type="button" class="mb-sm btn btn-danger" ng-click="delArticle()">删除</button>
+					</div>
+					<div class="pull-right pl-sm">
+						<button type="button" class="mb-sm btn btn-purple" ng-click="addArticle()">新增</button>
+					</div>
+					<div class="pull-right dropdown dropdown-list">
+						<button type="button" class="mb-sm btn btn-info"  ng-click="selAll()">全选</button>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="line_01">&nbsp;</div>
+				<!-- START table-responsive-->
+				<div class="table-responsive tablescroll">
+					<table  ng-table="subactr.tableParams" show-filter="true" class="table ng-table-rowselected" ng-table-columns-binding="subactr.cols">
+				         <tbody>
+				            <tr ng-repeat="info in $data" ng-click="info.$selected = !info.$selected; changeSelection(info)" ng-class="{'active': info.$selected}">
+				                <td title="'编号'"  ng-if="false" filter="{ 'id': 'text' }">{{info.id}}</td>
+								<td title="'标题'"  ng-if="true" filter="{ 'articleTitle': 'text' }">{{info.articleTitle}}</td>
+								<td title="'创建时间'"  ng-if="true">{{info.createTime |date:'yyyy-MM-dd HH:mm:ss'}}</td>
+								<td title="'作者'"  ng-if="true" filter="{ 'arctlcleAuthor': 'text' }">{{info.arctlcleAuthor}}</td>
+				            </tr>
+				         </tbody>
+				      </table>
+				</div>
+			</div>
+		</div>
