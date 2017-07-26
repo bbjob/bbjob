@@ -1,6 +1,11 @@
 package com.rundatop.biz.controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,14 +21,26 @@ public class FreeMarkerController extends SecurityController {
 	private FreeMarkerService freeMarkerService;
 	
 	@RequestMapping(value="getRoutes")
-	public String getRoutes(){
+	public void getRoutes(HttpServletRequest request,HttpServletResponse response){
 		//1.获取用户信息
 		SysUser user = (SysUser) getCurrentUser();
-		return freeMarkerService.getRoutes(user);
+		try {
+			response.setContentType("application/javascript;charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			freeMarkerService.getRoutes(user, out);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@RequestMapping(value="getLazyload")
-	public String getLazyload(){
-		return freeMarkerService.getLazyload();
+	public void getLazyload(HttpServletRequest request,HttpServletResponse response){
+		try {
+			response.setContentType("application/javascript;charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			freeMarkerService.getLazyload(out);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
