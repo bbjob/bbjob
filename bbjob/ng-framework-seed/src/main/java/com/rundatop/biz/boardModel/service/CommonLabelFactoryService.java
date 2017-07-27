@@ -1,5 +1,6 @@
 package com.rundatop.biz.boardModel.service;
 
+import java.beans.IntrospectionException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,15 +18,15 @@ public class CommonLabelFactoryService {
 	/**
 	 * @param modelAttribute
 	 * @return 
+	 * @throws IntrospectionException 
 	 */
-	public Map<String, Object> getAllDataByModelAttr(ModelAttribute modelAttribute) {
+	public Map<String, Object> getAllDataByModelAttr(ModelAttribute modelAttribute) throws IntrospectionException {
 		
 		Map<String, Object> returnMap = new HashMap<String,Object>();
 		
-		if ("1".equals(modelAttribute.getFlatBit())) {
-			System.out.println("artList:" + artList);
-			returnMap = artList.getAllData(modelAttribute);
+		if ("1".equals(modelAttribute.getFlatBit())) { // 图文列表
 			
+			returnMap = artList.getAllData(modelAttribute);
 		} else {
 			// TODO
 		}

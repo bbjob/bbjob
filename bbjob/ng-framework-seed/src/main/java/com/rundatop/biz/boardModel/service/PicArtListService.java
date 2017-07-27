@@ -1,5 +1,12 @@
 package com.rundatop.biz.boardModel.service;
 
+import java.beans.BeanInfo;
+import java.beans.IntrospectionException;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.beans.BeanMap;
 import org.springframework.stereotype.Service;
 
 import com.rundatop.sys.model.ArticleInfo;
@@ -19,7 +27,7 @@ public class PicArtListService {
 	@Autowired
 	private PicArtListDirectiveService picArtListDirectiveService;
 	
-	public Map<String, Object> getAllData(ModelAttribute modelAttribute) {
+	public Map<String, Object> getAllData(ModelAttribute modelAttribute) throws IntrospectionException {
 		Map<String, Object> returnMap = new HashMap<String,Object>();
 		
 		String authorName = modelAttribute.getArticleAuthor();
@@ -116,12 +124,56 @@ public class PicArtListService {
 			
 		}
 		
-		returnMap.put("conf", modelAttribute);
+		Map<String, Object> conf = ObjectToMap(modelAttribute);
+		
+		returnMap.put("conf", conf);
 		returnMap.put("data", returnList);
 		
 		return returnMap;
 	}
 	
+	/**
+	 * 属性统一返回Map
+	 * @param modelAttribute
+	 * @return
+	 * @throws IntrospectionException 
+	 */
+	private Map<String, Object> ObjectToMap(ModelAttribute modelAttribute) throws IntrospectionException {
+		if(modelAttribute == null) {
+			
+			return null;      
+		}
+	        
+		Map<String, Object> map = new HashMap<String, Object>();   
+	  
+		BeanInfo beanInfo = Introspector.getBeanInfo(modelAttribute.getClass());    
+		PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();    
+		for (PropertyDescriptor property : propertyDescriptors) {    
+			String key = property.getName();    
+			if (key.compareToIgnoreCase("class") == 0) {   
+				continue;  
+			}  
+			Method getter = property.getReadMethod();  
+			Object value;
+			try {
+				value = getter!=null ? getter.invoke(modelAttribute) : null;
+				map.put(key, value);  
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}  
+			
+		}    
+	  
+		return map;  
+	}
+
 	private List<ArticleInfo> getChildClumnArtInfoList(
 			ModelAttribute modelAttribute) {
 		
