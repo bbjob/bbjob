@@ -1,5 +1,6 @@
 package com.rundatop.biz.boardModel.directive;
 
+import java.beans.IntrospectionException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -50,11 +51,17 @@ public class CommonLabelDirective implements TemplateDirectiveModel{
 		ModelAttribute modelAttribute = dealBean(modelAttributeFromParams, modelAttributeFromDB); // 处理属性参数
 		
 		
-		Map<String, Object> allData = commonLabelFactory.getAllDataByModelAttr(modelAttribute);
+		Map<String, Object> allData = new HashMap<String, Object>();
 			
+		try {
+			allData = commonLabelFactory.getAllDataByModelAttr(modelAttribute);
+		} catch (IntrospectionException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		List<ArticleInfo> htmlValue = (List<ArticleInfo>) allData.get("data");
-		ModelAttribute confMap = (ModelAttribute) allData.get("conf");
+		Map<String, Object> confMap = (Map<String, Object>) allData.get("conf");
 		
 		env.setVariable("htmlValue", createBeansWrapper().wrap(htmlValue));
 		env.setVariable("confMap", createBeansWrapper().wrap(confMap));
