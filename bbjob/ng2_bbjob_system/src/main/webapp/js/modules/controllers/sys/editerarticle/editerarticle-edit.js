@@ -113,17 +113,6 @@
 		//摘要保存
 		$scope.aisave=function(){
 			var changeinfo=$scope.editinfo;
-			var imgList = changeinfo.imgList;
-			var pic1 = "";
-			if (imgList !== undefined && imgList !== null) {
-				for (var i = 0;i < imgList.length;i++) {
-					if (imgList[i] !== null && imgList[i] !== '' ) {
-						pic1 = pic1 + imgList[i] + ';'
-					}
-				}
-			}
-
-			changeinfo.pic1 = pic1;
 
 			if(null==changeinfo.articleTitle||undefined==changeinfo.articleTitle||""==null==changeinfo.articleTitle){
 				toaster.pop('error', "提示", "请输入标题！");
@@ -175,52 +164,46 @@
 				POSTBodyMethod('manage/editerarticle/add.json', changeinfo, "保存成功", "保存失败");
 			}
 		}
-		
-		
+
+
 		/**********************************************图片操作***********************************************************************/
-		//图片点击上传
-		$scope.addPic=function(index){
-			var inputId = "uppic" + index;
-			$scope.index = index;
-			document.getElementById(inputId).click();
-			angular.element(document.querySelector('#' + inputId)).off('change').on('change',uploadpic);
+			//图片点击上传
+		$scope.addPic=function(){
+			document.getElementById("uppic").click();
+			angular.element(document.querySelector('#uppic')).off('change').on('change',uploadpic);
 		}
 		/*********************************************************图片上传****************************************************************/
 		//上传
-		 function uploadpic(evt){
+		function uploadpic(evt){
 			// var fi=document.getElementById("uppic");
-			 var file = evt.currentTarget.files[0];
-			 $scope.upload(file);
-		 };
+			var file = evt.currentTarget.files[0];
+			$scope.upload(file);
+		};
 
-       $scope.upload = function (file) {
-           Upload.upload({
-               //服务端接收
-               url: 'upload/imageUp',
-               //上传的同时带的参数
-               data: {u:1},
-               file: file
-           }).progress(function (evt) {
-               //进度条
-               var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-               console.log('progess:' + progressPercentage + '%' + evt.config.file.name);
-           }).success(function (data, status, headers, config) {
-               //上传成功
-			   var index = $scope.index;
+		$scope.upload = function (file) {
+			Upload.upload({
+				//服务端接收
+				url: 'upload/imageUp',
+				//上传的同时带的参数
+				data: {u:1},
+				file: file
+			}).progress(function (evt) {
+				//进度条
+				var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+				console.log('progess:' + progressPercentage + '%' + evt.config.file.name);
+			}).success(function (data, status, headers, config) {
+				//上传成功
+				var obj = angular.fromJson(data);
 
-               console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
-               if(angular.isDefined(data)&&angular.isDefined(data.url)){
-				   if ($scope.editinfo.imgList === undefined || $scope.editinfo.imgList === null) {
-					   $scope.editinfo.imgList = [];
-				   }
-
-				   $scope.editinfo.imgList[index]=data.url;
-               }
-           }).error(function (data, status, headers, config) {
-               //上传失败
-               console.log('error status: ' + status);
-           });
-       };
+				console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
+				if(angular.isDefined(data)&&angular.isDefined(obj.url)){
+					$scope.editinfo.pic1=obj.url;
+				}
+			}).error(function (data, status, headers, config) {
+				//上传失败
+				console.log('error status: ' + status);
+			});
+		};
 		
 		$scope.isshow = function(type){
 			if(type==3)$scope.editorContentShow=false;

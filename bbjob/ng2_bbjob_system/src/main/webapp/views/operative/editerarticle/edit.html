@@ -101,17 +101,17 @@
 										<div class="pull-right mr20 mt10">{{editinfo.arcticleSummary.length}}/100</div>
 									</div>
 									<div class="col-md-12 mt-lg">
-									    <div class="form-group">
-				                            <label class="col-md-2 control-label pr0 text-right pt-sm">上传图片：</label>
-									        <div class="col-md-6 community_post_imgarea">
-									      	<!-- <div class="blockimg"><img src="app/img/pic_04.jpg"></div> -->
-										         <div   id="upimgDIv" ng-class="(null==editinfo.imgList[0] || editinfo.imgList[0] === '')?'imgadd':'blockimg'"  ng-click="addPic(0)" >
-											        <img  ng-src="{{(null==editinfo.imgList[0] || editinfo.imgList[0] === '')?'app/img/icon_add.png':res+editinfo.imgList[0]}}">
-											        <input type="file" id="uppic0" style="display: none;" accept="image/*">
-										        </div>
-										        <div style="margin-top:15%;">（建议上传图片尺寸：480*280像素）</div>
+										<div class="form-group">
+											<label class="col-md-2 control-label pr0 text-right pt-sm">上传图片：</label>
+											<div class="col-md-6 community_post_imgarea">
+												<!-- <div class="blockimg"><img src="app/img/pic_04.jpg"></div> -->
+												<div   id="upimgDIv" ng-class="null==editinfo.pic1?'imgadd':'blockimg'"  ng-click="addPic()" >
+													<img  ng-src="{{null==editinfo.pic1?'app/img/icon_add.png':res+editinfo.pic1}}">
+													<input type="file" id="uppic" style="display: none;" accept="image/*">
+												</div>
+												<div style="margin-top:15%;">（建议上传图片尺寸：480*280像素）</div>
 											</div>
-									      </div>
+										</div>
 									</div>
 									<!-- <div class="col-md-12 mt-lg" ng-show="!isAddflag">
 										<div class="form-group">
