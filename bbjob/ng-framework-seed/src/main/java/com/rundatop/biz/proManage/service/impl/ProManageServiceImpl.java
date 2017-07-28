@@ -72,6 +72,7 @@ public class ProManageServiceImpl implements ProManageService{
 		
 		List<Map<String, Object>> artCol = getArtRefColList();
 		
+		PageHelper.startPage(info.getPage(), info.getSize());
 		Map<String, String> dealData = dealArtColList(artCol);
 
 		for (int i = 0; i < list.size(); i++) {
@@ -83,7 +84,6 @@ public class ProManageServiceImpl implements ProManageService{
 			}
 		}
 		
-		PageHelper.startPage(info.getPage(), info.getSize());
 
 		return list;
 	}
