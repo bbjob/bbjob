@@ -50,6 +50,39 @@
     <result column="art_Col_Id" jdbcType="VARCHAR" property="artColId" />
     
   </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.rundatop.sys.model.ArticleInfo">
+    <result column="arcticle_content" jdbcType="LONGVARCHAR" property="arcticleContent" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  
   <sql id="Update_By_Example_Where_Clause">
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
@@ -78,6 +111,17 @@
         </if>
       </foreach>
     </where>
+  </sql>
+  
+  <sql id="Base_Column_List">
+    id, create_time, creater_id, free1, free2, free3, key_wordd, article_title, is_original, 
+    fee_type, fee, article_type, article_source, arcticle_summary, like_count, scan_count, 
+    entry_date, order_time, is_top, article_title2, title_all, sub_title, old_title, 
+    arctlcle_author, author_id, pic1, pic2, arcticle_status, source_id, is_perfect, comment_type, 
+    survey_id, html_url, file, author_name, content_source, free4, free5, free6,idno
+  </sql>
+  <sql id="Blob_Column_List">
+    arcticle_content
   </sql>
   <select id="getArtListByExample" resultMap="BaseResultMap">
   	select info.*, col.id as art_Col_Id
@@ -193,6 +237,18 @@
   			order by ai.entry_date
 		</otherwise>
   	</choose>
+  </select>
+  
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.rundatop.sys.example.ArticleInfoExample" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from article_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+      order by create_time
   </select>
   
 </mapper>
