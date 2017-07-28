@@ -43,7 +43,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		String deployPath = getDeployPath();
 		
 		if (path == null || "".equals(path)) {
-			ftlRootPath = deployPath + "ftl" + File.separator + "customModel";
+			ftlRootPath = deployPath + "WEB-INF" + File.separator + "customModel";
 		} else {
 			ftlRootPath = path;
 		}
@@ -123,11 +123,11 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 	 */
 	private String getDeployPath() {
 		
-/*		WebApplicationContext webApplicationContext = ContextLoader.getCurrentWebApplicationContext();
+		WebApplicationContext webApplicationContext = ContextLoader.getCurrentWebApplicationContext();
 		ServletContext servletContext = webApplicationContext.getServletContext(); 
-		String projectPath = servletContext.getRealPath("/").replace("\\", "/");*/  // E:/runda/workspace(quanmeitiOr)/mnt/WebContent/
+		String projectPath = servletContext.getRealPath("/").replace("\\", "/");  // E:/runda/workspace(quanmeitiOr)/mnt/WebContent/
 		
-		String projectPath = "F:/runda/workspace(quanmeitiOr)/mnt/WebContent/";
+//		String projectPath = "F:/runda/workspace(quanmeitiOr)/mnt/WebContent/";
 		
 		return projectPath;
 	}
@@ -135,7 +135,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 	public List<HashMap<String, Object>> getSampleModelFolderList() {
 		
 		String deployPath = getDeployPath();
-		String ftlSampleRootPath = deployPath + "ftl" + File.separator + "customModel" + File.separator + "samples";
+		String ftlSampleRootPath = deployPath + "WEB-INF" + File.separator + "customModel" + File.separator + "samples";
 		
 		List<HashMap<String, Object>> getSampleFolderInfo = getFolderInfo(ftlSampleRootPath);
 		
@@ -175,7 +175,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		
 		if (path == null || "".equals(path)) {
 			String deployPath = getDeployPath();
-			path = deployPath + "ftl" + File.separator + "customModel";
+			path = deployPath + "WEB-INF" + File.separator + "customModel";
 			
 		}
 		
@@ -201,7 +201,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		
 		if (path == null || "".equals(path)) {
 			String deployPath = getDeployPath();
-			path = deployPath + "ftl" + File.separator + "customModel";
+			path = deployPath + "WEB-INF" + File.separator + "customModel";
 			
 		}
 		
@@ -371,7 +371,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		
 		if (path == null || "".equals(path)) {
 			String deployPath = getDeployPath();
-			path = deployPath + "ftl" + File.separator + "customModel";
+			path = deployPath + "WEB-INF" + File.separator + "customModel";
 			
 		}
 		
@@ -453,12 +453,12 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		File file = new File(path);
 		if (path == null || "".equals(path)) {
 			String deployPath = getDeployPath();
-			return deployPath + "ftl" + File.separator + "customModel";
+			return deployPath + "WEB-INF" + File.separator + "customModel";
 		} 
 		
 		if (!file.exists()) {
 			String deployPath = getDeployPath();
-			return deployPath + "ftl" + File.separator + "customModel";
+			return deployPath + "WEB-INF" + File.separator + "customModel";
 		} else {
 			
 			return file.getParent();
