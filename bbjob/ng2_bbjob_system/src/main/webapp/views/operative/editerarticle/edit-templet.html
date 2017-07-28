@@ -1,0 +1,315 @@
+
+<div class="modal-header">
+	<h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+</div>
+<div class="modal-body gdt">
+	<!--选项卡-->
+	<div role="tabpanel" class="panel panel-transparent">
+		<!-- Nav tabs-->
+		<ul role="tablist" class="nav nav-tabs nav-justified">
+			<li role="presentation" class="active"><a href="#tab01"
+				aria-controls="jbxx" role="tab" data-toggle="tab" class="bb0">
+					概要</a></li>
+			<!-- <li role="presentation"><a href="#tab02" aria-controls="qxxx"
+				role="tab" data-toggle="tab" class="bb0"> 内容属性</a></li> -->
+			<li role="presentation"><a href="#tab03" aria-controls="qxxx"
+				role="tab" data-toggle="tab" class="bb0"> 具体内容</a></li>
+			<li ng-show="savetype!=0" role="presentation"><a href="#tab04" aria-controls="qxxx"
+				role="tab" data-toggle="tab" class="bb0"> 历史记录</a></li>
+			<!-- <li role="presentation"><a href="#tab05" aria-controls="qxxx"
+				role="tab" data-toggle="tab" class="bb0"> 写稿记录</a></li> -->
+		</ul>
+		<div class="tab-content p0">
+			<!--概要-->
+			<div id="tab01" role="tabpanel" class="tab-pane active">
+				<form name="editerArticleFormGY" novalidate>
+				<!-- START list group-->
+				<div class="table-responsive">
+					<div class="modal-body ">
+						<div class="row">
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">标题：</label>
+									<div class="col-sm-10">
+										<input class="form-control" type="text" name="articleTitle"  placeholder="请输入(必填)" maxlength="100" ng-model="editinfo.articleTitle" ng-readonly="iseditFlag" required>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">全标题：</label>
+									<div class="col-sm-10">
+										<input class="form-control" type="text" name="titleAll"  maxlength="100" ng-model="editinfo.titleAll" ng-readonly="iseditFlag" >
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">作者：</label>
+									<div class="col-md-4">
+										<input class="form-control" type="text" name="authorName"  placeholder="请输入" maxlength="100" ng-model="editinfo.authorName" required>									
+									</div>
+									<label class="col-md-2 control-label pr0 text-right pt-sm">内容来源：</label>
+									<div class="col-md-4">
+										<input class="form-control" type="text" name="contentSource"  placeholder="请输入" maxlength="100" ng-model="editinfo.contentSource" required>									
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">录入时间：</label>
+									<div class="col-md-4">
+										<input  ng-flatpickr class="form-control" fp-opts="dateOpts" fp-on-setup="datePostSetup(fpItem)" data-enabletime="true"  data-enableseconds="true" data-utc="false" data-time_24hr="true"  placeholder="请输入(必填)"  ng-model="editinfo.entryDate"  ng-readonly="iseditFlag" required>
+											<!-- <p class="input-group">
+												<input type="text"  placeholder="请输入(必填)" uib-datepicker-popup="{{format}}" ng-model="editinfo.entryDate" is-open="openedPublishDT"
+													 max-date="'2018-06-22'" uib-datepicker-options="dateOptions" ng-required="true" close-text="Close" class="form-control" /> 
+												<span class="input-group-btn">
+													<button type="button" ng-click="openPublishDT($event)"
+														class="btn btn-default">
+														<em class="fa fa-calendar"></em>
+													</button>
+												</span>
+											</p> -->
+									</div>
+									<label class="col-md-2 control-label pr0 text-right pt-sm">是否原创：</label>
+									<div class="col-sm-4">
+										<select name="account" class="form-control m-b" ng-model="editinfo.isOriginal"  ng-options="x for (x,y) in editisOriginal"  ng-readonly="iseditFlag"  ng-disabled="iseditFlag">
+										</select>
+									</div>
+									<!-- <label class="col-md-2 control-label pr0 text-right pt-sm">状态</label>
+									<div class="col-sm-4">
+										<select name="account" class="form-control m-b" ng-model="editinfo.arcticleStatus"  ng-options="x for (x,y) in editStatus"  ng-readonly="iseditFlag">
+										</select>
+									</div> -->
+								</div>
+							</div>
+							<!-- <div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">录入时间</label>
+									<div class="col-md-4">
+										<p class="input-group">
+											<input type="text"  placeholder="请输入(必填)" uib-datepicker-popup="{{format}}" ng-model="editinfo.entryDate" is-open="openedPublishDT"
+												 max-date="'2018-06-22'" uib-datepicker-options="dateOptions" ng-required="true" close-text="Close" class="form-control" /> 
+											<span class="input-group-btn">
+												<button type="button" ng-click="openPublishDT($event)"
+													class="btn btn-default">
+													<em class="fa fa-calendar"></em>
+												</button>
+											</span>
+										</p>
+									</div>
+								</div>
+							</div> -->
+							<!-- <div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">频道/栏目：</label>
+									<div class="col-md-9 p0">
+										一行栏目循环
+										<div class="col-md-12 p0" ng-repeat=" ac in editinfo.vaclist">
+											<div class="col-sm-6">
+												<select name="account" class="form-control m-b" ng-model="ac.channelId"  ng-change="channelChange($index,ac.channelId)" ng-readonly="iseditFlag"  ng-disabled="iseditFlag">
+													<option ng-repeat="c in ac.channellist" value="{{c.id}}">{{c.channelName}}</option>
+												</select>
+											</div>
+											<div class="col-md-6">
+												<select name="account" class="form-control m-b" ng-model="ac.columnId" ng-readonly="iseditFlag"  ng-disabled="iseditFlag">
+													<option ng-repeat="c in ac.channelColumnlist" value="{{c.id}}">{{c.columnsName}}</option>
+												</select>
+											</div>
+										</div>
+										一行栏目循环//
+										一行栏目循环
+										<div>
+											<div class="form-group">
+												<a href="javascript:void(0)" ng-click="addacolumn();$event.stopPropagation();">
+													<div class="col-md-12 control-label pr0 pt-sm">
+														<span class="icon-plus">&nbsp;</span>添加更多筛选组件
+													</div>
+												</a>
+											</div>
+										</div>
+										一行栏目循环//
+
+									</div>
+								</div>
+							</div> -->
+							<div class="col-md-12 mt-xl">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">标签：</label>
+									<div class="col-sm-10">
+										<tags-input min-length="1" style="width:auto; max-height:80px; height:100%" ng-model="editinfo.keyWorddAry" placeholder="请输入标签"  ng-disabled="iseditFlag"></tags-input>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 mt-lg">
+								<div class="form-group">
+									<label class="col-md-2 control-label pr0 text-right pt-sm">摘要：</label>
+									<div class="col-md-10">
+										<textarea class="form-control" rows="5"  placeholder="请输入摘要" ng-model="editinfo.arcticleSummary" maxlength="100" ng-readonly="iseditFlag" ></textarea>
+									</div>
+								</div>
+								<div class="pull-right mr20 mt10">{{editinfo.arcticleSummary.length}}/100</div>
+							</div>
+							<div class="col-md-12 mt-lg">
+							    <div class="form-group">
+		                            <label class="col-md-2 control-label pr0 text-right pt-sm">上传图片：</label>
+							        <div class="col-md-6 community_post_imgarea">
+							      	<!-- <div class="blockimg"><img src="app/img/pic_04.jpg"></div> -->
+								         <div   id="upimgDIv" ng-class="null==editinfo.pic1?'imgadd':'blockimg'"  ng-click="addPic()" >
+									        <img  ng-src="{{null==editinfo.pic1?'app/img/icon_add.png':res+editinfo.pic1}}">
+									        <input type="file" id="uppic" style="display: none;" accept="image/*">
+								        </div>
+								        <div style="margin-top:15%;">（建议上传图片尺寸：480*280像素）</div>
+									</div>
+							      </div>
+							</div>
+							<div class="col-md-12 mt-lg" ng-show="!isAddflag">
+								<div class="form-group">
+									<div class="col-md-12 text-center">
+										<button class="btn btn-oval btn-danger mt-lg mb-lg" ng-click="iseditFlag=!iseditFlag">
+												<em class="fa fa-fw fa-pencil mr"></em>编辑
+											</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--保存按钮-->
+				<div class="modal-footer">
+
+					<div class="col-lg-4 col-lg-offset-4 text-center">
+						<button class="btn btn-info mt-lg mb-lg" ng-click="aisave()" ng-disabled="iseditFlag||editerArticleFormGY.articleTitle.$invalid ||editerArticleFormGY.cate.$invalid||editerArticleFormGY.channel.$invalid||editerArticleFormGY.coloum.$invalid||editerArticleFormGY.entryDate.$invalid||editerArticleNR.subTitle.$invalid||editinfo.arcticleContent.length>10000">保存</button>
+									<button class="btn btn-default mt-lg mb-lg" ng-click="dialogClosed();$event.stopPropagation();">取消</button>
+					</div>
+				</div>
+				<!--保存按钮//-->
+				</form>
+			</div>
+			<!--概要//-->
+			<!--具体内容-->
+			<div id="tab03" role="tabpanel" class="tab-pane">
+				<form name="editerArticleNR" novalidate>
+					<div class="table-responsive">
+						<div class="modal-body ">
+							<div class="row">
+								<div class="col-md-12 mt-lg">
+									<div class="form-group">
+										<label class="col-md-2 control-label pr0 text-right pt-sm">副标题：</label>
+										<div class="col-sm-10">
+											
+											<input class="form-control" name="subTitle" type="text" placeholder="请输入" ng-model="editinfo.subTitle"  maxlength="100"  ng-readonly="iseditFlag">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 mt-lg">
+									<div class="form-group">
+										<label class="col-md-2 control-label pr0 text-right pt-sm">文章类型：</label>
+	                                    <div class="col-sm-10">
+											<label class="radio-inline c-radio">
+		                                 		<input id="articleType" name="articleType" value="3" ng-model="editinfo.articleType" type="radio" ng-click="isshow(3)" ng-disabled="iseditFlag">
+		                                		 <span class="fa fa-check"></span>外链</label>
+		                            	    <label class="radio-inline c-radio">
+				                                 <input id="articleType" name="articleType" value="0" ng-model="editinfo.articleType" type="radio"  ng-click="isshow(0)" ng-disabled="iseditFlag">
+				                                 <span class="fa fa-check"></span>编辑</label>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 mt-lg"  ng-show="editinfo.articleType==3">
+									<div class="form-group">
+										<label class="col-md-2 control-label pr0 text-right pt-sm">外链链接：</label>
+	                                    <div class="col-sm-10">
+											<input class="form-control" name="free2" type="text" placeholder="请输入" ng-model="editinfo.free2"  maxlength="100"  ng-readonly="iseditFlag">
+										</div>
+									</div>
+								</div>
+								<div id="editorContent"   ng-show="editorContentShow" class="col-md-12 mt-lg">
+									<div class="form-group">
+										<label class="col-md-2 control-label pr0 text-right pt-sm">内容：</label>
+										<div class="col-sm-10">
+											<!-- <textarea class="form-control" rows="10" ng-readonly="iseditFlag"></textarea> -->
+											<div name="arcticleContent" class="ueditor" config="config" ready="ready" ng-model="editinfo.arcticleContent"></div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="col-md-12 text-center"  ng-show="!isAddflag">
+								<button class="btn btn-oval btn-danger mt-lg mb-lg" ng-click="iseditFlag=!iseditFlag">
+									<em class="fa fa-fw fa-pencil mr"></em>编辑
+								</button>
+							</div>
+						</div>
+					</div>
+					<!--保存按钮-->
+					<div class="modal-footer">
+						<div class="col-lg-4 col-lg-offset-4">
+							<button class="btn btn-block btn-info mt-lg mb-lg" ng-click="aisave()" ng-disabled="iseditFlag||editerArticleFormGY.articleTitle.$invalid ||editerArticleFormGY.cate.$invalid||editerArticleFormGY.channel.$invalid||editerArticleFormGY.coloum.$invalid||editerArticleFormGY.entryDate.$invalid||editinfo.arcticleContent.length>100000">保存</button>
+						</div>
+					</div>
+					<!--保存按钮//-->
+				</form>
+			</div>
+			<!--具体内容//-->
+			<!--历史记录-->
+			<div id="tab04" role="tabpanel" class="tab-pane">
+				<!-- 表格区-->
+				<div class="">
+					<!-- START table-responsive-->
+					<div class="table-responsive">
+						<table ng-table="logtableParams" show-filter="false" class="table ng-table-rowselected">
+							<tbody>
+								<tr ng-repeat="info in $data" ng-click="info.$selected = !info.$selected; clickRow(info)"
+									ng-class="{'active': info.$selected}">
+									<td title="'用户名'" ng-if="true">{{ info.userName }}</td>
+									<td title="'操作内容'" ng-if="true">{{ info.operContent }}</td>
+									<td title="'访问时间'" ng-if="true">{{ info.operDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- END table-responsive-->
+				</div>
+				<!--表格区//-->
+			</div>
+			<!--历史记录//-->
+			<!--写稿记录-->
+			<div id="tab05" role="tabpanel" class="tab-pane">
+				<!-- 表格区-->
+				<div class="">
+					<!-- START table-responsive-->
+					<div class="table-responsive">
+						<table id="table2" class="table table-bordered table-hover">
+							<thead>
+								<tr>
+									<th width="10%" class="nowrap">编号</th>
+									<th width="15%" class="nowrap">标题</th>
+									<th width="10%" class="nowrap">采用状态</th>
+									<th width="20%" class="nowrap">稿费</th>
+									<th width="20%" class="nowrap">投稿时间</th>
+									<th width="25%" class="nowrap">摘要</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!--表格区//-->
+			</div>
+			<!--写稿记录//-->
+		</div>
+	</div>
+	<!--选项卡//-->
+</div>
+
+<!--标签切换//-->
+<!--弹窗//-->

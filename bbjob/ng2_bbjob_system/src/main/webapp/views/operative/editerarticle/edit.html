@@ -1,0 +1,145 @@
+
+<!-- Page content-->
+<div class="content-wrapper" ng-controller="editerarticleEditCtrl as eelctr">
+	<div class="content-heading">
+		<em class="icon-action-redo"></em> 编辑写稿{{typeTile}}
+		<div class="pull-right pl-sm">
+			<button type="button" class="mb-sm btn btn-green" onclick="javascript:history.go(-1);">返回</button>
+		</div>
+		<div class="pull-right pl-sm" ng-show="!isAddflag">
+			<button type="button" class="mb-sm btn btn-danger"  ng-click="iseditFlag=!iseditFlag">编辑</button>
+		</div>
+		<div class="pull-right pl-sm">
+			<button class="mb-sm btn btn-info" ng-click="aisave()" ng-disabled="iseditFlag||editerArticleFormGY.articleTitle.$invalid||editerArticleFormGY.entryDate.$invalid">保存提交</button>
+		</div>
+	</div>
+	<!-- 表格区-->
+	<div class="panel panel-default">
+		<!-- START table-responsive-->
+		<div class="modal-body">
+			<!--选项卡-->
+			<div role="tabpanel" class="panel panel-transparent">
+				<!-- Nav tabs-->
+				<ul role="tablist" class="nav nav-tabs nav-justified">
+					<li role="presentation" class="active"><a href="#tab01"
+						aria-controls="jbxx" role="tab" data-toggle="tab" class="bb0">
+							概要</a></li>
+				</ul>
+				<div class="tab-content p0">
+					<!--概要-->
+					<div id="tab01" role="tabpanel" class="tab-pane active">
+						<form name="editerArticleFormGY" novalidate>
+						<!-- START list group-->
+						<div class="table-responsive">
+							<div class="modal-body ">
+								<div class="row">
+									<div class="col-md-12 mt-lg">
+										<div class="form-group">
+											<label class="col-md-2 control-label pr0 text-right pt-sm">标题：</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" name="articleTitle"  placeholder="请输入(必填)" maxlength="100" ng-model="editinfo.articleTitle" ng-readonly="iseditFlag" required>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 mt-lg">
+										<div class="form-group">
+											<label class="col-md-2 control-label pr0 text-right pt-sm">全标题：</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" name="titleAll"  maxlength="100" ng-model="editinfo.titleAll" ng-readonly="iseditFlag" >
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 mt-lg">
+										<div class="form-group">
+											<label class="col-md-2 control-label pr0 text-right pt-sm">作者：</label>
+											<div class="col-md-4">
+												<input class="form-control" type="text" name="authorName"  placeholder="请输入" maxlength="100" ng-model="editinfo.authorName" ng-readonly="iseditFlag">									
+											</div>
+											<label class="col-md-2 control-label pr0 text-right pt-sm">内容来源：</label>
+											<div class="col-md-4">
+												<input class="form-control" type="text" name="contentSource"  placeholder="请输入" maxlength="100" ng-model="editinfo.contentSource" ng-readonly="iseditFlag">									
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 mt-lg">
+										<div class="form-group">
+											<label class="col-md-2 control-label pr0 text-right pt-sm">录入时间：</label>
+											<div class="col-md-4">
+												<input  ng-flatpickr class="form-control" fp-opts="dateOpts" fp-on-setup="datePostSetup(fpItem)" data-enabletime="true"  data-enableseconds="true" data-utc="false" data-time_24hr="true"  placeholder="请输入(必填)"  ng-model="editinfo.entryDate"  ng-readonly="iseditFlag" required>
+											</div>
+											<label class="col-md-2 control-label pr0 text-right pt-sm">是否原创：</label>
+											<div class="col-sm-4">
+												<select name="account" class="form-control m-b" ng-model="editinfo.isOriginal"  ng-options="x for (x,y) in editisOriginal"  ng-readonly="iseditFlag"  ng-disabled="iseditFlag">
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 mt-xl">
+										<div class="form-group">
+											<label class="col-md-2 control-label pr0 text-right pt-sm">链接：</label>
+											<div class="col-sm-10">
+												<input class="form-control" type="text" name="free2"  placeholder="请输入" maxlength="100" ng-model="editinfo.free2" ng-readonly="iseditFlag">
+											</div>
+										</div>
+									</div>
+
+									<div class="col-md-12 mt-xl">
+										<div class="form-group">
+											<label class="col-md-2 control-label pr0 text-right pt-sm">标签：</label>
+											<div class="col-sm-10">
+												<tags-input min-length="1" style="width:auto; max-height:80px; height:100%" ng-model="editinfo.keyWorddAry" placeholder="请输入标签"  ng-disabled="iseditFlag"></tags-input>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 mt-lg">
+										<div class="form-group">
+											<label class="col-md-2 control-label pr0 text-right pt-sm">摘要：</label>
+											<div class="col-md-10">
+												<textarea class="form-control" rows="5"  placeholder="请输入摘要" ng-model="editinfo.arcticleSummary" maxlength="100" ng-readonly="iseditFlag" ></textarea>
+											</div>
+										</div>
+										<div class="pull-right mr20 mt10">{{editinfo.arcticleSummary.length}}/100</div>
+									</div>
+									<div class="col-md-12 mt-lg">
+									    <div class="form-group">
+				                            <label class="col-md-2 control-label pr0 text-right pt-sm">上传图片：</label>
+									        <div class="col-md-6 community_post_imgarea">
+									      	<!-- <div class="blockimg"><img src="app/img/pic_04.jpg"></div> -->
+										         <div   id="upimgDIv" ng-class="(null==editinfo.imgList[0] || editinfo.imgList[0] === '')?'imgadd':'blockimg'"  ng-click="addPic(0)" >
+											        <img  ng-src="{{(null==editinfo.imgList[0] || editinfo.imgList[0] === '')?'app/img/icon_add.png':res+editinfo.imgList[0]}}">
+											        <input type="file" id="uppic0" style="display: none;" accept="image/*">
+										        </div>
+										        <div style="margin-top:15%;">（建议上传图片尺寸：480*280像素）</div>
+											</div>
+									      </div>
+									</div>
+									<!-- <div class="col-md-12 mt-lg" ng-show="!isAddflag">
+										<div class="form-group">
+											<div class="col-md-12 text-center">
+												<button class="btn btn-oval btn-danger mt-lg mb-lg" ng-click="iseditFlag=!iseditFlag">
+														<em class="fa fa-fw fa-pencil mr"></em>编辑
+													</button>
+											</div>
+										</div>
+									</div> -->
+								</div>
+							</div>
+						</div>
+						<!--保存按钮-->
+						<!-- <div class="modal-footer">
+		
+							<div class="col-lg-4 col-lg-offset-4 text-center">
+								<button class="btn btn-info mt-lg mb-lg" ng-click="aisave()" ng-disabled="iseditFlag||editerArticleFormGY.articleTitle.$invalid ||editerArticleFormGY.cate.$invalid||editerArticleFormGY.channel.$invalid||editerArticleFormGY.coloum.$invalid||editerArticleFormGY.entryDate.$invalid||editerArticleNR.subTitle.$invalid||editinfo.arcticleContent.length>10000">保存</button>
+							</div>
+						</div> -->
+						<!--保存按钮//-->
+						</form>
+					</div>
+					<!--概要//-->
+				</div>
+			</div>
+			<!--选项卡//-->
+		</div>
+	</div>
+	<!--表格区//-->
+</div>

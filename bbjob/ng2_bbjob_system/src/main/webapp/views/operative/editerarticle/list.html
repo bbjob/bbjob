@@ -1,0 +1,94 @@
+
+<!-- Page content-->
+<div class="content-wrapper" ng-controller=" editerarticleCtrl as ealctr">
+	<div class="content-heading">
+		<em class="icon-action-redo"></em> 编辑写稿
+	</div>
+	<!-- 表格区-->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="pull-right pl-lg dropdown dropdown-list">
+				<a href="javascript:void(0)" data-toggle="dropdown"><button type="button"
+						class="mb-sm btn btn-primary">
+						<span class="icon-options"></span>
+					</button></a>
+
+				<!-- START Dropdown menu-->
+				<ul class="dropdown-menu animated lightSpeedIn modal-lg">
+					<li>
+						<!-- START list group-->
+							<!-- list item-->
+							<div class="col-lg-3 borderbtm_01"   ng-repeat="col in ealctr.cols">
+								<div class="media-box-body  ml-lg">
+									<div data-toggle="tooltip" title="Check All"
+										class="checkbox c-checkbox pull-left mt-lg">
+										<label>
+											<input type="checkbox" ng-model-options="{ getterSetter: true }" ng-model="col.show">
+											<span class="fa fa-check"></span>
+										</label>
+									</div>
+									<p class="m-lg">{{col.title()}}</p>
+								</div>
+							</div>
+					</li>
+				</ul>
+				<!-- END Dropdown menu-->
+
+			</div>
+             <!--
+        		<div class="pull-right pl-sm">
+		     <button type="button" class="mb-sm btn btn-info"  ng-click="lookforEa()">查看</button></div> -->
+             <!-- <div class="pull-right pl-sm">
+               <button type="button" class="mb-sm btn btn-warning"  ng-click="changeEa(2)">发布</button></div> -->
+             <div class="pull-right pl-sm">
+               <button type="button" class="mb-sm btn btn-danger" ng-click="changeEa()">删除</button></div>
+             <div class="pull-right pl-sm">
+               <button type="button" class="mb-sm btn btn-purple"  ng-click="addEa()">新增</button></div>
+             <!-- <div class="pull-right pl-sm">
+               <button type="button" class="mb-sm btn btn-purple"  ng-click="upword()">上传word</button></div> -->
+			<div class="pull-left dropdown dropdown-list">
+				<button type="button" class="mb-sm btn btn-info"  ng-click="selAll()">全选</button>
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="line_01">&nbsp;</div>
+		<!-- START table-responsive-->
+		<div class="table-responsive tablescroll">
+			<table  ng-table="ealctr.tableParams" show-filter="true" class="table ng-table-rowselected" ng-table-columns-binding="ealctr.cols">
+		         <tbody>
+		            <tr ng-repeat="info in $data" ng-click="info.$selected = !info.$selected; clickRow(info)" ng-class="{'active': info.$selected}">
+		               <td title="'编号'"  ng-if="false" filter="{ 'id': 'text' }">{{info.id}}</td>
+						<td title="'状态'"   ng-if="false" filter="{ 'arcticleStatus': 'select' }" filter-data="ealctr.statusSEL($column)">{{info.arcticleStatus |statusfilter}}</td>
+						<td title="'标题'"  ng-if="true" filter="{ 'articleTitle': 'text' }"><a ng-click="edit($index)">{{info.articleTitle}}</a></td>
+						<td title="'原创标志'"  ng-if="false" filter="{ 'isOriginal': 'select' }" filter-data="ealctr.isOriginalSEL($column)">{{info.isOriginal==1?'原创':'非原创'}}</td>
+						<td title="'收费模式'"  ng-if="false" filter="{ 'isFree': 'select' }" filter-data="ealctr.isFreeSEL($column)" >{{info.isFree==1?'收费':'免费'}}</td>
+						<!-- <td title="'费用'"  ng-if="true" filter="{ 'fee': 'number' }">{{info.fee}}</td> -->
+						<td title="'文章类型'"  ng-if="false" filter="{ 'articleType': 'select' }"  filter-data="ealctr.aTypeSEL($column)" >{{info.articleType |articleTypefilter}}</td>
+						<td title="'摘要'"  ng-if="false" filter="{ 'arcticleSummary': 'text' }">{{info.arcticleSummary}}</td>
+						<!-- <td title="'文章来源'"  ng-if="true" filter="{ 'articleSource': 'select' }" filter-data="ealctr.articleSourceSEL($column)">{{info.articleSource |articleSourcefilter}}</td> -->
+						<td title="'标签'"  ng-if="true" filter="{ 'keyWordd': 'text' }">{{info.keyWordd}}</td>
+						<!-- <td title="'客户端'"   ng-if="false" filter="{ 'type': 'text' }">{{info.type}}</td> -->
+						<td title="'正文内容'"  ng-if="false" filter="{ 'arcticleContent': 'text' }">{{info.arcticleContent}}</td>
+						<!-- <td title="'投稿人'"   ng-if="true">{{info.nickName}}</td> -->
+						<!-- <td title="'点赞数'"  ng-if="false" filter="{ 'likeCount': 'number' }">{{info.likeCount==null?0:info.likeCount}}</td>
+						<td title="'浏览数'"  ng-if="false" filter="{ 'scanCount': 'number' }">{{info.scanCount==null?0:info.scanCount}}</td> -->
+						<td title="'录入时间'"  ng-if="true"  filter="{ 'entryDate': 'text' }">{{info.entryDate|date:'yyyy-MM-dd HH:mm:ss'}}</td>
+						<td title="'作者'"   ng-if="true" filter="{ 'authorName': 'text' }">{{info.authorName}}</td>
+						<td title="'内容来源'"   ng-if="false" filter="{ 'contentSource': 'text' }">{{info.contentSource}}</td>
+						<!-- <td title="'排序时间'"   ng-if="false" filter="{ 'orderTime': 'text' }">{{info.orderTime|date:'yyyy-MM-dd HH:mm:ss'}}</td> -->
+						<td title="'创建时间'"   ng-if="false" filter="{ 'createTime': 'text' }">{{info.createTime |date:'yyyy-MM-dd HH:mm:ss'}}</td>
+						<!-- <td title="'标题2'"   ng-if="false" filter="{ 'articleTitle2': 'text' }">{{info.articleTitle2}}</td> -->
+						<td title="'全标题'"  ng-if="false"  filter="{ 'titleAll': 'text' }">{{info.titleAll}}</td>
+						<td title="'副标题'"  ng-if="false"  filter="{ 'subTitle': 'text' }">{{info.subTitle}}</td>
+						<!-- <td title="'原标题'"   ng-if="false" filter="{ 'oldTitle': 'text' }">{{info.oldTitle}}</td> -->
+						<td title="'编辑'"   ng-if="false" filter="{ 'arctlcleAuthor': 'text' }">{{info.arctlcleAuthor}}</td>
+						<!-- <td title="'置顶'"   ng-if="true" filter="{ 'isTop': 'select' }" filter-data="ealctr.topSEL($column)">{{info.isTop==1?'已置顶':''}}</td> -->
+						<!-- <td title="'加精'"   ng-if="true" filter="{ 'isPerfect': 'select' }" filter-data="ealctr.perfectSEL($column)">{{info.isPerfect==1?'已加精':''}}</td> -->
+		            </tr>
+		         </tbody>
+		      </table>
+		</div>
+	</div>
+	<!--表格区//-->
+</div>
