@@ -146,6 +146,10 @@ public class Uploader {
 	}
 	public void upload() throws Exception {
 		boolean isMultipart = ServletFileUpload.isMultipartContent(this.request);
+		BufferedInputStream in = null;
+		FileOutputStream out = null;
+		BufferedOutputStream output = null;
+		
 		if (!isMultipart) {
 			this.state = this.errorInfo.get("NOFILE");
 			return;
@@ -170,10 +174,10 @@ public class Uploader {
 					this.fileName = this.getName(this.originalName);
 					this.type = this.getFileExt(this.fileName);
 					this.url = savePath + "/" + this.fileName;
-					BufferedInputStream in = new BufferedInputStream(fis.openStream());
+					in = new BufferedInputStream(fis.openStream());
 					File file = new File(this.getPhysicalPath(this.url));
-					FileOutputStream out = new FileOutputStream( file );
-					BufferedOutputStream output = new BufferedOutputStream(out);
+					out = new FileOutputStream( file );
+					output = new BufferedOutputStream(out);
 					Streams.copy(in, output, true);
 					this.state=this.errorInfo.get("SUCCESS");
 					this.size = file.length();
@@ -185,7 +189,7 @@ public class Uploader {
 					if(!fname.equals("pictitle")){
 						continue;
 					}
-                    BufferedInputStream in = new BufferedInputStream(fis.openStream());
+                    in = new BufferedInputStream(fis.openStream());
                     BufferedReader reader = new BufferedReader(new InputStreamReader(in));
                     StringBuffer result = new StringBuffer();  
                     while (reader.ready()) {  
@@ -205,6 +209,20 @@ public class Uploader {
 		} catch (Exception e) {
 			e.printStackTrace();
 			this.state = this.errorInfo.get("UNKNOWN");
+		} finally {
+			if (output != null) {
+				output.flush();
+				output.close();
+			}
+			
+			if (out != null) {
+				out.flush();
+				out.close();
+			}
+			
+			if (in != null) {
+				in.close();
+			}
 		}
 	}
 	
