@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -142,6 +145,16 @@ public class ModelFolderController extends SecurityController{
 	public ModelFileInfo getFileInfoByAbPath(String path) {
 		
 		return modelFolderService.getFileInfoByAbPath(path);
+	}
+	
+	/**
+	 * 下载文件
+	 * @throws IOException 
+	 */
+	@RequestMapping(value = "/filedownload", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public void filedownload(String path, String fileType, String fileName, HttpServletRequest request, HttpServletResponse response) {
+		
+		modelFolderService.downLoadFile(path, fileType, fileName, request, response);
 	}
 	
 }
