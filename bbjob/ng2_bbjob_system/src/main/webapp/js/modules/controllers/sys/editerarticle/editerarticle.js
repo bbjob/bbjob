@@ -540,7 +540,7 @@
 		
 		/**********************************************发布撤销退回************************************************************************/
 		//操作 1审核2发布3弃用4删除
-		$scope.changeEa= function(status) {
+		$scope.delEa= function() {
 			var name = "删除";
 			var ids = getselectedIds();
 			SweetAlert.swal({
@@ -554,7 +554,7 @@
 	              closeOnCancel: true 
 	            }, function(isConfirm){  
 	              if (isConfirm) {  
-	            	  POSTMethod('manage/editerarticle/somechange.json', {ids:ids,status:status,type:status}, name+"成功",  name+"失败");
+	            	  POSTMethod('manage/editerarticle/del.json', {ids:ids}, name+"成功",  name+"失败");
 	              } else {     
 	               // SweetAlert.swal('取消操作', '你取消了操作', 'error');   
 	              } 
@@ -901,8 +901,7 @@
   		        data    : $.param(params),  // pass in data as strings
   		        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
   		    }).success(function(data, status, headers, config) {
-  				var obj2 = eval(data);
-  				if(obj2.statusCode==200){
+  				if(status === 200){
   					self.tableParams.reload();
   					toaster.pop('success', "提示", successmessage);
   					ngDialog.close();
@@ -922,7 +921,7 @@
   		        data    : params
   		    }).success(function(data, status, headers, config) {
   				var obj2 = eval(data);
-  				if(obj2.statusCode==200){
+  				if(status === 200){
   					var maps=obj2.data;
   					
   					if(messsageShow){
