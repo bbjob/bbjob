@@ -3,6 +3,9 @@ package com.rundatop.biz.modelFolder.service;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import com.rundatop.sys.dto.SysUser;
 import com.rundatop.sys.model.ModelFileInfo;
 
@@ -28,5 +31,8 @@ public interface ModelFolderService {
 	String getParentPath(String path);
 
 	ModelFileInfo getFileInfoByAbPath(String path);
+
+	void downLoadFile(String path, String fileType,
+			String fileName, HttpServletRequest request, HttpServletResponse response);
 
 }
