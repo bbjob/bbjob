@@ -7,41 +7,13 @@
 	<!-- 表格区-->
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<div class="pull-right pl-lg dropdown dropdown-list">
-				<a href="javascript:void(0)" data-toggle="dropdown"><button type="button"
-						class="mb-sm btn btn-primary">
-						<span class="icon-options"></span>
-					</button></a>
-
-				<!-- START Dropdown menu-->
-				<ul class="dropdown-menu animated lightSpeedIn modal-lg">
-					<li>
-						<!-- START list group-->
-							<!-- list item-->
-							<div class="col-lg-3 borderbtm_01"   ng-repeat="col in ealctr.cols">
-								<div class="media-box-body  ml-lg">
-									<div data-toggle="tooltip" title="Check All"
-										class="checkbox c-checkbox pull-left mt-lg">
-										<label>
-											<input type="checkbox" ng-model-options="{ getterSetter: true }" ng-model="col.show">
-											<span class="fa fa-check"></span>
-										</label>
-									</div>
-									<p class="m-lg">{{col.title()}}</p>
-								</div>
-							</div>
-					</li>
-				</ul>
-				<!-- END Dropdown menu-->
-
-			</div>
              <!--
         		<div class="pull-right pl-sm">
 		     <button type="button" class="mb-sm btn btn-info"  ng-click="lookforEa()">查看</button></div> -->
              <!-- <div class="pull-right pl-sm">
                <button type="button" class="mb-sm btn btn-warning"  ng-click="changeEa(2)">发布</button></div> -->
              <div class="pull-right pl-sm">
-               <button type="button" class="mb-sm btn btn-danger" ng-click="changeEa()">删除</button></div>
+               <button type="button" class="mb-sm btn btn-danger" ng-click="delEa()">删除</button></div>
              <div class="pull-right pl-sm">
                <button type="button" class="mb-sm btn btn-purple"  ng-click="addEa()">新增</button></div>
              <!-- <div class="pull-right pl-sm">
