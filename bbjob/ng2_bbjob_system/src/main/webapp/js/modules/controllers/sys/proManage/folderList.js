@@ -157,6 +157,18 @@
 			}
 		};
 
+		// 文件下載
+		$scope.downLoadFile = function (info) {
+
+			var path = info.abPath,
+				fileType = info.fileType,
+				fileName = info.fileName;
+
+			window.location.href = "modelFolderController/filedownload.json?path="
+					+ path + "&fileType=" + fileType +"&fileName=" + fileName;
+		}
+
+
 		// 文件管理 编辑操作
 		$scope.editFolder = function (info) {
 			$scope.saveType = 0;
