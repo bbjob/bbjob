@@ -100,4 +100,19 @@ public class EditerArticleController extends SecurityController {
 		return ok;
 	}
 	
+	/**
+	 * 删除内容
+	 */
+	@RequestMapping(value="/del",method=RequestMethod.POST,produces=MediaType.APPLICATION_JSON_VALUE)
+	public Integer del(String ids) {
+		Integer ok = 0;
+		try {
+			SysUser user = (SysUser) getCurrentUser();
+			ok = service.del(ids,user);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return ok;
+	}
+	
 }
