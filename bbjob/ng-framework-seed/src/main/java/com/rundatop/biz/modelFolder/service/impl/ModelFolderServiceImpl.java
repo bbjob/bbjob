@@ -1,12 +1,16 @@
 package com.rundatop.biz.modelFolder.service.impl;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
@@ -17,8 +21,12 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,7 +51,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		String deployPath = getDeployPath();
 		
 		if (path == null || "".equals(path)) {
-			ftlRootPath = deployPath + "WEB-INF" + File.separator + "customModel";
+			ftlRootPath = deployPath +  "customModel";
 		} else {
 			ftlRootPath = path;
 		}
@@ -127,6 +135,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		ServletContext servletContext = webApplicationContext.getServletContext(); 
 		String projectPath = servletContext.getRealPath("/").replace("\\", "/");  // E:/runda/workspace(quanmeitiOr)/mnt/WebContent/
 		
+		System.out.println("------------" + projectPath);
 //		String projectPath = "F:/runda/workspace(quanmeitiOr)/mnt/WebContent/";
 		
 		return projectPath;
@@ -135,7 +144,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 	public List<HashMap<String, Object>> getSampleModelFolderList() {
 		
 		String deployPath = getDeployPath();
-		String ftlSampleRootPath = deployPath + "WEB-INF" + File.separator + "customModel" + File.separator + "samples";
+		String ftlSampleRootPath = deployPath +  "customModel" + File.separator + "samples";
 		
 		List<HashMap<String, Object>> getSampleFolderInfo = getFolderInfo(ftlSampleRootPath);
 		
@@ -175,7 +184,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		
 		if (path == null || "".equals(path)) {
 			String deployPath = getDeployPath();
-			path = deployPath + "WEB-INF" + File.separator + "customModel";
+			path = deployPath +  "customModel";
 			
 		}
 		
@@ -201,7 +210,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		
 		if (path == null || "".equals(path)) {
 			String deployPath = getDeployPath();
-			path = deployPath + "WEB-INF" + File.separator + "customModel";
+			path = deployPath +  "customModel";
 			
 		}
 		
@@ -371,7 +380,7 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		
 		if (path == null || "".equals(path)) {
 			String deployPath = getDeployPath();
-			path = deployPath + "WEB-INF" + File.separator + "customModel";
+			path = deployPath +  "customModel";
 			
 		}
 		
@@ -453,12 +462,12 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		File file = new File(path);
 		if (path == null || "".equals(path)) {
 			String deployPath = getDeployPath();
-			return deployPath + "WEB-INF" + File.separator + "customModel";
+			return deployPath +  "customModel";
 		} 
 		
 		if (!file.exists()) {
 			String deployPath = getDeployPath();
-			return deployPath + "WEB-INF" + File.separator + "customModel";
+			return deployPath +  "customModel";
 		} else {
 			
 			return file.getParent();
@@ -510,5 +519,144 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 		String uuid = UUID.randomUUID().toString();
 		uuid = uuid.replaceAll("-", "");
 		return uuid.toUpperCase();
+	}
+	
+	private String getDateFormat() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+		
+		return sdf.format(new Date());
+	}
+
+	@Override
+	public void downLoadFile(String path, String fileType, String fileName,
+			HttpServletRequest request, HttpServletResponse response) {
+		String prefix = "";
+		
+		try {
+			fileType = new String(fileType.getBytes("ISO-8859-1"), "UTF-8");
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		if (fileType.contains("文件夹")) { // 判断是否是文件夹，如果是则返回压缩文件路径
+			prefix = fileName;
+			
+			String zipTempPath = getDeployPath() + "/temp";
+			File dir = new File(zipTempPath);
+			
+			if (!isExist(dir)) { // 创建临时存放目录
+				dir.mkdir(); 
+			}
+			
+			String zipNamePath = zipTempPath + "/" + prefix + ".zip";
+			File targetFile = new File(zipNamePath);
+			
+			if (!isExist(targetFile)) {
+				try {
+					targetFile.createNewFile();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			
+			File sourceFile = new File(path);
+			response.reset();
+			try {
+				FileOutputStream fous = new FileOutputStream(targetFile);
+				ZipOutputStream zipOut = new ZipOutputStream(fous);
+				BufferedOutputStream bo = new BufferedOutputStream(zipOut);
+				zip(zipOut, sourceFile, prefix, bo);
+				
+				// 1.设置文件ContentType类型，这样设置，会自动判断下载文件类型
+				response.setContentType("multipart/form-data");
+				// 2.设置文件头：最后一个参数是设置下载文件名(假如我们叫a.pdf)
+				response.setHeader("Content-Disposition", "attachment;fileName=" + prefix + ".zip");
+				try {
+					// 读取文件
+					InputStream in = new FileInputStream(zipNamePath);
+					OutputStream out = response.getOutputStream();
+
+					// 写文件
+					int b;
+					while ((b = in.read()) != -1) {
+						out.write(b);
+					}
+
+					in.close();
+					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else {
+			// prefix = fileName.substring(0, fileName.lastIndexOf("."));
+			// 1.设置文件ContentType类型，这样设置，会自动判断下载文件类型
+			response.setContentType("multipart/form-data");
+			// 2.设置文件头：最后一个参数是设置下载文件名(假如我们叫a.pdf)
+			response.setHeader("Content-Disposition", "attachment;fileName=" + fileName);
+			
+			try {
+				// 读取文件
+				InputStream in = new FileInputStream(path);
+				OutputStream out = response.getOutputStream();
+
+				// 写文件
+				int b;
+				while ((b = in.read()) != -1) {
+					out.write(b);
+				}
+
+				in.close();
+				out.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	/**
+	 * 压缩文件
+	 * @param zipOut     zipoutSteam 
+	 * @param sourceFile 源文件
+	 * @param prefix     文件名
+	 * @param bo         BufferedOutStream
+	 * @throws IOException 
+	 */
+	private void zip(ZipOutputStream out, File f, String base,
+			BufferedOutputStream bo) throws IOException {
+        if (f.isDirectory()) {  
+            File[] fl = f.listFiles();  
+            if (fl.length == 0) {  
+                out.putNextEntry(new ZipEntry(base + "/")); // 创建zip压缩进入点base  
+                System.out.println(base + "/");  
+            }  
+            for (int i = 0; i < fl.length; i++) {  
+                zip(out, fl[i], base + "/" + fl[i].getName(), bo); // 递归遍历子文件夹  
+            }  
+        } else {  
+            out.putNextEntry(new ZipEntry(base)); // 创建zip压缩进入点base  
+            System.out.println(base);  
+            FileInputStream in = new FileInputStream(f);  
+            BufferedInputStream bi = new BufferedInputStream(in);  
+            int b;  
+            while ((b = bi.read()) != -1) {  
+                bo.write(b); // 将字节流写入当前zip目录  
+            }  
+            bi.close();  
+            in.close(); // 输入流关闭  
+        } 
+	}
+
+	// 判断文件是否存在
+	private boolean isExist(File file) {
+		
+		if (file.exists()) {
+			return true;
+		} else {
+			
+			return false;
+		}
 	}
 }
