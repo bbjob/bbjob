@@ -1,12 +1,15 @@
 package com.rundatop.biz.editerarticle.service.impl;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import tk.mybatis.mapper.entity.Example;
 
 import com.github.pagehelper.PageHelper;
 import com.rundatop.biz.editerarticle.service.EditerArticleService;
@@ -181,14 +184,26 @@ public class EditerArticleServiceImpl implements EditerArticleService {
 
 	@Override
 	public int update(ArticleInfo info, SysUser user) {
-		// TODO Auto-generated method stub
+		
 		return articleInfoMapper.updateByPrimaryKey(info);
 	}
 
 	@Override
 	public ArticleInfo info(Integer id) {
-		// TODO Auto-generated method stub
+		
 		return articleInfoMapper.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public Integer del(String ids, SysUser user) {
+		
+		String[] idsary=ids.split(",");
+		
+		Example example = new Example(ArticleInfo.class);
+		
+		example.createCriteria().andIn("id", new ArrayList<String>(Arrays.asList(idsary)));
+		
+		return articleInfoMapper.deleteByExample(example);
 	}
 
 }
