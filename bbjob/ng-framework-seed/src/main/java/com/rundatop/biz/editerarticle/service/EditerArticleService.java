@@ -19,5 +19,7 @@ public interface EditerArticleService {
 	int update(ArticleInfo info, SysUser user);
 
 	ArticleInfo info(Integer integer);
+
+	Integer del(String ids, SysUser user);
 	
 }
