@@ -47,7 +47,6 @@
 			<div class="pull-right pl-sm">
 				<button type="button" class="mb-sm btn btn-warning" ng-click="folderBack()">返回</button>
 			</div>
-
 			<div class="pull-right pl-sm">
 				<button type="button" class="mb-sm btn btn-purple" ng-click="addFolder()">新增文件夹</button>
 			</div>
@@ -116,7 +115,7 @@
 					<td title="'类型'"  ng-if="true">{{info.fileType}}</td>
 					<td title="'大小'"  ng-if="true">{{info.fileSize}}</td>
 					<td title="'更新时间'" ng-if="true">{{info.fileModifyDate}}</td>
-					<td data-title="'操作'" ng-if="true" width="20%"><a ng-if="true" ng-click="editFolder(info)">编辑</a>&nbsp;&nbsp;&nbsp;<a ng-if="true" ng-click="delFolder(info)">删除</a></td>
+					<td data-title="'操作'" ng-if="true" width="20%"><a ng-if="true" ng-click="editFolder(info)">编辑</a>&nbsp;&nbsp;&nbsp;<a ng-if="true" ng-click="downLoadFile(info)">下载</a>&nbsp;&nbsp;&nbsp;<a ng-if="true" ng-click="delFolder(info)">删除</a></td>
 				</tr>
 				</tbody>
 			</table>
