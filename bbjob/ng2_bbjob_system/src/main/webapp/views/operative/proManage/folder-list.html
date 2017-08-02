@@ -107,7 +107,7 @@
 		<div class="line_01">&nbsp;</div>
 		<!-- START table-responsive-->
 		<div class="table-responsive tablescroll">
-			<table  ng-table="subctr.folderTableParams" show-filter="true" class="table ng-table-rowselected" ng-table-columns-binding="subctr.cols">
+			<table  ng-table="subctr.folderTableParams" class="table ng-table-rowselected" ng-table-columns-binding="subctr.cols">
 				<tbody>
 				<tr ng-repeat="info in $data"  ng-class="{'active': info.$selected}">
 					<!-- <td title="'编号'"  ng-if="true">{{info.id}}</td> -->
@@ -115,7 +115,7 @@
 					<td title="'类型'"  ng-if="true">{{info.fileType}}</td>
 					<td title="'大小'"  ng-if="true">{{info.fileSize}}</td>
 					<td title="'更新时间'" ng-if="true">{{info.fileModifyDate}}</td>
-					<td data-title="'操作'" ng-if="true" width="20%"><a ng-if="true" ng-click="editFolder(info)">编辑</a>&nbsp;&nbsp;&nbsp;<a ng-if="true" ng-click="downLoadFile(info)">下载</a>&nbsp;&nbsp;&nbsp;<a ng-if="true" ng-click="delFolder(info)">删除</a></td>
+					<td data-title="'操作'" ng-if="true" width="20%"><a ng-if="true" ng-click="editFolder(info)">编辑</a>&nbsp;&nbsp;&nbsp;<a ng-if="info.isPreview === true" ng-href="{{info.href}}" target="_blank">预览</a>&nbsp;&nbsp;&nbsp;<a ng-if="true" ng-click="downLoadFile(info)">下载</a>&nbsp;&nbsp;&nbsp;<a ng-if="true" ng-click="delFolder(info)">删除</a></td>
 				</tr>
 				</tbody>
 			</table>
