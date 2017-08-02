@@ -46,12 +46,16 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 	@Autowired
 	private ModelFileInfoMapper modelFileInfoMapper;
 
-	public List<HashMap<String, Object>> getList(String path) {
+	public List<HashMap<String, Object>> getList(String path, String folder) {
 		String ftlRootPath = "";
 		String deployPath = getDeployPath();
 		
 		if (path == null || "".equals(path)) {
-			ftlRootPath = deployPath +  "customModel";
+			if (folder == null || "".equals(folder)) {
+				ftlRootPath = deployPath +  "customModel";;
+			} else {
+				ftlRootPath = deployPath +  "customModel" + File.separator + folder;
+			}
 		} else {
 			ftlRootPath = path;
 		}
@@ -99,6 +103,11 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 				itemMap.put("fileModifyDate", format.format(cal.getTime()));
 				
 				itemMap.put("abPath", itemFile.getAbsolutePath());
+			
+				itemMap.put("isPreview", false);
+				
+				itemMap.put("href", "");
+			
 			} else {
 				itemMap.put("fileName", itemFile.getName());
 
@@ -115,6 +124,14 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 				
 				itemMap.put("fileModifyDate", format.format(cal.getTime()));
 				itemMap.put("abPath", itemFile.getAbsolutePath());
+			
+				if (type.toUpperCase().equals("FTL")) {
+					itemMap.put("isPreview", true);
+					itemMap.put("href", "zhuanti/" + itemFile.getName().substring(0, itemFile.getName().lastIndexOf(".")));
+				} else {
+					itemMap.put("isPreview", false);
+					itemMap.put("href", "");
+				}
 			}
 			
 			
@@ -470,7 +487,18 @@ public class ModelFolderServiceImpl implements ModelFolderService {
 			return deployPath +  "customModel";
 		} else {
 			
-			return file.getParent();
+			String dealPath = path.replace("\\", "/");
+			String deployPath = (getDeployPath() + "customModel").replace("\\", "/");
+			
+			if (deployPath.equals(dealPath)) {
+				return deployPath;
+			} else {
+				if (dealPath.contains(deployPath)) {
+					return file.getParent();
+				} else {
+					return deployPath;
+				}
+			}
 		}
 	}
 
