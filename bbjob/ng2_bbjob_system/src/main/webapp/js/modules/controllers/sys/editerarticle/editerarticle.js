@@ -259,7 +259,7 @@
 //  						scope:$scope
 //  					});
 //  				}else{
-//  					toaster.pop('error', "提示","服务我未响应数据！");
+//  					toaster.pop('error', "提示","服务器未响应数据！");
 //  				}
 //  			}).error(function(data, status, headers, config){
 //  				toaster.pop('error', "提示", "服务器繁忙！");
@@ -298,7 +298,7 @@
 				if(obj2.statusCode==200){
 					$scope.channelColumnlist=obj2.data;
 				}else{
-					toaster.pop('error', "提示","服务我未响应数据！");
+					toaster.pop('error', "提示","服务器未响应数据！");
 				}
 			}).error(function(data, status, headers, config){
 				toaster.pop('error', "提示", "服务器繁忙！");
@@ -330,7 +330,7 @@
 				if(obj2.statusCode==200){
 					$scope.editinfo.vaclist[index].channelColumnlist=obj2.data;
 				}else{
-					toaster.pop('error', "提示","服务我未响应数据！");
+					toaster.pop('error', "提示","服务器未响应数据！");
 				}
 			}).error(function(data, status, headers, config){
 				toaster.pop('error', "提示", "服务器繁忙！");
@@ -768,7 +768,7 @@
 					if(obj2.statusCode==200){
 						$scope.channelColumnlist=obj2.data;
 					}else{
-						toaster.pop('error', "提示","服务我未响应数据！");
+						toaster.pop('error', "提示","服务器未响应数据！");
 					}
 				}).error(function(data, status, headers, config){
 					toaster.pop('error', "提示", "服务器繁忙！");
@@ -800,7 +800,7 @@
 					if(obj2.statusCode==200){
 						$scope.editinfo.vaclist[index].channelColumnlist=obj2.data;
 					}else{
-						toaster.pop('error', "提示","服务我未响应数据！");
+						toaster.pop('error', "提示","服务器未响应数据！");
 					}
 				}).error(function(data, status, headers, config){
 					toaster.pop('error', "提示", "服务器繁忙！");
