@@ -137,7 +137,7 @@
   <select id="artNumCount"  resultType="java.lang.Integer">
       SELECT count(1)
 	  FROM article_info ai <if test="columnId !=null or channelId !=null">LEFT JOIN article_column ac ON ai.id=ac.article_id LEFT JOIN channel_columns cc ON ac.column_id=cc.id</if> 
-	  where  ai.arcticle_status <![CDATA[ <>]]> 4 
+	  where  1 = 1
 	  <if test="columnId !=null"> AND cc.id=#{columnId} </if>
 	  <if test="channelId !=null"> AND cc.channel_id=#{channelId} </if>
 	  <if test="name !=null"> AND ai.article_title LIKE #{name} </if>
@@ -146,7 +146,7 @@
    <select id="selInColArticleCount"  resultType="java.lang.Integer">
       SELECT count(1)
 	  FROM article_info ai <if test="columnId !=null or channelId !=null">LEFT JOIN article_column ac ON ai.id=ac.article_id LEFT JOIN channel_columns cc ON ac.column_id=cc.id</if> 
-	  where  ai.arcticle_status <![CDATA[ <>]]> 4 AND  ai.id IN (SELECT article_id FROM article_column where ai.id=article_id AND column_id=#{colId} ) 
+	  where ai.id IN (SELECT article_id FROM article_column where ai.id=article_id AND column_id=#{colId} ) 
 	  <if test="columnId !=null"> AND cc.id=#{columnId} </if>
 	  <if test="channelId !=null"> AND cc.channel_id=#{channelId} </if>
 	  <if test="name !=null"> AND ai.article_title LIKE #{name} </if>
@@ -155,7 +155,7 @@
   <select id="selNotinColArticle" resultMap="BaseResultMap">
       SELECT ai.*,ac.column_id,cc.channel_id 
 	  FROM article_info ai LEFT JOIN article_column ac ON ai.id=ac.article_id LEFT JOIN channel_columns cc ON ac.column_id=cc.id 
-	  where  ai.arcticle_status <![CDATA[ <>]]> 4 AND  ai.id NOT IN (SELECT article_id FROM article_column where ai.id=article_id AND column_id=#{colId} ) 
+	  where ai.id NOT IN (SELECT article_id FROM article_column where ai.id=article_id AND column_id=#{colId} ) 
 	  <if test="columnId !=null"> AND cc.id=#{columnId} </if>
 	  <if test="channelId !=null"> AND cc.channel_id=#{channelId} </if>
 	  <if test="name !=null"> AND ai.article_title LIKE #{name} </if>
