@@ -63,14 +63,15 @@ public class CommonLabelDirective implements TemplateDirectiveModel{
 		List<ArticleInfo> htmlValue = (List<ArticleInfo>) allData.get("data");
 		Map<String, Object> confMap = (Map<String, Object>) allData.get("conf");
 		
-		env.setVariable("htmlValue", createBeansWrapper().wrap(htmlValue));
-		env.setVariable("confMap", createBeansWrapper().wrap(confMap));
-		
 		ServletRequestAttributes attr = (ServletRequestAttributes) RequestContextHolder.currentRequestAttributes();
 		HttpServletRequest request = attr.getRequest();
 		HttpSession session = request.getSession();
 		session.setAttribute("confMap", confMap);
 		
+		env.setVariable("htmlValue", createBeansWrapper().wrap(htmlValue));
+		env.setVariable("confMap", createBeansWrapper().wrap(confMap));
+		
+
 		// 查询该栏目下的所有内容和配置信息
 		/*
 		Map<String, Object> allData = MockData.getMockDataByBoardID(boardID, className);
