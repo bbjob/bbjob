@@ -11,7 +11,7 @@ import com.rundatop.sys.model.ModelFileInfo;
 
 public interface ModelFolderService {
 
-	List<HashMap<String, Object>> getList(String path);
+	List<HashMap<String, Object>> getList(String path, String folder);
 
 	List<HashMap<String, Object>> getSampleModelFolderList();
 
