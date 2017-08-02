@@ -31,9 +31,9 @@ public class ModelFolderController extends SecurityController{
 	 * 测试，获取模板文件目录
 	 */
 	@RequestMapping(value = "/getModelFolderList", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Map<String, Object> getModelFolderList(String path, String folderName) {
+	public Map<String, Object> getModelFolderList(String path, String folderName, String folder) {
 		
-		List<HashMap<String, Object>> getList = modelFolderService.getList(path);
+		List<HashMap<String, Object>> getList = modelFolderService.getList(path, folder);
 		
 		Map<String, Object> returnMap = new HashMap<String, Object>();
 		
