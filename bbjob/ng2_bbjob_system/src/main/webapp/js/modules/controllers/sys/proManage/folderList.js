@@ -59,7 +59,7 @@
 		$scope.artTypeSelected = $stateParams.artTypeSelected;
 		$scope.contentSelected = $stateParams.contentSelected;
 
-		$scope.folderfilters = {path: null, folderName: null, folder: $scope.editinfo.folder};
+		$scope.folderfilters = {path: null, folderName: null, folder: null};
 		var self = this; //把controller 定义为变量self
 
 		self.folderTableParams = new ngTableParams({},{
