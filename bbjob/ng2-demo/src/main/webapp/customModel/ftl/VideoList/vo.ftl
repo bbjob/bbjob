@@ -1,6 +1,6 @@
 <#list htmlValue as data>
     <#assign uu = "${data.uu}" />
-    <#assign vu = "${data.vu}" />
+    <#assign vu = "${data.videoUnique}" />
     <#assign player = "${data.player}" />
     <script type="text/javascript">
         var uu = "${uu?js_string}",
